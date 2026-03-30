@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaaS SEO Agency | B2B Organic Growth for SaaS | The SaaS Partnership</title>
+  <meta name="description" content="The SaaS Partnership delivers SEO for SaaS companies — technical optimisation, high-intent content and link building that builds organic pipeline compounding over time. Pipeline-first approach." />
+  <meta name="keywords" content="SaaS SEO agency, SEO for SaaS companies, B2B SaaS SEO, technical SEO for SaaS, SaaS content marketing agency, SEO agency software company" />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/saas-seo.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:#0A1628;--navy-mid:#142240;--navy-light:#1E3A6B;
+      --sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#BAE6FD;
+      --teal:#14B8A6;--teal-light:#CCFBF1;
+      --red:#EF4444;--red-light:#FEE2E2;
+      --white:#FFFFFF;--surface:#F8FAFC;--surface-2:#F1F5F9;
+      --border:#E2E8F0;--border-mid:#CBD5E1;
+      --text-1:#0A1628;--text-2:#334155;--text-3:#64748B;--text-4:#94A3B8;
+      --radius:14px;--radius-sm:8px;--radius-lg:20px;
+      --shadow-sm:0 1px 4px rgba(0,0,0,.06);
+      --shadow-md:0 4px 20px rgba(0,0,0,.09);
+      --shadow-lg:0 12px 48px rgba(0,0,0,.12);
+    }
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',system-ui,sans-serif;color:var(--text-1);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;text-decoration:none;}
+
+    .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+    .section{padding:100px 0;}
+    .section--surface{background:var(--surface);}
+
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .65s cubic-bezier(.25,.46,.45,.94),transform .65s cubic-bezier(.25,.46,.45,.94);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal--left{transform:translateX(-32px);}
+    .reveal--left.visible{transform:translateX(0);}
+    .reveal--right{transform:translateX(32px);}
+    .reveal--right.visible{transform:translateX(0);}
+    .reveal--scale{transform:scale(.95);}
+    .reveal--scale.visible{transform:scale(1);}
+    .d1{transition-delay:.08s!important;}
+    .d2{transition-delay:.16s!important;}
+    .d3{transition-delay:.24s!important;}
+    .d4{transition-delay:.32s!important;}
+    .d5{transition-delay:.40s!important;}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);margin-bottom:16px;}
+    .eyebrow::before{content:'';display:block;width:20px;height:2px;background:var(--sky);border-radius:2px;}
+    .eyebrow--teal{color:var(--teal);}
+    .eyebrow--teal::before{background:var(--teal);}
+    .eyebrow--white{color:rgba(255,255,255,.7);}
+    .eyebrow--white::before{background:rgba(255,255,255,.4);}
+
+    h1{font-size:clamp(38px,5vw,62px);font-weight:900;line-height:1.06;letter-spacing:-.03em;}
+    h2{font-size:clamp(28px,4vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.025em;}
+    h3{font-size:24px;font-weight:700;line-height:1.3;letter-spacing:-.01em;}
+    h4{font-size:16px;font-weight:600;}
+    p{color:var(--text-2);line-height:1.8;}
+    .lead{font-size:18px;color:var(--text-2);line-height:1.75;}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius-sm);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .22s ease;white-space:nowrap;letter-spacing:-.01em;}
+    .btn--primary{background:var(--sky);color:var(--white);}
+    .btn--primary:hover{background:var(--sky-dark);box-shadow:0 8px 24px rgba(14,165,233,.4);transform:translateY(-2px);}
+    .btn--outline{background:transparent;color:var(--text-1);border:1.5px solid var(--border-mid);}
+    .btn--outline:hover{border-color:var(--sky);color:var(--sky);}
+    .btn--ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3);}
+    .btn--ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);}
+    .btn--lg{padding:17px 34px;font-size:16px;}
+
+    .arrow{display:inline-block;width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;transition:transform .2s ease;}
+    .btn:hover .arrow{transform:translateX(4px);}
+    .arrow--sky{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230EA5E9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s ease;}
+    .nav--scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border),0 4px 20px rgba(0,0,0,.06);}
+    .nav--top{background:rgba(10,22,40,.5);backdrop-filter:blur(10px);}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:0 28px;max-width:1180px;margin:0 auto;height:72px;}
+    .nav__logo{font-size:17px;font-weight:800;color:var(--white);display:flex;align-items:center;gap:10px;transition:color .3s;}
+    .nav--scrolled .nav__logo{color:var(--navy);}
+    .nav__logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--teal));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;letter-spacing:-.02em;flex-shrink:0;}
+    .nav__logo span{color:var(--sky);}
+    .nav__links{display:flex;align-items:center;gap:2px;list-style:none;}
+    .nav__links a{padding:8px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:rgba(255,255,255,.8);transition:all .2s;}
+    .nav--scrolled .nav__links a{color:var(--text-2);}
+    .nav__links a:hover,.nav__links a.active{color:var(--white);}
+    .nav--scrolled .nav__links a:hover{color:var(--navy);background:var(--surface);}
+    .nav--scrolled .nav__links a.active{color:var(--sky);}
+    .nav__right{display:flex;align-items:center;gap:12px;}
+    .nav__cta-ghost{padding:9px 18px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.2);transition:all .2s;}
+    .nav__cta-ghost:hover{border-color:rgba(255,255,255,.5);color:white;}
+    .nav--scrolled .nav__cta-ghost{color:var(--text-2);border-color:var(--border);}
+    .nav--scrolled .nav__cta-ghost:hover{border-color:var(--sky);color:var(--sky);}
+    .nav__hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav__hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:all .3s;}
+    .nav--scrolled .nav__hamburger span{background:var(--navy);}
+
+    .nav__item--dropdown{position:relative;}
+    .nav__submenu{
+      display:none;position:absolute;top:calc(100% + 8px);left:50%;
+      transform:translateX(-50%);background:white;border:1px solid var(--border);
+      border-radius:var(--radius);box-shadow:var(--shadow-lg);
+      padding:8px;min-width:230px;list-style:none;z-index:1001;
+    }
+    .nav__item--dropdown:hover .nav__submenu{display:block;}
+    .nav__submenu li a{
+      display:block;padding:9px 14px;border-radius:var(--radius-sm);
+      font-size:14px;color:var(--text-1)!important;font-weight:500;
+      transition:all .15s;background:transparent!important;
+    }
+    .nav__submenu li a:hover{background:var(--surface)!important;color:var(--sky)!important;}
+    .nav__chevron{font-size:10px;opacity:0.7;}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);color:var(--white);padding:160px 0 120px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(20,184,166,.1) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+    .hero__content{position:relative;z-index:2;}
+    .hero__inner{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;}
+    .hero__text h1{color:var(--white);margin-bottom:20px;}
+    .hero__text h1 .highlight{color:var(--teal);background:linear-gradient(90deg,var(--teal),#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .hero__text > .lead{color:rgba(255,255,255,.85);margin-bottom:32px;max-width:520px;}
+    .hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .hero__stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:20px;border-radius:var(--radius);backdrop-filter:blur(10px);}
+    .hero__stat-value{font-size:24px;font-weight:800;color:var(--teal);margin-bottom:4px;}
+    .hero__stat-label{font-size:13px;color:rgba(255,255,255,.7);font-weight:500;}
+
+    /* THREE PILLARS */
+    .pillars{padding:100px 0;}
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:80px;}
+    .pillar-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:40px 32px;text-align:center;transition:all .3s cubic-bezier(.25,.46,.45,.94);}
+    .pillar-card:hover{border-color:var(--teal);box-shadow:0 12px 48px rgba(20,184,166,.15);transform:translateY(-8px);}
+    .pillar-icon{font-size:48px;margin-bottom:20px;}
+    .pillar-card h3{margin-bottom:16px;color:var(--navy);}
+    .pillar-card p{font-size:15px;line-height:1.7;color:var(--text-2);}
+
+    /* ROADMAP */
+    .roadmap{background:var(--surface);padding:100px 0;}
+    .roadmap h2{text-align:center;margin-bottom:80px;}
+    .roadmap-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+    .roadmap-phase{padding:32px;background:white;border:1px solid var(--border);border-radius:var(--radius);}
+    .roadmap-phase-num{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:var(--teal);color:white;font-weight:700;border-radius:8px;margin-bottom:16px;font-size:16px;}
+    .roadmap-phase h4{margin-bottom:12px;color:var(--navy);}
+    .roadmap-phase p{font-size:14px;color:var(--text-2);line-height:1.6;}
+
+    /* WHY DIFFERENT */
+    .why-seo{padding:100px 0;}
+    .why-seo h2{text-align:center;margin-bottom:80px;}
+    .why-seo-list{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;max-width:1000px;}
+    .why-seo-item{background:var(--surface);border:1px solid var(--border);padding:28px;border-radius:var(--radius);}
+    .why-seo-item::before{content:'✓';display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--teal);color:white;font-weight:700;border-radius:8px;margin-bottom:16px;font-size:18px;}
+    .why-seo-item h4{font-size:16px;margin-bottom:12px;color:var(--navy);}
+    .why-seo-item p{font-size:14px;color:var(--text-2);line-height:1.6;}
+
+    /* CHECKLIST */
+    .checklist-section{padding:100px 0;}
+    .checklist-section h2{text-align:center;margin-bottom:80px;}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;}
+    .checklist-item{display:flex;gap:16px;align-items:flex-start;}
+    .checklist-check{flex-shrink:0;width:24px;height:24px;background:var(--teal);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:14px;margin-top:2px;}
+    .checklist-item h4{font-size:15px;color:var(--navy);margin-bottom:4px;}
+    .checklist-item p{font-size:14px;color:var(--text-2);line-height:1.6;}
+
+    /* MISTAKES */
+    .mistakes{background:var(--surface);padding:100px 0;}
+    .mistakes h2{text-align:center;margin-bottom:80px;}
+    .mistakes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+    .mistake-card{background:#FEE2E2;border:1px solid #FECACA;border-radius:var(--radius);padding:32px;text-align:center;}
+    .mistake-card h4{color:#991B1B;margin-bottom:12px;}
+    .mistake-card p{font-size:14px;color:#7F1D1D;line-height:1.6;}
+
+    /* PERFORMANCE STATS */
+    .perf-stats{padding:100px 0;}
+    .perf-stats h2{text-align:center;margin-bottom:80px;}
+    .perf-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center;}
+    .perf-stat-value{font-size:48px;font-weight:900;color:var(--navy);margin-bottom:8px;}
+    .perf-stat-label{font-size:14px;color:var(--text-3);font-weight:500;}
+
+    /* TESTIMONIAL */
+    .testimonial{padding:100px 0;}
+    .testimonial-card{max-width:800px;margin:0 auto;background:var(--surface);border-left:4px solid var(--teal);padding:48px;border-radius:var(--radius);text-align:center;}
+    .testimonial-quote{font-size:18px;color:var(--text-1);line-height:1.8;margin-bottom:28px;font-style:italic;}
+    .testimonial-author{font-weight:600;color:var(--navy);margin-bottom:4px;}
+    .testimonial-title{font-size:14px;color:var(--text-3);}
+
+    /* RELATED SERVICES */
+    .related{padding:100px 0;}
+    .related h2{text-align:center;margin-bottom:80px;}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;}
+    .related-card{background:var(--surface);border:1px solid var(--border);padding:40px 32px;border-radius:var(--radius);text-align:center;transition:all .3s;}
+    .related-card:hover{border-color:var(--teal);box-shadow:0 12px 48px rgba(20,184,166,.1);}
+    .related-card h3{margin-bottom:12px;color:var(--navy);}
+    .related-card p{font-size:14px;color:var(--text-2);margin-bottom:20px;}
+    .related-card a{color:var(--teal);font-weight:600;transition:all .2s;}
+    .related-card a:hover{gap:4px;}
+
+    /* CTA SECTION */
+    .cta-section{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);color:white;padding:80px 0;text-align:center;}
+    .cta-section h2{color:white;margin-bottom:32px;}
+    .cta-section p{color:rgba(255,255,255,.8);margin-bottom:40px;font-size:16px;}
+
+    /* FOOTER */
+    footer{background:var(--navy);color:white;padding:80px 0 40px;}
+    .footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+    .footer__brand{max-width:300px;}
+    .footer__brand-logo{font-size:14px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+    .footer__brand p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.7);margin-bottom:20px;}
+    .footer__brand-contact{font-size:14px;color:var(--teal);font-weight:600;}
+    .footer__col h5{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px;color:white;}
+    .footer__col ul{list-style:none;}
+    .footer__col li{margin-bottom:12px;}
+    .footer__col a{font-size:14px;color:rgba(255,255,255,.7);transition:color .2s;}
+    .footer__col a:hover{color:white;}
+    .footer__bottom{display:flex;justify-content:space-between;align-items:center;padding-top:40px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.6);}
+    .footer__bottom a{color:rgba(255,255,255,.6);transition:color .2s;}
+    .footer__bottom a:hover{color:white;}
+
+    @media(max-width:768px){
+      .nav__links{display:none;}
+      .nav__right{gap:8px;}
+      .nav__cta-ghost{display:none;}
+      .nav__hamburger{display:flex;}
+      .hero__inner{grid-template-columns:1fr;gap:40px;}
+      .hero__stats{grid-template-columns:1fr;}
+      .pillars-grid{grid-template-columns:1fr;}
+      .roadmap-timeline{grid-template-columns:repeat(2,1fr);}
+      .why-seo-list{grid-template-columns:1fr;}
+      .checklist{grid-template-columns:1fr;}
+      .mistakes-grid{grid-template-columns:1fr;}
+      .perf-stats-grid{grid-template-columns:repeat(2,1fr);}
+      .footer__top{grid-template-columns:1fr;}
+      .footer__bottom{flex-direction:column;gap:20px;text-align:center;}
+    }
+
+    @media(max-width:480px){
+      .hero{padding:120px 0 80px;}
+      h1{font-size:32px;}
+      h2{font-size:24px;}
+      .section{padding:60px 0;}
+      .roadmap-timeline{grid-template-columns:1fr;}
+      .perf-stats-grid{grid-template-columns:1fr;}
+      .mistakes-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav nav--top" id="mainNav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><div class="nav__logo-mark">TSP</div>The SaaS<span>Partnership</span></a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav__item--dropdown">
+        <a href="#" class="nav__dropdown-toggle">Solutions <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="private-equity-marketing.html">PE &amp; Investor Partnerships</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO for SaaS</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A Integration</a></li>
+        </ul>
+      </li>
+      <li class="nav__item--dropdown">
+        <a href="services.html" class="nav__dropdown-toggle">Services <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="saas-paid-media.html">Paid Media</a></li>
+          <li><a href="saas-seo.html" aria-current="page">SEO for SaaS</a></li>
+          <li><a href="services.html#cro">CRO &amp; Conversion</a></li>
+          <li><a href="services.html#automation">Marketing Automation</a></li>
+        </ul>
+      </li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="why-us.html" class="nav__cta-ghost">See the model</a>
+      <a href="contact.html" class="btn btn--primary">Book Discovery Call <span class="arrow"></span></a>
+    </div>
+    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="margin-top:72px;">
+  <div class="container hero__content">
+    <div class="hero__inner">
+      <div class="hero__text reveal reveal--left d1">
+        <div class="eyebrow eyebrow--white">SEO for SaaS Companies</div>
+        <h1>Organic growth that <span class="highlight">compounds</span> — built for B2B SaaS</h1>
+        <p class="lead">SaaS SEO isn't about ranking for your product name. It's about owning the search terms your buyers use when they're looking for a solution like yours — and converting that traffic into qualified pipeline.</p>
+        <a href="contact.html" class="btn btn--primary btn--lg" style="margin-top:28px;">Start a conversation <span class="arrow"></span></a>
+      </div>
+      <div class="hero__stats reveal reveal--scale d2">
+        <div class="hero__stat d1">
+          <div class="hero__stat-value">180%</div>
+          <div class="hero__stat-label">Avg organic traffic growth in 12 months</div>
+        </div>
+        <div class="hero__stat d2">
+          <div class="hero__stat-value">30–45%</div>
+          <div class="hero__stat-label">Organic pipeline for mature programmes</div>
+        </div>
+        <div class="hero__stat d3">
+          <div class="hero__stat-value">3x</div>
+          <div class="hero__stat-label">SEO ROI vs paid over 24 months</div>
+        </div>
+        <div class="hero__stat d4">
+          <div class="hero__stat-value">47</div>
+          <div class="hero__stat-label">Avg technical issues per SaaS site</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE PILLARS -->
+<section class="pillars">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px;">
+      <h2 class="reveal reveal--left d1">The three pillars of SaaS SEO</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal reveal--scale d1">
+        <div class="pillar-icon">⚙️</div>
+        <h3>Technical SEO</h3>
+        <p>Crawlability, Core Web Vitals, schema, site architecture. We audit and fix the foundation that prevents Google from ranking you. Average 47 technical issues resolved per SaaS site.</p>
+      </div>
+      <div class="pillar-card reveal reveal--scale d2">
+        <div class="pillar-icon">📝</div>
+        <h3>High-Intent Content</h3>
+        <p>Bottom-of-funnel content targeting evaluation-stage buyers — "best [category] software", "[product] alternatives", "[pain point] solution". Content built to convert pipeline, not just traffic.</p>
+      </div>
+      <div class="pillar-card reveal reveal--scale d3">
+        <div class="pillar-icon">🔗</div>
+        <h3>Authority & Link Building</h3>
+        <p>Domain authority growth through digital PR, SaaS community engagement and strategic link acquisition from relevant publishers in your space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">The SEO roadmap</h2>
+    <div class="roadmap-timeline" style="margin-top:80px;">
+      <div class="roadmap-phase reveal reveal--scale d1">
+        <div class="roadmap-phase-num">1</div>
+        <h4>Month 1: Foundation</h4>
+        <p>Technical audit and fixes — crawl errors, page speed, site structure, schema. Fix the issues preventing Google from ranking you.</p>
+      </div>
+      <div class="roadmap-phase reveal reveal--scale d2">
+        <div class="roadmap-phase-num">2</div>
+        <h4>Months 2–3: Strategy</h4>
+        <p>Keyword strategy and content plan — the 50 highest-value pages to build. Research, competitive analysis, buyer journey mapping.</p>
+      </div>
+      <div class="roadmap-phase reveal reveal--scale d3">
+        <div class="roadmap-phase-num">3</div>
+        <h4>Months 3–6: Production</h4>
+        <p>Content production at velocity. 4–8 pieces per month, fully optimised for keywords, user intent and conversion.</p>
+      </div>
+      <div class="roadmap-phase reveal reveal--scale d4">
+        <div class="roadmap-phase-num">4</div>
+        <h4>Month 6+: Compounding</h4>
+        <p>Link acquisition, authority growth, ranking expansion. Organic pipeline builds and compounds as authority improves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="why-seo">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">Why SaaS SEO is different</h2>
+    <div class="why-seo-list" style="margin:80px auto 0;">
+      <div class="why-seo-item reveal reveal--scale d1">
+        <h4>Buyer journey is long and research-heavy</h4>
+        <p>Content must span every stage. Awareness → Consideration → Evaluation → Decision. Each stage needs different content and messaging.</p>
+      </div>
+      <div class="why-seo-item reveal reveal--scale d2">
+        <h4>Multiple ICPs search differently</h4>
+        <p>VP Sales, CMO, CTO all search for different solutions. Your SEO strategy needs separate content for each persona and their search intent.</p>
+      </div>
+      <div class="why-seo-item reveal reveal--scale d3">
+        <h4>PLG adds complexity</h4>
+        <p>Self-serve SaaS integrates help docs, trial pages and community into SEO. Your strategy has to cover product-led paths alongside traditional sales funnel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="checklist-section section--surface">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">What you get</h2>
+    <div class="checklist" style="margin:80px auto 0;max-width:900px;">
+      <div class="checklist-item reveal reveal--left d1">
+        <div class="checklist-check">✓</div>
+        <div>
+          <h4>Full technical SEO audit</h4>
+          <p>Crawlability, Core Web Vitals, schema, XML sitemaps, internal linking, site speed — all audited and remediated.</p>
+        </div>
+      </div>
+      <div class="checklist-item reveal reveal--left d2">
+        <div class="checklist-check">✓</div>
+        <div>
+          <h4>Monthly keyword tracking</h4>
+          <p>200+ target terms tracked monthly. Ranking progress, search volume, keyword opportunities and competitive positioning.</p>
+        </div>
+      </div>
+      <div class="checklist-item reveal reveal--left d3">
+        <div class="checklist-check">✓</div>
+        <div>
+          <h4>4–8 optimised content pieces per month</h4>
+          <p>High-intent content built for conversion. Keyword-optimised, buyer-journey focused, designed to move pipeline.</p>
+        </div>
+      </div>
+      <div class="checklist-item reveal reveal--left d4">
+        <div class="checklist-check">✓</div>
+        <div>
+          <h4>Schema &amp; structured data</h4>
+          <p>FAQPage, SoftwareApplication, Organization schema. Everything needed to help Google understand and rank your content.</p>
+        </div>
+      </div>
+      <div class="checklist-item reveal reveal--left d5">
+        <div class="checklist-check">✓</div>
+        <div>
+          <h4>Organic pipeline reporting</h4>
+          <p>Integrated with your CRM. See which keywords, pages and content drive actual pipeline and revenue.</p>
+        </div>
+      </div>
+      <div class="checklist-item reveal reveal--left d5">
+        <div class="checklist-check">✓</div>
+        <div>
+          <h4>Link building (Growth tiers)</h4>
+          <p>Digital PR, SaaS community engagement, strategic link acquisition from relevant industry publishers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON MISTAKES -->
+<section class="mistakes">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">Common SaaS SEO mistakes</h2>
+    <div class="mistakes-grid" style="margin-top:80px;">
+      <div class="mistake-card reveal reveal--scale d1">
+        <h4>Targeting only product name</h4>
+        <p>Nobody searches for you until they know you exist. You need category, alternative and pain-point keywords.</p>
+      </div>
+      <div class="mistake-card reveal reveal--scale d2">
+        <h4>Top-of-funnel content with no conversion</h4>
+        <p>Blog posts with no demo CTA. Educational content with no pipeline tie. SEO traffic that doesn't convert is wasted bandwidth.</p>
+      </div>
+      <div class="mistake-card reveal reveal--scale d3">
+        <h4>Ignoring technical issues</h4>
+        <p>Average SaaS site has 47 technical SEO problems. These prevent Google from ranking you. Fix the foundation first.</p>
+      </div>
+      <div class="mistake-card reveal reveal--scale d4">
+        <h4>Content without keyword strategy</h4>
+        <p>Publishing 50 blog posts without targeting keywords. That's zero search traffic. Every piece needs a keyword foundation.</p>
+      </div>
+      <div class="mistake-card reveal reveal--scale d5">
+        <h4>No organic pipeline measurement</h4>
+        <p>Treating SEO as a vanity metric. You have to track organic traffic to pipeline to prove SEO works.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE STATS -->
+<section class="perf-stats">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">Performance by the numbers</h2>
+    <div class="perf-stats-grid" style="margin-top:80px;">
+      <div class="reveal reveal--scale d1">
+        <div class="perf-stat-value" data-value="180">0</div>
+        <div class="perf-stat-label">% organic traffic growth (12 mo)</div>
+      </div>
+      <div class="reveal reveal--scale d2">
+        <div class="perf-stat-value" data-value="200">0</div>
+        <div class="perf-stat-label">Target keywords tracked monthly</div>
+      </div>
+      <div class="reveal reveal--scale d3">
+        <div class="perf-stat-value" data-value="6">0</div>
+        <div class="perf-stat-label">Content pieces per month</div>
+      </div>
+      <div class="reveal reveal--scale d4">
+        <div class="perf-stat-value" data-value="35">0%</div>
+        <div class="perf-stat-label">Organic pipeline (mature programmes)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO ENGAGEMENT MODEL -->
+<section style="padding:100px 0;background:var(--white);">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:40px;color:var(--navy);" class="reveal reveal--left d1">How we deliver SEO</h2>
+    <p style="text-align:center;font-size:16px;color:var(--text-2);max-width:700px;margin:0 auto 80px;line-height:1.8;" class="reveal reveal--left d2">Our engagement model is transparent, predictable and focused on long-term pipeline growth. Here's how we structure every SEO partnership.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:48px;margin-bottom:80px;">
+      <div class="reveal reveal--left d1">
+        <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px;">Month 1: Foundation & Discovery</h3>
+        <ul style="list-style:none;font-size:15px;color:var(--text-2);line-height:1.8;">
+          <li style="margin-bottom:12px;">✓ Complete technical SEO audit (47-point checklist)</li>
+          <li style="margin-bottom:12px;">✓ Competitive landscape analysis</li>
+          <li style="margin-bottom:12px;">✓ Buyer journey mapping by persona</li>
+          <li style="margin-bottom:12px;">✓ Keyword research and opportunity analysis</li>
+          <li style="margin-bottom:12px;">✓ Content gap analysis</li>
+          <li>✓ Technical remediation roadmap</li>
+        </ul>
+      </div>
+      <div class="reveal reveal--left d2">
+        <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px;">Months 2-3: Strategy & Planning</h3>
+        <ul style="list-style:none;font-size:15px;color:var(--text-2);line-height:1.8;">
+          <li style="margin-bottom:12px;">✓ 50-page content roadmap by keyword</li>
+          <li style="margin-bottom:12px;">✓ Topical cluster mapping</li>
+          <li style="margin-bottom:12px;">✓ Technical fixes implementation begins</li>
+          <li style="margin-bottom:12px;">✓ Keyword ranking baseline established</li>
+          <li style="margin-bottom:12px;">✓ Monthly tracking setup (200+ keywords)</li>
+          <li>✓ CRM integration for pipeline tracking</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:48px;">
+      <div class="reveal reveal--left d3">
+        <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px;">Months 3-6: Content Production</h3>
+        <ul style="list-style:none;font-size:15px;color:var(--text-2);line-height:1.8;">
+          <li style="margin-bottom:12px;">✓ 4-8 pieces of high-intent content per month</li>
+          <li style="margin-bottom:12px;">✓ On-page optimization (title, meta, headers)</li>
+          <li style="margin-bottom:12px;">✓ Schema markup implementation</li>
+          <li style="margin-bottom:12px;">✓ Internal linking strategy execution</li>
+          <li style="margin-bottom:12px;">✓ Technical fixes completion</li>
+          <li>✓ Monthly performance reviews and adjustments</li>
+        </ul>
+      </div>
+      <div class="reveal reveal--left d4">
+        <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px;">Month 6+: Scaling & Compounds</h3>
+        <ul style="list-style:none;font-size:15px;color:var(--text-2);line-height:1.8;">
+          <li style="margin-bottom:12px;">✓ Organic traffic growth acceleration</li>
+          <li style="margin-bottom:12px;">✓ First rank improvements visible</li>
+          <li style="margin-bottom:12px;">✓ Link building and authority growth</li>
+          <li style="margin-bottom:12px;">✓ Content expansion into new topics</li>
+          <li style="margin-bottom:12px;">✓ Organic pipeline measurement and optimization</li>
+          <li>✓ Compounding returns as authority grows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIP STRUCTURE -->
+<section style="padding:100px 0;background:var(--surface);">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:60px;color:var(--navy);" class="reveal reveal--left d1">Partnership structure</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+      <div class="reveal reveal--scale d1" style="background:white;border:1px solid var(--border);padding:32px;border-radius:var(--radius);">
+        <h4 style="color:var(--navy);margin-bottom:16px;font-size:16px;">Monthly Reporting</h4>
+        <p style="font-size:14px;color:var(--text-2);line-height:1.7;">Comprehensive reporting dashboard showing keyword rankings, organic traffic, engagement and pipeline contribution. Not vanity metrics — real business impact.</p>
+      </div>
+      <div class="reveal reveal--scale d2" style="background:white;border:1px solid var(--border);padding:32px;border-radius:var(--radius);">
+        <h4 style="color:var(--navy);margin-bottom:16px;font-size:16px;">Transparent Communication</h4>
+        <p style="font-size:14px;color:var(--text-2);line-height:1.7;">Monthly strategy calls, quarterly reviews, direct access to your senior specialist. You're never in the dark about progress, strategy or direction.</p>
+      </div>
+      <div class="reveal reveal--scale d3" style="background:white;border:1px solid var(--border);padding:32px;border-radius:var(--radius);">
+        <h4 style="color:var(--navy);margin-bottom:16px;font-size:16px;">Long-Term Orientation</h4>
+        <p style="font-size:14px;color:var(--text-2);line-height:1.7;">SEO takes time. We're built for 12+ month partnerships. We optimize for compounding growth, not quick wins. Your long-term success is our success.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+  <div class="container">
+    <div class="testimonial-card reveal reveal--scale d1">
+      <p class="testimonial-quote">"We started at 0 organic pipeline. 12 months later it was 38% of our pipeline. The technical audit found 60 issues we didn't know about. The content strategy got us ranking for actual buyer keywords, not just our product name. This is compounding value."</p>
+      <p class="testimonial-author">James Patterson</p>
+      <p class="testimonial-title">Content & Growth Lead, Series A SaaS</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEO CONTENT STRATEGY -->
+<section class="section--surface" style="padding:100px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px;">
+      <h2 class="reveal reveal--left d1">The SEO content strategy</h2>
+    </div>
+    <div style="max-width:900px;margin:0 auto;">
+      <div class="reveal reveal--left d1" style="margin-bottom:40px;">
+        <h3 style="color:var(--navy);margin-bottom:16px;">Keyword tiers by intent</h3>
+        <p style="font-size:15px;margin-bottom:16px;">Not all keywords are created equal. We segment your target keywords into tiers: Awareness (what is X?), Consideration (X vs Y), Evaluation (best X software, X alternatives), and Decision (X pricing, X reviews). Each tier gets different content and messaging.</p>
+      </div>
+      <div class="reveal reveal--left d2" style="margin-bottom:40px;">
+        <h3 style="color:var(--navy);margin-bottom:16px;">Product-market fit keywords</h3>
+        <p style="font-size:15px;margin-bottom:16px;">The keywords where your product has unfair advantage. These are the ones where your solution genuinely solves the problem better than alternatives. These become your content pillars — deep, authoritative content that locks in rankings.</p>
+      </div>
+      <div class="reveal reveal--left d3" style="margin-bottom:40px;">
+        <h3 style="color:var(--navy);margin-bottom:16px;">High-intent landing pages</h3>
+        <p style="font-size:15px;margin-bottom:16px;">Content isn't a blog. Every piece targets specific keywords, ranks for them, and converts them. Product comparison pages, alternative pages, category pages — all built to move buyers closer to pipeline.</p>
+      </div>
+      <div class="reveal reveal--left d4">
+        <h3 style="color:var(--navy);margin-bottom:16px;">Authority through topical clusters</h3>
+        <p style="font-size:15px;">Build topical authority around your core buyer problems. If "mobile CRM" is a key topic, create 10–15 pieces around it. Google rewards topical authority with better rankings and SERP real estate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL DEEP DIVE -->
+<section style="padding:100px 0;">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:80px;color:var(--navy);" class="reveal reveal--left d1">Technical SEO: The foundation</h2>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:48px;">
+      <div class="reveal reveal--left d1">
+        <div style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:var(--radius);margin-bottom:32px;">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Core Web Vitals</h4>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.7;">Largest Contentful Paint (LCP), First Input Delay (FID), Cumulative Layout Shift (CLS). These are ranking factors. Slow sites don't rank. We optimize for speed across all metrics.</p>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:var(--radius);">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Site architecture & crawlability</h4>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.7;">Clear hierarchy, logical internal linking, no crawl errors. Google needs to easily understand your site structure to index all content.</p>
+        </div>
+      </div>
+      <div class="reveal reveal--left d2">
+        <div style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:var(--radius);margin-bottom:32px;">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Schema & structured data</h4>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.7;">FAQPage, SoftwareApplication, Organization, FAQs. Proper schema helps Google understand your content and show rich snippets in search results.</p>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:var(--radius);">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Indexation & robots</h4>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.7;">XML sitemaps, robots.txt, meta robots. Make sure Google can find and index all your important pages without crawling waste or duplicates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIC PIPELINE CASE -->
+<section class="section--surface" style="padding:100px 0;">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:60px;color:var(--navy);" class="reveal reveal--left d1">Why organic pipeline compounds</h2>
+    <div style="max-width:800px;margin:0 auto;">
+      <p style="font-size:16px;color:var(--text-2);line-height:1.8;margin-bottom:28px;" class="reveal reveal--left d1">Organic traffic is compounding. Month 1, you start at zero. Month 3, you see small gains. Month 6, momentum builds. Month 12, your organic programme is 30–45% of pipeline. Month 24, it's your strongest channel.</p>
+      <p style="font-size:16px;color:var(--text-2);line-height:1.8;margin-bottom:28px;" class="reveal reveal--left d2">Paid media is linear. Spend £1 today, get £3 of pipeline today (if you're lucky). Stop spending, the pipeline stops. Organic is the opposite. Invest time and money in Month 1–6. See compounding returns in Month 6–24 as your domain authority grows and content compounds.</p>
+      <p style="font-size:16px;color:var(--text-2);line-height:1.8;" class="reveal reveal--left d3">This is why B2B SaaS companies that do SEO properly early win long-term. Your organic programme becomes your moat. It drives pipeline, it builds trust, it compounds over years.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED SERVICES -->
+<section class="related">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">Related services</h2>
+    <div class="related-grid" style="margin-top:80px;">
+      <div class="related-card reveal reveal--scale d1">
+        <h3>Paid Media for SaaS</h3>
+        <p>Complement organic with intent-driven paid campaigns. Google Ads, LinkedIn, review sites and retargeting built around pipeline.</p>
+        <a href="saas-paid-media.html">Explore paid media →</a>
+      </div>
+      <div class="related-card reveal reveal--scale d2">
+        <h3>CRO & Conversion</h3>
+        <p>Convert the traffic you earn. Landing pages, onboarding flows and funnels optimised to move buyers closer to closed deals.</p>
+        <a href="services.html#cro">Learn more →</a>
+      </div>
+      <div class="related-card reveal reveal--scale d3">
+        <h3>Fractional CMO for SaaS</h3>
+        <p>Scale strategy across all channels. Senior-level marketing leadership across paid, organic, content, automation and product.</p>
+        <a href="fractional-cmo-saas.html">Discover CMO service →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="reveal reveal--left d1">Ready to build organic pipeline that compounds?</h2>
+    <p class="reveal reveal--left d2">Let's audit your SEO foundation and build a content strategy that ranks and converts. 12 months in, you'll have a compounding asset that drives 30–45% of your pipeline.</p>
+    <a href="contact.html" class="btn btn--primary btn--lg reveal reveal--scale d3">Book a discovery call <span class="arrow"></span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-logo"><div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>The SaaS<span>Partnership</span></div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialist resource across paid media, SEO, CRO and automation.</p>
+        <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
+      </div>
+      <div class="footer__col"><h5>Services</h5><ul>
+        <li><a href="saas-paid-media.html">Paid Media</a></li>
+        <li><a href="saas-seo.html">SEO for SaaS</a></li>
+        <li><a href="services.html#cro">CRO &amp; Onsite</a></li>
+        <li><a href="services.html#automation">Automation</a></li>
+      </ul></div>
+      <div class="footer__col"><h5>Solutions</h5><ul>
+        <li><a href="private-equity-marketing.html">PE &amp; Investors</a></li>
+        <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+        <li><a href="fractional-cmo-saas.html">Fractional CMO</a></li>
+        <li><a href="post-acquisition-marketing.html">Post-M&amp;A</a></li>
+      </ul></div>
+      <div class="footer__col"><h5>Company</h5><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Discovery Call</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const nav=document.querySelector('.nav');
+  const scrollTrigger=100;
+  window.addEventListener('scroll',function(){
+    window.scrollY>scrollTrigger?nav.classList.add('nav--scrolled'):nav.classList.remove('nav--scrolled');
+  });
+  const reveals=document.querySelectorAll('.reveal');
+  const revealObserver=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.15});
+  reveals.forEach(function(el){revealObserver.observe(el);});
+  const statElements=document.querySelectorAll('[data-value]');
+  let statsAnimated=false;
+  const statsObserver=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting&&!statsAnimated){
+      statsAnimated=true;
+      statElements.forEach(function(el){
+        const value=parseInt(el.getAttribute('data-value'));
+        let current=0;
+        const increment=value/60;
+        const timer=setInterval(function(){
+          current+=increment;
+          if(current>=value){
+            el.textContent=value+(el.textContent.includes('%')?'%':'');
+            clearInterval(timer);
+          }else{
+            el.textContent=Math.floor(current);
+          }
+        },16);
+      });
+    }
+  },{threshold:.5});
+  const perfStatsSection=document.querySelector('.perf-stats');
+  if(perfStatsSection)statsObserver.observe(perfStatsSection);
+});
+</script>
+
+</body>
+</html>

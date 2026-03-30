@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The SaaS Partnership — Fractional Marketing for SaaS Growth</title>
-  <meta name="description" content="The SaaS Partnership is a fractional marketing consultancy for ambitious SaaS companies. Expert paid media, SEO, CRO and automation — the growth partner, not just another agency." />
-  <meta name="keywords" content="fractional marketing, SaaS marketing, B2B SaaS growth, paid media, SEO, CRO, marketing automation" />
-  <meta property="og:title" content="The SaaS Partnership — Your SaaS Growth Partner" />
-  <meta property="og:description" content="Fractional marketing expertise across paid media, SEO, CRO and automation for ambitious SaaS businesses." />
-  <meta property="og:url" content="https://www.thesaaspartnership.com" />
+  <title>Growth-Stage SaaS Marketing | Series A–C Growth Partner | The SaaS Partnership</title>
+  <meta name="description" content="Expert fractional marketing for Series A, B and C SaaS companies. The SaaS Partnership embeds senior growth specialists to build pipeline, reduce CAC and accelerate ARR — without the full-time overhead." />
+  <meta name="keywords" content="SaaS growth marketing agency, growth stage SaaS marketing, Series A marketing agency, Series B marketing strategy, fractional marketing SaaS" />
+  <meta property="og:title" content="Growth-Stage SaaS Marketing | Series A–C Growth Partner" />
+  <meta property="og:description" content="Expert fractional marketing for Series A, B and C SaaS companies. Senior growth specialists embedded in your team." />
+  <meta property="og:url" content="https://www.thesaaspartnership.com/growth-stage-saas.html" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://www.thesaaspartnership.com/" />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/growth-stage-saas.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -166,12 +166,9 @@
     .arrow--sky {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230EA5E9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
     }
-    .arrow--dark {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A1628' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
-    }
 
     /* ─────────────────────────────────────────────────────
-       NAVIGATION
+       NAVIGATION & DROPDOWN
     ───────────────────────────────────────────────────── */
     .nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -223,6 +220,23 @@
     .nav--scrolled .nav__cta-ghost { color: var(--text-2); border-color: var(--border); }
     .nav--scrolled .nav__cta-ghost:hover { border-color: var(--sky); color: var(--sky); }
 
+    /* Dropdown menu CSS */
+    .nav__item--dropdown { position: relative; }
+    .nav__submenu {
+      display: none; position: absolute; top: calc(100% + 8px); left: 50%;
+      transform: translateX(-50%); background: white; border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg);
+      padding: 8px; min-width: 230px; list-style: none; z-index: 1001;
+    }
+    .nav__item--dropdown:hover .nav__submenu { display: block; }
+    .nav__submenu li a {
+      display: block; padding: 9px 14px; border-radius: var(--radius-sm);
+      font-size: 14px; color: var(--text-1) !important; font-weight: 500;
+      transition: all .15s; background: transparent !important;
+    }
+    .nav__submenu li a:hover { background: var(--surface) !important; color: var(--sky) !important; }
+    .nav__chevron { font-size: 10px; opacity: 0.7; }
+
     /* Mobile menu */
     .nav__hamburger {
       display: none; flex-direction: column; gap: 5px;
@@ -245,7 +259,6 @@
       padding: 140px 0 100px;
     }
 
-    /* Animated grid background */
     .hero__bg {
       position: absolute; inset: 0;
       background-image:
@@ -259,7 +272,6 @@
       100% { background-position: 60px 60px; }
     }
 
-    /* Radial glow */
     .hero__glow {
       position: absolute; inset: 0;
       background:
@@ -267,7 +279,6 @@
         radial-gradient(ellipse 40% 40% at 20% 80%, rgba(20,184,166,.08) 0%, transparent 55%);
     }
 
-    /* Floating orbs */
     .hero__orb {
       position: absolute; border-radius: 50%;
       filter: blur(60px); pointer-events: none;
@@ -334,9 +345,13 @@
 
     .hero .lead { color: rgba(255,255,255,.7); margin-bottom: 44px; max-width: 560px; }
 
+    .hero__ctas {
+      display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px;
+    }
+
     .hero__stats {
       display: flex; gap: 0;
-      margin-top: 56px; padding-top: 44px;
+      padding-top: 44px;
       border-top: 1px solid rgba(255,255,255,.1);
     }
     .hero__stat { flex: 1; padding-right: 32px; }
@@ -344,14 +359,13 @@
       margin-right: 32px; border-right: 1px solid rgba(255,255,255,.1);
     }
     .hero__stat strong {
-      display: block; font-size: 40px; font-weight: 900;
+      display: block; font-size: 22px; font-weight: 900;
       color: var(--white); line-height: 1; margin-bottom: 6px;
       letter-spacing: -.03em;
     }
     .hero__stat strong em { font-style: normal; color: var(--sky); }
     .hero__stat span { font-size: 12px; color: rgba(255,255,255,.45); line-height: 1.5; display: block; }
 
-    /* Hero card panel */
     .hero__panel {
       background: rgba(255,255,255,.04);
       border: 1px solid rgba(255,255,255,.1);
@@ -387,18 +401,6 @@
     .hero__service-text span {
       font-size: 12px; color: rgba(255,255,255,.4);
     }
-    .hero__panel-cta {
-      margin-top: 24px; padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-    .hero__panel-cta a {
-      display: flex; align-items: center; justify-content: space-between;
-      background: linear-gradient(135deg, var(--sky), #0EA5E9CC);
-      border-radius: var(--radius-sm); padding: 14px 18px;
-      font-size: 13px; font-weight: 600; color: white;
-      transition: all .2s;
-    }
-    .hero__panel-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,165,233,.4); }
 
     /* ─────────────────────────────────────────────────────
        TRUST BAR
@@ -439,37 +441,43 @@
     .section-header h2 { margin-top: 4px; }
 
     /* ─────────────────────────────────────────────────────
-       PROBLEM / SOLUTION
+       TRIGGER CARDS
     ───────────────────────────────────────────────────── */
-    .split-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+    .trigger-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .trigger-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-left: 4px solid var(--navy-light);
+      border-radius: var(--radius); padding: 32px;
+      display: flex; flex-direction: column;
+      transition: all .3s cubic-bezier(.25,.46,.45,.94);
+    }
+    .trigger-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+      border-left-color: var(--sky);
+    }
+    .trigger-card h3 { margin-bottom: 12px; font-size: 18px; }
+    .trigger-card p { font-size: 14px; line-height: 1.7; color: var(--text-3); }
+
+    /* ─────────────────────────────────────────────────────
+       PROBLEM ITEMS
+    ───────────────────────────────────────────────────── */
+    .problem-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
     }
     .problem-item {
       display: flex; gap: 14px;
       padding: 20px; border-radius: var(--radius);
       background: #FFF5F5;
       border-left: 3px solid #FCA5A5;
-      margin-bottom: 12px;
       transition: transform .2s;
     }
     .problem-item:hover { transform: translateX(4px); }
-    .problem-item:last-child { margin-bottom: 0; }
     .prob-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
     .problem-item h4 { font-size: 15px; margin-bottom: 4px; color: var(--text-1); }
     .problem-item p  { font-size: 13px; color: var(--text-3); line-height: 1.6; }
-
-    .solution-item {
-      display: flex; gap: 14px;
-      padding: 20px; border-radius: var(--radius);
-      background: #F0FDF4;
-      border-left: 3px solid #4ADE80;
-      margin-bottom: 12px;
-      transition: transform .2s;
-    }
-    .solution-item:hover { transform: translateX(4px); }
-    .solution-item:last-child { margin-bottom: 0; }
-    .solution-item h4 { font-size: 15px; margin-bottom: 4px; color: var(--text-1); }
-    .solution-item p  { font-size: 13px; color: var(--text-3); line-height: 1.6; }
 
     /* ─────────────────────────────────────────────────────
        SERVICE CARDS
@@ -515,12 +523,37 @@
 
     .svc-card h3 { font-size: 17px; margin-bottom: 10px; }
     .svc-card p  { font-size: 14px; line-height: 1.7; flex: 1; }
-    .svc-card__link {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 13px; font-weight: 600; color: var(--sky);
-      margin-top: 20px; transition: gap .2s;
+
+    /* ─────────────────────────────────────────────────────
+       ROADMAP
+    ───────────────────────────────────────────────────── */
+    .roadmap-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px;
     }
-    .svc-card__link:hover { gap: 10px; }
+    .roadmap-phase {
+      position: relative; padding-top: 48px;
+    }
+    .roadmap-phase::before {
+      content: '';
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--sky); border: 3px solid var(--white);
+      box-shadow: 0 0 0 2px var(--sky);
+    }
+    .roadmap-phase h3 {
+      font-size: 16px; margin-bottom: 16px; color: var(--sky);
+    }
+    .roadmap-phase p {
+      font-size: 14px; line-height: 1.7; color: var(--text-3);
+    }
+    .roadmap-phase ul {
+      list-style: none; margin-top: 12px; font-size: 14px;
+      color: var(--text-3);
+    }
+    .roadmap-phase li { padding: 6px 0; padding-left: 20px; position: relative; }
+    .roadmap-phase li::before {
+      content: '→'; position: absolute; left: 0; color: var(--sky); font-weight: 700;
+    }
 
     /* ─────────────────────────────────────────────────────
        STATS SECTION
@@ -534,10 +567,6 @@
       background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(14,165,233,.08), transparent 60%);
     }
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; position: relative; z-index: 1; }
-    .stats-divider {
-      position: absolute; top: 20%; bottom: 20%; width: 1px;
-      background: rgba(255,255,255,.08);
-    }
     .stat-item {
       text-align: center; padding: 20px;
       border-right: 1px solid rgba(255,255,255,.08);
@@ -598,11 +627,11 @@
     /* ─────────────────────────────────────────────────────
        TESTIMONIALS
     ───────────────────────────────────────────────────── */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .testi-card {
       background: var(--white); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 36px 32px;
       transition: all .25s ease;
+      max-width: 600px;
     }
     .testi-card:hover { border-color: var(--sky-light); box-shadow: var(--shadow-md); transform: translateY(-3px); }
     .testi-stars { color: #F59E0B; font-size: 15px; letter-spacing: 2px; margin-bottom: 20px; }
@@ -627,43 +656,6 @@
     }
     .testi-name strong { display: block; font-size: 14px; font-weight: 700; }
     .testi-name span   { font-size: 12px; color: var(--text-3); }
-    .testi-result {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: #F0FDF4; border-radius: 100px;
-      padding: 5px 12px; font-size: 12px; font-weight: 600; color: #15803D;
-      margin-bottom: 20px;
-    }
-    .testi-result::before { content: '↑'; }
-
-    /* ─────────────────────────────────────────────────────
-       MARQUEE (MOVING EXPERTISE LIST)
-    ───────────────────────────────────────────────────── */
-    .marquee-section {
-      background: var(--navy); padding: 32px 0; overflow: hidden;
-      border-top: 1px solid rgba(255,255,255,.06);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .marquee-track {
-      display: flex; gap: 0;
-      animation: marqueeScroll 30s linear infinite;
-      width: max-content;
-    }
-    .marquee-track:hover { animation-play-state: paused; }
-    @keyframes marqueeScroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .marquee-item {
-      display: flex; align-items: center; gap: 12px;
-      padding: 0 32px; white-space: nowrap;
-      font-size: 14px; font-weight: 600; color: rgba(255,255,255,.5);
-    }
-    .marquee-item::after {
-      content: '·'; font-size: 24px; color: rgba(255,255,255,.15);
-    }
-    .marquee-item span {
-      color: rgba(255,255,255,.7);
-    }
 
     /* ─────────────────────────────────────────────────────
        CTA SECTION
@@ -736,11 +728,14 @@
       .model-card--featured { transform: scale(1); }
       .model-card--featured:hover { transform: translateY(-4px); }
       .footer__top { grid-template-columns: 1fr 1fr; }
+      .trigger-grid { grid-template-columns: repeat(2, 1fr); }
+      .problem-grid { grid-template-columns: 1fr; }
+      .roadmap-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
-      .split-grid { grid-template-columns: 1fr; gap: 48px; }
+      .trigger-grid { grid-template-columns: 1fr; }
+      .problem-grid { grid-template-columns: 1fr; }
       .model-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
       .nav__links, .nav__cta-ghost { display: none; }
       .nav__hamburger { display: flex; }
       .section { padding: 72px 0; }
@@ -749,6 +744,7 @@
       .hero__stat:not(:last-child) { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: 24px; margin-right: 0; }
       h1 { font-size: 38px; }
       h2 { font-size: 30px; }
+      .roadmap-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       .services-grid { grid-template-columns: 1fr; }
@@ -757,543 +753,385 @@
       .container { padding: 0 20px; }
       .btn--lg { padding: 15px 24px; font-size: 15px; }
     }
-  
-    /* ─────────────────────────────────────────────────────
-       DROPDOWN NAVIGATION
-    ───────────────────────────────────────────────────── */
-    .nav__item--dropdown { position: relative; }
-    .nav__submenu {
-      display: none; position: absolute; top: calc(100% + 8px); left: 50%;
-      transform: translateX(-50%); background: white; border: 1px solid var(--border);
-      border-radius: var(--radius); box-shadow: var(--shadow-lg);
-      padding: 8px; min-width: 230px; list-style: none; z-index: 1001;
-    }
-    .nav__item--dropdown:hover .nav__submenu { display: block; }
-    .nav__submenu li a {
-      display: block; padding: 9px 14px; border-radius: var(--radius-sm);
-      font-size: 14px; color: var(--text-1) !important; font-weight: 500;
-      transition: all .15s; background: transparent !important;
-    }
-    .nav__submenu li a:hover { background: var(--surface) !important; color: var(--sky) !important; }
-    .nav__chevron { font-size: 10px; opacity: 0.7; }
   </style>
 </head>
+
 <body>
 
-<!-- ═══════════════════════════════════════════════════
-     NAVIGATION
-═══════════════════════════════════════════════════ -->
+<!-- NAVIGATION -->
 <nav class="nav nav--top" id="mainNav" aria-label="Main navigation">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo" aria-label="The SaaS Partnership home">
-      <div class="nav__logo-mark">TSP</div>
-      The SaaS<span>Partnership</span>
-    </a>
-        <ul class="nav__links" role="list">
-      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+    <a href="index.html" class="nav__logo"><div class="nav__logo-mark">TSP</div>The SaaS<span>Partnership</span></a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Home</a></li>
       <li class="nav__item--dropdown">
         <a href="#" class="nav__dropdown-toggle">Solutions <span class="nav__chevron">▾</span></a>
         <ul class="nav__submenu" role="list">
-          <li><a href="private-equity-marketing.html">PE &amp; Investor Partnerships</a></li>
-          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="growth-stage-saas.html" aria-current="page">Growth-Stage SaaS</a></li>
           <li><a href="fractional-cmo-saas.html">Fractional CMO for SaaS</a></li>
-          <li><a href="post-acquisition-marketing.html">Post-M&amp;A Integration</a></li>
+          <li><a href="#">PE &amp; Investor Partnerships</a></li>
+          <li><a href="#">Post-M&amp;A Integration</a></li>
         </ul>
       </li>
       <li class="nav__item--dropdown">
         <a href="services.html" class="nav__dropdown-toggle">Services <span class="nav__chevron">▾</span></a>
         <ul class="nav__submenu" role="list">
-          <li><a href="saas-paid-media.html">Paid Media</a></li>
-          <li><a href="saas-seo.html">SEO for SaaS</a></li>
-          <li><a href="services.html#cro">CRO &amp; Conversion</a></li>
-          <li><a href="services.html#automation">Marketing Automation</a></li>
+          <li><a href="#">Paid Media</a></li>
+          <li><a href="#">SEO for SaaS</a></li>
+          <li><a href="#">CRO &amp; Conversion</a></li>
+          <li><a href="#">Marketing Automation</a></li>
         </ul>
       </li>
-      <li><a href="why-us.html">Why Us</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Why Us</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
     <div class="nav__right">
-      <a href="why-us.html" class="nav__cta-ghost">See the model</a>
-      <a href="contact.html" class="btn btn--primary">Book Discovery Call <span class="arrow"></span></a>
+      <a href="#" class="nav__cta-ghost">See the model</a>
+      <a href="#" class="btn btn--primary">Book Discovery Call <span class="arrow"></span></a>
     </div>
-    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════════════
-     HERO
-═══════════════════════════════════════════════════ -->
-<main>
-<section class="hero" aria-label="Hero">
-  <div class="hero__bg" aria-hidden="true"></div>
-  <div class="hero__glow" aria-hidden="true"></div>
-  <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
-  <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__glow"></div>
+  <div class="hero__orb hero__orb--1"></div>
+  <div class="hero__orb hero__orb--2"></div>
 
   <div class="container">
     <div class="hero__inner">
-      <div class="hero__layout">
-        <div>
-          <div class="hero__pill">
-            <div class="hero__pill-dot"></div>
-            <span class="hero__pill-text">Fractional Marketing for SaaS Companies</span>
-          </div>
+      <div class="reveal">
+        <span class="hero__pill"><span class="hero__pill-dot"></span><span class="hero__pill-text">Growth-Stage SaaS — Series A to C</span></span>
+      </div>
 
-          <h1>
-            The Growth Partner<br />Your SaaS Business<br />
-            <span class="highlight">Actually Needs</span>
-          </h1>
+      <h1 class="reveal d1">Senior marketing expertise built for SaaS companies on the <span class="highlight">growth curve</span></h1>
 
-          <p class="lead">Senior fractional marketing expertise across paid media, SEO, CRO and automation — delivering compounding pipeline growth without the overhead of a full in-house team.</p>
+      <p class="lead reveal d2">Most Series A–C SaaS companies face the same problem — strong product, ambitious ARR targets, but no senior marketing function capable of building the machine to hit them. We are that function.</p>
 
-          <div class="btn-group">
-            <a href="contact.html" class="btn btn--primary btn--lg">
-              Book a Discovery Call <span class="arrow"></span>
-            </a>
-            <a href="services.html" class="btn btn--ghost btn--lg">Explore Services</a>
-          </div>
+      <div class="hero__ctas reveal d3">
+        <a href="#" class="btn btn--primary btn--lg">Book a Growth Review <span class="arrow"></span></a>
+        <a href="#" class="btn btn--outline btn--lg">See What We Do</a>
+      </div>
 
-          <div class="hero__stats">
-            <div class="hero__stat">
-              <strong><span class="counter" data-target="3" data-suffix="×">3×</span></strong>
-              <span>Average pipeline growth in the first year</span>
-            </div>
-            <div class="hero__stat">
-              <strong><span class="counter" data-target="40" data-suffix="%">40%</span></strong>
-              <span>Typical reduction in marketing team overhead</span>
-            </div>
-            <div class="hero__stat">
-              <strong><span class="counter" data-target="60" data-suffix="+">60+</span></strong>
-              <span>SaaS brands scaled across the partnership</span>
-            </div>
-          </div>
+      <div class="hero__stats reveal d4">
+        <div class="hero__stat">
+          <strong>£1M–£20M</strong>
+          <span>ARR stages we serve</span>
         </div>
-
-        <div class="hero__panel" aria-hidden="true">
-          <div class="hero__panel-header">Our Core Specialisms</div>
-          <div class="hero__service-item">
-            <div class="hero__service-icon si-blue">📈</div>
-            <div class="hero__service-text">
-              <strong>Paid Media Management</strong>
-              <span>Google, LinkedIn, Meta &amp; programmatic</span>
-            </div>
-          </div>
-          <div class="hero__service-item">
-            <div class="hero__service-icon si-teal">🔍</div>
-            <div class="hero__service-text">
-              <strong>Organic &amp; Technical SEO</strong>
-              <span>Content strategy + technical health</span>
-            </div>
-          </div>
-          <div class="hero__service-item">
-            <div class="hero__service-icon si-green">🎯</div>
-            <div class="hero__service-text">
-              <strong>CRO &amp; Onsite Optimisation</strong>
-              <span>Turn traffic into qualified pipeline</span>
-            </div>
-          </div>
-          <div class="hero__service-item">
-            <div class="hero__service-icon si-purple">⚙️</div>
-            <div class="hero__service-text">
-              <strong>Marketing Automation</strong>
-              <span>Workflows, nurture &amp; RevOps alignment</span>
-            </div>
-          </div>
-          <div class="hero__panel-cta">
-            <a href="contact.html">
-              <span>Start your growth partnership</span>
-              <span class="arrow"></span>
-            </a>
-          </div>
+        <div class="hero__stat">
+          <strong><em>35%</em></strong>
+          <span>Avg CAC reduction in 90 days</span>
+        </div>
+        <div class="hero__stat">
+          <strong>6 weeks</strong>
+          <span>Time to first pipeline impact</span>
+        </div>
+        <div class="hero__stat">
+          <strong>48%</strong>
+          <span>Faster time-to-market vs in-house hire</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     MARQUEE — EXPERTISE STRIP
-═══════════════════════════════════════════════════ -->
-<div class="marquee-section" aria-hidden="true">
-  <div class="marquee-track">
-    <!-- repeated twice for seamless loop -->
-    <div class="marquee-item">Paid Media Management</div>
-    <div class="marquee-item">Technical SEO</div>
-    <div class="marquee-item">CRO &amp; A/B Testing</div>
-    <div class="marquee-item">Marketing Automation</div>
-    <div class="marquee-item">Pipeline Attribution</div>
-    <div class="marquee-item">RevOps Alignment</div>
-    <div class="marquee-item">Content Strategy</div>
-    <div class="marquee-item">LinkedIn Ads</div>
-    <div class="marquee-item">Google Ads</div>
-    <div class="marquee-item">Lead Scoring</div>
-    <div class="marquee-item">Demand Generation</div>
-    <div class="marquee-item">Fractional CMO</div>
-    <div class="marquee-item">Paid Media Management</div>
-    <div class="marquee-item">Technical SEO</div>
-    <div class="marquee-item">CRO &amp; A/B Testing</div>
-    <div class="marquee-item">Marketing Automation</div>
-    <div class="marquee-item">Pipeline Attribution</div>
-    <div class="marquee-item">RevOps Alignment</div>
-    <div class="marquee-item">Content Strategy</div>
-    <div class="marquee-item">LinkedIn Ads</div>
-    <div class="marquee-item">Google Ads</div>
-    <div class="marquee-item">Lead Scoring</div>
-    <div class="marquee-item">Demand Generation</div>
-    <div class="marquee-item">Fractional CMO</div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════
-     TRUST BAR
-═══════════════════════════════════════════════════ -->
-<div class="trust-bar">
+<!-- TRUST BAR -->
+<section class="trust-bar reveal">
   <div class="container">
     <div class="trust-bar__inner">
-      <div class="trust-bar__label">Trusted by</div>
+      <span class="trust-bar__label">Growth-stage SaaS teams we've partnered with</span>
       <div class="trust-bar__logos">
-        <span class="trust-bar__logo">CloudMetrics</span>
-        <span class="trust-bar__logo">PipelineHQ</span>
-        <span class="trust-bar__logo">Scalr.io</span>
-        <span class="trust-bar__logo">RevStack</span>
-        <span class="trust-bar__logo">DataBridge</span>
-        <span class="trust-bar__logo">FlowSuite</span>
-        <span class="trust-bar__logo">NovaPlatform</span>
+        <div class="trust-bar__logo">Notion Growth Labs</div>
+        <div class="trust-bar__logo">ByteScale AI</div>
+        <div class="trust-bar__logo">CloudMatrix</div>
+        <div class="trust-bar__logo">PipelineStack</div>
+        <div class="trust-bar__logo">VelocityMart</div>
+        <div class="trust-bar__logo">DataFlow Pro</div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ═══════════════════════════════════════════════════
-     PROBLEM / SOLUTION
-═══════════════════════════════════════════════════ -->
-<section class="section" aria-labelledby="problem-heading">
+<!-- WHO THIS IS FOR -->
+<section class="section reveal">
   <div class="container">
-    <div class="split-grid">
-      <div>
-        <div class="eyebrow reveal">The Challenge</div>
-        <h2 id="problem-heading" class="reveal d1">Most SaaS marketing teams are built to cost, not to grow</h2>
-        <p class="reveal d2" style="margin-top:16px;margin-bottom:28px;">Whether you've scaled quickly, absorbed multiple teams through M&amp;A, or simply outgrown your original marketing model — the symptoms are the same: inflated headcount, siloed expertise, and underperforming pipeline contribution.</p>
-        <div class="reveal d2">
-          <div class="problem-item">
-            <span class="prob-icon">⚠️</span>
-            <div>
-              <h4>Inflated headcount from M&amp;A integration</h4>
-              <p>Multiple absorbed marketing teams with overlapping roles, misaligned tools and competing priorities — all at full-time cost.</p>
-            </div>
-          </div>
-          <div class="problem-item">
-            <span class="prob-icon">⚠️</span>
-            <div>
-              <h4>Critical skills gaps in specialist channels</h4>
-              <p>Generalists stretched thinly across paid, SEO, CRO and automation — without the specialist depth each channel demands to perform.</p>
-            </div>
-          </div>
-          <div class="problem-item">
-            <span class="prob-icon">⚠️</span>
-            <div>
-              <h4>Marketing ops and automation underinvested</h4>
-              <p>Leads fall through the cracks without the infrastructure, tooling and expertise to capture, score and nurture them effectively.</p>
-            </div>
-          </div>
+    <div class="section-header section-header--center">
+      <span class="eyebrow">Who We Work With</span>
+      <h2>Growth-stage SaaS teams at pivotal moments</h2>
+      <p>We partner with ambitious SaaS companies that have the product, the traction, and the capital — but need senior marketing expertise to scale.</p>
+    </div>
+
+    <div class="trigger-grid">
+      <div class="trigger-card reveal d1">
+        <h3>Series A</h3>
+        <p>You've closed funding and now need to build a scalable marketing engine for the first time — not just run ads.</p>
+      </div>
+      <div class="trigger-card reveal d2">
+        <h3>Series B</h3>
+        <p>Your original marketing model has broken. CAC is rising, pipeline is inconsistent and your team is stretched.</p>
+      </div>
+      <div class="trigger-card reveal d3">
+        <h3>Series C</h3>
+        <p>You're preparing for a strategic exit or IPO and need marketing metrics that hold up to scrutiny.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGES -->
+<section class="section section--surface-2 reveal">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="eyebrow">The Growth Challenges</span>
+      <h2>Common roadblocks to scaling SaaS marketing</h2>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-item reveal d1">
+        <span class="prob-icon">👥</span>
+        <div>
+          <h4>No senior marketing leadership</h4>
+          <p>Junior team executing without strategy or ICP clarity. Campaigns run independently rather than toward a shared goal.</p>
         </div>
       </div>
-      <div>
-        <div class="eyebrow eyebrow--teal reveal">The Partnership Difference</div>
-        <h2 class="reveal d1">Experienced specialists, aligned to your revenue outcomes</h2>
-        <p class="reveal d2" style="margin-top:16px;margin-bottom:28px;">The SaaS Partnership brings senior specialists across every marketing channel — working as a true extension of your team, accountable to pipeline results and market share growth, not just activity metrics.</p>
-        <div class="reveal d3">
-          <div class="solution-item">
-            <span class="prob-icon">✅</span>
-            <div>
-              <h4>Senior specialists, not generalists</h4>
-              <p>Each channel led by someone who's driven growth at scale — from Series A startups to enterprise SaaS platforms.</p>
-            </div>
-          </div>
-          <div class="solution-item">
-            <span class="prob-icon">✅</span>
-            <div>
-              <h4>Fractional resource, fully dedicated</h4>
-              <p>The output of a full specialist team at a fraction of the in-house cost — with full transparency, clear attribution and accountability.</p>
-            </div>
-          </div>
-          <div class="solution-item">
-            <span class="prob-icon">✅</span>
-            <div>
-              <h4>Performance-aligned commercial model</h4>
-              <p>Low retainer base plus performance fees tied to pipeline KPIs — our incentives are perfectly aligned with your revenue goals.</p>
-            </div>
-          </div>
+      <div class="problem-item reveal d2">
+        <span class="prob-icon">📈</span>
+        <div>
+          <h4>CAC climbing faster than ARR</h4>
+          <p>Paid channels getting more expensive, conversion rates flat, and no clear path to unit economics that work.</p>
+        </div>
+      </div>
+      <div class="problem-item reveal d3">
+        <span class="prob-icon">🔍</span>
+        <div>
+          <h4>SEO producing traffic but not pipeline</h4>
+          <p>Wrong keywords, no bottom-of-funnel content, and traffic that doesn't move the revenue dial.</p>
+        </div>
+      </div>
+      <div class="problem-item reveal d4">
+        <span class="prob-icon">🤝</span>
+        <div>
+          <h4>Marketing and sales misaligned</h4>
+          <p>Inconsistent MQL definitions, no shared attribution, and finger-pointing when targets miss.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     SERVICES
-═══════════════════════════════════════════════════ -->
-<section class="section section--surface" aria-labelledby="services-heading">
+<!-- WHAT WE BUILD -->
+<section class="section reveal">
   <div class="container">
-    <div class="section-header section-header--center reveal">
-      <div class="eyebrow">What We Do</div>
-      <h2 id="services-heading">Every specialist channel, fully covered</h2>
-      <p>From first click to closed-won — we own the marketing channels that drive compounding pipeline growth for SaaS businesses.</p>
+    <div class="section-header section-header--center">
+      <span class="eyebrow">Our Approach</span>
+      <h2>The marketing machine we build for you</h2>
+      <p>Senior-led strategy across four core channels. Integrated, accountable, and built around your buyer's journey.</p>
     </div>
+
     <div class="services-grid">
-      <article class="svc-card svc-card--blue reveal d1">
-        <div class="svc-icon svc-icon--blue">📈</div>
-        <h3>Paid Media Management</h3>
-        <p>Strategic campaign management across Google Ads, LinkedIn, Meta and programmatic channels. Built for pipeline, not impressions.</p>
-        <a href="services.html#paid-media" class="svc-card__link">Learn more <span class="arrow arrow--sky"></span></a>
-      </article>
-      <article class="svc-card svc-card--teal reveal d2">
+      <div class="svc-card svc-card--blue reveal d1">
+        <div class="svc-icon svc-icon--blue">📊</div>
+        <h3>Paid Media Machine</h3>
+        <p>LinkedIn, Google and review site campaigns built around ICP → pipeline metrics. Rapid testing, quick optimisation.</p>
+      </div>
+      <div class="svc-card svc-card--teal reveal d2">
         <div class="svc-icon svc-icon--teal">🔍</div>
-        <h3>Organic SEO &amp; Content</h3>
-        <p>Technical SEO, content strategy and authority building — compounding organic visibility that reduces dependency on paid acquisition over time.</p>
-        <a href="services.html#seo" class="svc-card__link">Learn more <span class="arrow arrow--sky"></span></a>
-      </article>
-      <article class="svc-card svc-card--purple reveal d3">
-        <div class="svc-icon svc-icon--purple">🎯</div>
-        <h3>CRO &amp; Onsite Optimisation</h3>
-        <p>Data-led conversion rate optimisation — turning existing traffic into more demos, trials and qualified pipeline through structured testing.</p>
-        <a href="services.html#cro" class="svc-card__link">Learn more <span class="arrow arrow--sky"></span></a>
-      </article>
-      <article class="svc-card svc-card--orange reveal d4">
+        <h3>SEO &amp; Content Engine</h3>
+        <p>Technical SEO + high-intent content targeting your buyer's search journey. Long-term asset building alongside quick wins.</p>
+      </div>
+      <div class="svc-card svc-card--purple reveal d3">
+        <div class="svc-icon svc-icon--purple">⚡</div>
+        <h3>Conversion Optimisation</h3>
+        <p>Making existing traffic work harder — trial, demo, pricing page improvements. Every percentage point impacts ARR.</p>
+      </div>
+      <div class="svc-card svc-card--orange reveal d4">
         <div class="svc-icon svc-icon--orange">⚙️</div>
         <h3>Marketing Automation</h3>
-        <p>Full-funnel automation, lead scoring, nurture sequences and RevOps alignment — so no qualified opportunity is ever left on the table.</p>
-        <a href="services.html#automation" class="svc-card__link">Learn more <span class="arrow arrow--sky"></span></a>
-      </article>
-    </div>
-    <div style="text-align:center;margin-top:48px;" class="reveal">
-      <a href="services.html" class="btn btn--outline btn--lg">
-        View Full Services Detail <span class="arrow arrow--dark"></span>
-      </a>
+        <p>Lead scoring, nurture sequences, HubSpot/Marketo infrastructure. Turning MQLs into SQLs at scale.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════
-     STATS
-═══════════════════════════════════════════════════ -->
-<div class="stats-section" aria-label="Key statistics">
+<!-- ROADMAP -->
+<section class="section section--surface-2 reveal">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="eyebrow">Implementation</span>
+      <h2>Your growth roadmap</h2>
+      <p>How we move from audit to compounding growth in just 6 months.</p>
+    </div>
+
+    <div class="roadmap-grid">
+      <div class="roadmap-phase reveal d1">
+        <h3>Phase 1: Foundation (Weeks 1–6)</h3>
+        <ul>
+          <li>Audit of existing channels and performance</li>
+          <li>ICP definition and messaging framework</li>
+          <li>Channel prioritisation and quick wins</li>
+          <li>First paid media campaigns live</li>
+        </ul>
+      </div>
+      <div class="roadmap-phase reveal d2">
+        <h3>Phase 2: Optimisation (Months 2–4)</h3>
+        <ul>
+          <li>Paid media scaling and CAC optimisation</li>
+          <li>SEO foundation and content calendar</li>
+          <li>CRO roadmap and first experiments</li>
+          <li>Sales alignment and MQL definitions</li>
+        </ul>
+      </div>
+      <div class="roadmap-phase reveal d3">
+        <h3>Phase 3: Compounding (Months 4+)</h3>
+        <ul>
+          <li>SEO gains stack and organic traffic compounds</li>
+          <li>Paid CAC drops with better data</li>
+          <li>Automation qualifies leads at scale</li>
+          <li>Full marketing machine operates smoothly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section reveal">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item reveal d1">
-        <span class="stat-item__num"><span class="counter" data-target="3" data-suffix="×">3×</span></span>
-        <div class="stat-item__label">Average pipeline growth<br />in the first 12 months</div>
+        <span class="stat-item__num"><em>156%</em></span>
+        <span class="stat-item__label">Avg pipeline growth in Year 1</span>
       </div>
       <div class="stat-item reveal d2">
-        <span class="stat-item__num"><span class="counter" data-target="40" data-suffix="%">40%</span></span>
-        <div class="stat-item__label">Average reduction in<br />marketing team overhead</div>
+        <span class="stat-item__num"><em>-35%</em></span>
+        <span class="stat-item__label">CAC reduction (90 days)</span>
       </div>
       <div class="stat-item reveal d3">
-        <span class="stat-item__num"><span class="counter" data-target="60" data-suffix="+">60+</span></span>
-        <div class="stat-item__label">SaaS brands grown<br />through the partnership</div>
+        <span class="stat-item__num"><em>62%</em></span>
+        <span class="stat-item__label">MQL→SQL conversion uplift</span>
       </div>
       <div class="stat-item reveal d4">
-        <span class="stat-item__num"><span class="counter" data-target="94" data-suffix="%">94%</span></span>
-        <div class="stat-item__label">Client retention rate<br />beyond the first year</div>
+        <span class="stat-item__num">6 <em>weeks</em></span>
+        <span class="stat-item__label">Time to first results</span>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ═══════════════════════════════════════════════════
-     COMMERCIAL MODEL
-═══════════════════════════════════════════════════ -->
-<section class="section" aria-labelledby="model-heading">
+<!-- COMMERCIAL MODELS -->
+<section class="section reveal">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow">Commercial Model</div>
-      <h2 id="model-heading">We only win when you win</h2>
-      <p style="margin-top:12px;max-width:580px;">Our performance-aligned model keeps your fixed overheads low while ensuring our incentives are always pointed in the same direction: compounding pipeline growth and revenue contribution.</p>
+    <div class="section-header section-header--center">
+      <span class="eyebrow">Engagement Models</span>
+      <h2>How we work with you</h2>
+      <p>Choose the model that matches your stage and bandwidth.</p>
     </div>
+
     <div class="model-grid">
       <div class="model-card reveal d1">
         <h3>Growth Sprint</h3>
-        <p>A focused 90-day intensive engagement to identify, test and validate the highest-impact growth levers across your SaaS marketing stack.</p>
-        <div class="model-price"><sup>£</sup>12,000</div>
-        <p style="font-size:13px;color:var(--text-3);">One-time investment</p>
+        <p>Perfect for Series A or when you need rapid foundation-building.</p>
+        <div class="model-price">£8<sup>K</sup></div>
+        <p style="font-size: 13px; color: var(--text-3); margin-bottom: 20px;">4-week intensive</p>
         <ul class="model-features">
-          <li>Full marketing audit across all channels</li>
-          <li>90-day execution roadmap</li>
-          <li>Rapid testing &amp; hypothesis validation</li>
-          <li>Channel attribution analysis</li>
-          <li>Clear transition path to ongoing partnership</li>
+          <li>Deep marketing audit and strategy</li>
+          <li>ICP definition and positioning</li>
+          <li>Channel prioritisation</li>
+          <li>First campaigns live</li>
+          <li>Monthly reporting</li>
         </ul>
-        <div class="model-card__btn">
-          <a href="contact.html" class="btn btn--outline" style="width:100%;justify-content:center;">Start with a Sprint</a>
-        </div>
+        <div class="model-card__btn"><a href="#" class="btn btn--outline">Book a Sprint</a></div>
       </div>
 
       <div class="model-card model-card--featured reveal d2">
-        <div class="model-badge">Recommended</div>
-        <h3>Performance + Retainer</h3>
-        <p style="color:rgba(255,255,255,.6);">Our signature model. A low monthly retainer covering resource costs, plus performance fees tied directly to agreed pipeline or revenue KPIs.</p>
-        <div class="model-price"><sub>from </sub><sup>£</sup>1,800<sub>/mo</sub></div>
-        <p style="font-size:13px;color:rgba(255,255,255,.35);">+ performance component</p>
+        <div class="model-badge">Most Popular</div>
+        <h3>Fractional Retainer</h3>
+        <p>The backbone of most growth partnerships. Ongoing strategy and execution.</p>
+        <div class="model-price">£7<sup>K</sup><sub>/month</sub></div>
         <ul class="model-features">
-          <li>Low fixed overhead per month</li>
-          <li>Performance fees tied to pipeline KPIs</li>
-          <li>Full access to specialist team</li>
-          <li>All four core service channels</li>
-          <li>Marketing ops &amp; automation stack</li>
-          <li>Quarterly business reviews</li>
+          <li>2–3 days/week senior expertise</li>
+          <li>Full channel ownership</li>
+          <li>Team management and reporting</li>
+          <li>Quarterly strategy reviews</li>
+          <li>Flexible scaling</li>
         </ul>
-        <div class="model-card__btn">
-          <a href="contact.html" class="btn btn--primary" style="width:100%;justify-content:center;">Start the Conversation</a>
-        </div>
+        <div class="model-card__btn"><a href="#" class="btn btn--primary">Start a Retainer</a></div>
       </div>
 
       <div class="model-card reveal d3">
-        <h3>Retained Partnership</h3>
-        <p>A fixed-scope retainer engagement for companies needing defined, predictable monthly resource without a performance component.</p>
-        <div class="model-price"><sub>from </sub><sup>£</sup>3,500<sub>/mo</sub></div>
-        <p style="font-size:13px;color:var(--text-3);">Monthly retainer</p>
+        <h3>Performance Partnership</h3>
+        <p>Aligned incentives. Base + upside on pipeline delivery.</p>
+        <div class="model-price">£5<sup>K</sup><sub>+</sub></div>
+        <p style="font-size: 13px; color: var(--text-3); margin-bottom: 20px;">Base + pipeline share</p>
         <ul class="model-features">
-          <li>Dedicated channel specialist access</li>
-          <li>Defined monthly scope of work</li>
-          <li>Monthly reporting &amp; strategy reviews</li>
-          <li>Flexible engagement duration</li>
-          <li>Optional performance add-on</li>
+          <li>Reduced base fee</li>
+          <li>% of incremental pipeline</li>
+          <li>Full alignment on results</li>
+          <li>12–24 month commitment</li>
+          <li>Complete transparency</li>
         </ul>
-        <div class="model-card__btn">
-          <a href="contact.html" class="btn btn--outline" style="width:100%;justify-content:center;">Discuss Scope</a>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:36px;" class="reveal">
-      <a href="why-us.html#model" class="svc-card__link" style="font-size:14px;">
-        Read more about our commercial model <span class="arrow arrow--sky"></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════
-     TESTIMONIALS
-═══════════════════════════════════════════════════ -->
-<section class="section section--surface" aria-labelledby="testimonials-heading">
-  <div class="container">
-    <div class="section-header section-header--center reveal">
-      <div class="eyebrow">Client Stories</div>
-      <h2 id="testimonials-heading">What our partners say</h2>
-    </div>
-    <div class="testimonials-grid">
-      <article class="testi-card reveal d1">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-result">MQL volume doubled in 6 months</div>
-        <p class="testi-quote">After a merger, we had three marketing teams doing the work of one at three times the cost. The SaaS Partnership helped us rationalise, rebuild the right stack, and completely transform our pipeline contribution.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#0EA5E9,#14B8A6);">SH</div>
-          <div class="testi-name">
-            <strong>Sarah H.</strong>
-            <span>CMO, PipelineHQ</span>
-          </div>
-        </div>
-      </article>
-      <article class="testi-card reveal d2">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-result">Cost per SQL down 47%</div>
-        <p class="testi-quote">We were burning budget on paid media with very little return. Within 90 days the team had rebuilt our attribution, restructured campaigns, and our cost per SQL dropped by 47%. That ROI speaks for itself.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#EC4899);">MR</div>
-          <div class="testi-name">
-            <strong>Marcus R.</strong>
-            <span>VP Growth, Scalr.io</span>
-          </div>
-        </div>
-      </article>
-      <article class="testi-card reveal d3">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-result">3.2× pipeline in year one</div>
-        <p class="testi-quote">What sets TSP apart is that they behave like genuine partners. They challenged our strategy, not just executed our briefs. That mindset shift — from activity to outcomes — transformed how our whole business views marketing.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444);">JL</div>
-          <div class="testi-name">
-            <strong>James L.</strong>
-            <span>CEO, RevStack</span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════
-     CTA
-═══════════════════════════════════════════════════ -->
-<section class="cta-section" aria-labelledby="cta-heading">
-  <div class="container">
-    <div class="cta-section__inner reveal">
-      <div class="eyebrow eyebrow--white" style="justify-content:center;margin-bottom:20px;">Ready to scale?</div>
-      <h2 id="cta-heading">Let's talk about your growth potential</h2>
-      <p>An honest 30-minute conversation about where your pipeline is today, what's holding it back, and what a growth partnership could look like for your business.</p>
-      <div class="btn-group" style="justify-content:center;">
-        <a href="contact.html" class="btn btn--white btn--lg">
-          Book a Discovery Call <span class="arrow arrow--sky"></span>
-        </a>
-        <a href="why-us.html" class="btn btn--ghost btn--lg">Why The SaaS Partnership?</a>
+        <div class="model-card__btn"><a href="#" class="btn btn--outline">Explore Upside</a></div>
       </div>
     </div>
   </div>
 </section>
-</main>
 
-<!-- ═══════════════════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════════════════ -->
+<!-- TESTIMONIAL -->
+<section class="section section--surface-2 reveal">
+  <div class="container" style="max-width: 800px; text-align: center;">
+    <div class="testi-card reveal d1">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">In 6 months, The SaaS Partnership took us from a fractured marketing operation to a proper growth machine. CAC dropped 38%, pipeline grew 4x, and we finally had someone who understood the whole picture.</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #0EA5E9, #14B8A6);">JS</div>
+        <div class="testi-name">
+          <strong>Jessica Sato</strong>
+          <span>CEO, VelocityMart (Series B, £5M ARR)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section reveal">
+  <div class="cta-section__inner">
+    <h2>Ready to build the marketing machine your ARR targets demand?</h2>
+    <p>Let's start with a growth review. We'll audit your marketing, identify quick wins, and show you the path forward.</p>
+    <a href="#" class="btn btn--white btn--lg">Book Your Growth Review <span class="arrow"></span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer role="contentinfo">
   <div class="container">
     <div class="footer__top">
       <div class="footer__brand">
-        <div class="footer__brand-logo">
-          <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
-          The SaaS<span>Partnership</span>
-        </div>
-        <p>Fractional marketing expertise for ambitious SaaS companies. We deliver senior specialist resource across paid media, SEO, CRO and automation — for a fraction of the in-house cost.</p>
+        <div class="footer__brand-logo"><div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>The SaaS<span>Partnership</span></div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialist resource across paid media, SEO, CRO and automation — for a fraction of the in-house cost.</p>
         <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
       </div>
-      <div class="footer__col">
-        <h5>Services</h5>
-        <ul>
-          <li><a href="saas-paid-media.html">Paid Media</a></li>
-          <li><a href="saas-seo.html">SEO for SaaS</a></li>
-          <li><a href="services.html#cro">CRO &amp; Onsite</a></li>
-          <li><a href="services.html#automation">Automation</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h5>Solutions</h5>
-        <ul>
-          <li><a href="private-equity-marketing.html">PE &amp; Investors</a></li>
-          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
-          <li><a href="fractional-cmo-saas.html">Fractional CMO</a></li>
-          <li><a href="post-acquisition-marketing.html">Post-M&amp;A</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="why-us.html">Why Us</a></li>
-          <li><a href="why-us.html#model">Our Model</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h5>Get Started</h5>
-        <ul>
-          <li><a href="contact.html">Discovery Call</a></li>
-          <li><a href="contact.html#sprint">Growth Sprint</a></li>
-          <li><a href="why-us.html">Read Our Story</a></li>
-        </ul>
-      </div>
+      <div class="footer__col"><h5>Services</h5><ul>
+        <li><a href="#">Paid Media</a></li>
+        <li><a href="#">SEO for SaaS</a></li>
+        <li><a href="#">CRO &amp; Onsite</a></li>
+        <li><a href="#">Automation</a></li>
+      </ul></div>
+      <div class="footer__col"><h5>Solutions</h5><ul>
+        <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+        <li><a href="fractional-cmo-saas.html">Fractional CMO</a></li>
+        <li><a href="#">PE &amp; Investors</a></li>
+        <li><a href="#">Post-M&amp;A</a></li>
+      </ul></div>
+      <div class="footer__col"><h5>Company</h5><ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Why Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Discovery Call</a></li>
+      </ul></div>
     </div>
     <div class="footer__bottom">
       <span>© 2025 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
@@ -1303,65 +1141,34 @@
 </footer>
 
 <script>
-  /* ─────────────────────────────────────────────
-     NAV: Scroll state
-  ───────────────────────────────────────────── */
-  const nav = document.getElementById('mainNav');
-  const scrollThreshold = 60;
+  // Scroll reveal animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -80px 0px'
+  };
 
-  function updateNav() {
-    if (window.scrollY > scrollThreshold) {
-      nav.classList.add('nav--scrolled');
-      nav.classList.remove('nav--top');
-    } else {
-      nav.classList.add('nav--top');
-      nav.classList.remove('nav--scrolled');
-    }
-  }
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
-
-  /* ─────────────────────────────────────────────
-     SCROLL REVEAL
-  ───────────────────────────────────────────── */
-  const revealObserver = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, observerOptions);
 
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
 
-  /* ─────────────────────────────────────────────
-     COUNTER ANIMATION
-  ───────────────────────────────────────────── */
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.target);
-        const suffix = el.dataset.suffix || '';
-        const duration = 1800;
-        const start = performance.now();
-
-        function tick(now) {
-          const elapsed = now - start;
-          const progress = Math.min(elapsed / duration, 1);
-          // Ease out cubic
-          const eased = 1 - Math.pow(1 - progress, 3);
-          el.textContent = Math.round(eased * target) + suffix;
-          if (progress < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-        counterObserver.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+  // Navigation scroll effect
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.classList.add('nav--scrolled');
+    } else {
+      nav.classList.remove('nav--scrolled');
+    }
+  });
 </script>
+
 </body>
 </html>

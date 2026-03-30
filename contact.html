@@ -171,6 +171,25 @@
     @media(max-width:1024px){.contact-layout{grid-template-columns:1fr;}.contact-info{order:-1;}.form-card{margin-top:0;}}
     @media(max-width:768px){.form-row{grid-template-columns:1fr;}.nav__links,.nav__cta-ghost{display:none;}.nav__hamburger{display:flex;}.sprint-features{flex-direction:column;align-items:center;}.footer__top{grid-template-columns:1fr 1fr;}}
     @media(max-width:480px){.form-card{padding:28px;}.footer__top{grid-template-columns:1fr;}}
+  
+    /* ─────────────────────────────────────────────────────
+       DROPDOWN NAVIGATION
+    ───────────────────────────────────────────────────── */
+    .nav__item--dropdown { position: relative; }
+    .nav__submenu {
+      display: none; position: absolute; top: calc(100% + 8px); left: 50%;
+      transform: translateX(-50%); background: white; border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg);
+      padding: 8px; min-width: 230px; list-style: none; z-index: 1001;
+    }
+    .nav__item--dropdown:hover .nav__submenu { display: block; }
+    .nav__submenu li a {
+      display: block; padding: 9px 14px; border-radius: var(--radius-sm);
+      font-size: 14px; color: var(--text-1) !important; font-weight: 500;
+      transition: all .15s; background: transparent !important;
+    }
+    .nav__submenu li a:hover { background: var(--surface) !important; color: var(--sky) !important; }
+    .nav__chevron { font-size: 10px; opacity: 0.7; }
   </style>
 </head>
 <body>
@@ -181,12 +200,29 @@
       <div class="nav__logo-mark">TSP</div>
       The SaaS<span>Partnership</span>
     </a>
-    <ul class="nav__links">
+        <ul class="nav__links" role="list">
       <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li class="nav__item--dropdown">
+        <a href="#" class="nav__dropdown-toggle">Solutions <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="private-equity-marketing.html">PE &amp; Investor Partnerships</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO for SaaS</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A Integration</a></li>
+        </ul>
+      </li>
+      <li class="nav__item--dropdown">
+        <a href="services.html" class="nav__dropdown-toggle">Services <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="saas-paid-media.html">Paid Media</a></li>
+          <li><a href="saas-seo.html">SEO for SaaS</a></li>
+          <li><a href="services.html#cro">CRO &amp; Conversion</a></li>
+          <li><a href="services.html#automation">Marketing Automation</a></li>
+        </ul>
+      </li>
       <li><a href="why-us.html">Why Us</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
     </ul>
     <div class="nav__right">
       <a href="services.html" class="nav__cta-ghost">Our services</a>
@@ -400,15 +436,24 @@
           <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
           The SaaS<span>Partnership</span>
         </div>
-        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialists across SEM,SEO,GEO,CRO and automation.</p>
+        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialists across paid, SEO, CRO and automation.</p>
         <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
       </div>
-      <div class="footer__col"><h5>Services</h5><ul><li><a href="services.html#paid-media">Paid Media</a></li><li><a href="services.html#seo">Organic SEO</a></li><li><a href="services.html#cro">CRO &amp; Onsite</a></li><li><a href="services.html#automation">Automation</a></li></ul></div>
+      <div class="footer__col"><h5>Services</h5><ul><li><a href="saas-paid-media.html">Paid Media</a></li><li><a href="saas-seo.html">SEO for SaaS</a></li><li><a href="services.html#cro">CRO &amp; Onsite</a></li><li><a href="services.html#automation">Automation</a></li></ul></div>
+      <div class="footer__col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="private-equity-marketing.html">PE &amp; Investors</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A</a></li>
+        </ul>
+      </div>
       <div class="footer__col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="why-us.html">Why Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div class="footer__col"><h5>Get Started</h5><ul><li><a href="contact.html">Discovery Call</a></li><li><a href="why-us.html#model">Our Model</a></li></ul></div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 The SaaS Partnership · thesaaspartnership.com</span>
+      <span>© 2025 The SaaS Partnership · thesaaspartnership.com</span>
       <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
     </div>
   </div>

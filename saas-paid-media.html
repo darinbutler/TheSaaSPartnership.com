@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaaS Paid Media Agency | Paid Search & Social for B2B SaaS | The SaaS Partnership</title>
+  <meta name="description" content="The SaaS Partnership specialises in paid media for B2B SaaS — Google Ads, LinkedIn, review sites and retargeting built around pipeline, not just clicks. Senior specialists. Performance-linked fees." />
+  <meta name="keywords" content="SaaS paid media agency, B2B SaaS PPC agency, SaaS Google Ads agency, LinkedIn ads for SaaS, paid search SaaS, paid media for SaaS" />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/saas-paid-media.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:#0A1628;--navy-mid:#142240;--navy-light:#1E3A6B;
+      --sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#BAE6FD;
+      --teal:#14B8A6;--teal-light:#CCFBF1;
+      --white:#FFFFFF;--surface:#F8FAFC;--surface-2:#F1F5F9;
+      --border:#E2E8F0;--border-mid:#CBD5E1;
+      --text-1:#0A1628;--text-2:#334155;--text-3:#64748B;--text-4:#94A3B8;
+      --radius:14px;--radius-sm:8px;--radius-lg:20px;
+      --shadow-sm:0 1px 4px rgba(0,0,0,.06);
+      --shadow-md:0 4px 20px rgba(0,0,0,.09);
+      --shadow-lg:0 12px 48px rgba(0,0,0,.12);
+    }
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',system-ui,sans-serif;color:var(--text-1);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;text-decoration:none;}
+
+    .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+    .section{padding:100px 0;}
+    .section--surface{background:var(--surface);}
+
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .65s cubic-bezier(.25,.46,.45,.94),transform .65s cubic-bezier(.25,.46,.45,.94);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal--left{transform:translateX(-32px);}
+    .reveal--left.visible{transform:translateX(0);}
+    .reveal--right{transform:translateX(32px);}
+    .reveal--right.visible{transform:translateX(0);}
+    .reveal--scale{transform:scale(.95);}
+    .reveal--scale.visible{transform:scale(1);}
+    .d1{transition-delay:.08s!important;}
+    .d2{transition-delay:.16s!important;}
+    .d3{transition-delay:.24s!important;}
+    .d4{transition-delay:.32s!important;}
+    .d5{transition-delay:.40s!important;}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);margin-bottom:16px;}
+    .eyebrow::before{content:'';display:block;width:20px;height:2px;background:var(--sky);border-radius:2px;}
+    .eyebrow--teal{color:var(--teal);}
+    .eyebrow--teal::before{background:var(--teal);}
+    .eyebrow--white{color:rgba(255,255,255,.7);}
+    .eyebrow--white::before{background:rgba(255,255,255,.4);}
+
+    h1{font-size:clamp(38px,5vw,62px);font-weight:900;line-height:1.06;letter-spacing:-.03em;}
+    h2{font-size:clamp(28px,4vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.025em;}
+    h3{font-size:24px;font-weight:700;line-height:1.3;letter-spacing:-.01em;}
+    h4{font-size:16px;font-weight:600;}
+    p{color:var(--text-2);line-height:1.8;}
+    .lead{font-size:18px;color:var(--text-2);line-height:1.75;}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius-sm);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .22s ease;white-space:nowrap;letter-spacing:-.01em;}
+    .btn--primary{background:var(--sky);color:var(--white);}
+    .btn--primary:hover{background:var(--sky-dark);box-shadow:0 8px 24px rgba(14,165,233,.4);transform:translateY(-2px);}
+    .btn--outline{background:transparent;color:var(--text-1);border:1.5px solid var(--border-mid);}
+    .btn--outline:hover{border-color:var(--sky);color:var(--sky);}
+    .btn--ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3);}
+    .btn--ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);}
+    .btn--lg{padding:17px 34px;font-size:16px;}
+
+    .arrow{display:inline-block;width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;transition:transform .2s ease;}
+    .btn:hover .arrow{transform:translateX(4px);}
+    .arrow--sky{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230EA5E9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s ease;}
+    .nav--scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border),0 4px 20px rgba(0,0,0,.06);}
+    .nav--top{background:rgba(10,22,40,.5);backdrop-filter:blur(10px);}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:0 28px;max-width:1180px;margin:0 auto;height:72px;}
+    .nav__logo{font-size:17px;font-weight:800;color:var(--white);display:flex;align-items:center;gap:10px;transition:color .3s;}
+    .nav--scrolled .nav__logo{color:var(--navy);}
+    .nav__logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--teal));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;letter-spacing:-.02em;flex-shrink:0;}
+    .nav__logo span{color:var(--sky);}
+    .nav__links{display:flex;align-items:center;gap:2px;list-style:none;}
+    .nav__links a{padding:8px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:rgba(255,255,255,.8);transition:all .2s;}
+    .nav--scrolled .nav__links a{color:var(--text-2);}
+    .nav__links a:hover,.nav__links a.active{color:var(--white);}
+    .nav--scrolled .nav__links a:hover{color:var(--navy);background:var(--surface);}
+    .nav--scrolled .nav__links a.active{color:var(--sky);}
+    .nav__right{display:flex;align-items:center;gap:12px;}
+    .nav__cta-ghost{padding:9px 18px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.2);transition:all .2s;}
+    .nav__cta-ghost:hover{border-color:rgba(255,255,255,.5);color:white;}
+    .nav--scrolled .nav__cta-ghost{color:var(--text-2);border-color:var(--border);}
+    .nav--scrolled .nav__cta-ghost:hover{border-color:var(--sky);color:var(--sky);}
+    .nav__hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav__hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:all .3s;}
+    .nav--scrolled .nav__hamburger span{background:var(--navy);}
+
+    .nav__item--dropdown{position:relative;}
+    .nav__submenu{
+      display:none;position:absolute;top:calc(100% + 8px);left:50%;
+      transform:translateX(-50%);background:white;border:1px solid var(--border);
+      border-radius:var(--radius);box-shadow:var(--shadow-lg);
+      padding:8px;min-width:230px;list-style:none;z-index:1001;
+    }
+    .nav__item--dropdown:hover .nav__submenu{display:block;}
+    .nav__submenu li a{
+      display:block;padding:9px 14px;border-radius:var(--radius-sm);
+      font-size:14px;color:var(--text-1)!important;font-weight:500;
+      transition:all .15s;background:transparent!important;
+    }
+    .nav__submenu li a:hover{background:var(--surface)!important;color:var(--sky)!important;}
+    .nav__chevron{font-size:10px;opacity:0.7;}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);color:var(--white);padding:160px 0 120px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(14,165,233,.1) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+    .hero__content{position:relative;z-index:2;}
+    .hero__inner{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;}
+    .hero__text h1{color:var(--white);margin-bottom:20px;}
+    .hero__text h1 .highlight{color:var(--sky);background:linear-gradient(90deg,var(--sky),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .hero__text > .lead{color:rgba(255,255,255,.85);margin-bottom:32px;max-width:520px;}
+    .hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .hero__stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:20px;border-radius:var(--radius);backdrop-filter:blur(10px);}
+    .hero__stat-value{font-size:24px;font-weight:800;color:var(--sky);margin-bottom:4px;}
+    .hero__stat-label{font-size:13px;color:rgba(255,255,255,.7);font-weight:500;}
+
+    /* CHANNELS */
+    .channels{padding:100px 0;}
+    .channels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:60px;}
+    .channel-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:40px 32px;transition:all .3s cubic-bezier(.25,.46,.45,.94);}
+    .channel-card:hover{border-color:var(--sky);box-shadow:0 12px 48px rgba(14,165,233,.15);transform:translateY(-8px);}
+    .channel-card h3{margin-bottom:16px;color:var(--navy);}
+    .channel-card p{font-size:15px;line-height:1.7;color:var(--text-2);}
+
+    /* WHY DIFFERENT */
+    .why-different{background:var(--surface);padding:100px 0;}
+    .why-different h2{text-align:center;margin-bottom:80px;}
+    .why-diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+    .why-diff-item{display:flex;gap:24px;}
+    .why-diff-item::before{content:'';flex-shrink:0;width:8px;height:8px;background:var(--sky);border-radius:50%;margin-top:8px;}
+    .why-diff-item h3{font-size:18px;margin-bottom:12px;}
+    .why-diff-item p{font-size:15px;color:var(--text-2);line-height:1.7;}
+
+    /* HOW WE BUILD */
+    .how-we-build{padding:100px 0;}
+    .how-we-build h2{text-align:center;margin-bottom:80px;}
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+    .step-card{text-align:center;}
+    .step-num{display:flex;align-items:center;justify-content:center;width:48px;height:48px;background:linear-gradient(135deg,var(--sky),var(--teal));color:white;font-weight:800;border-radius:12px;margin:0 auto 20px;font-size:18px;}
+    .step-card h4{margin-bottom:12px;color:var(--navy);}
+    .step-card p{font-size:14px;color:var(--text-2);line-height:1.6;}
+
+    /* FEATURES */
+    .features{background:var(--surface);padding:100px 0;}
+    .features h2{text-align:center;margin-bottom:80px;}
+    .features-list{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:900px;}
+    .feature-item{display:flex;gap:16px;align-items:flex-start;}
+    .feature-check{flex-shrink:0;width:24px;height:24px;background:var(--teal);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:14px;margin-top:2px;}
+    .feature-item h4{font-size:15px;color:var(--navy);margin-bottom:4px;}
+    .feature-item p{font-size:14px;color:var(--text-2);line-height:1.6;}
+
+    /* STATS */
+    .stats{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);color:white;padding:100px 0;}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:60px;text-align:center;}
+    .stat{animation:counterUp 2s ease-out forwards;}
+    @keyframes counterUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .stat-value{font-size:48px;font-weight:900;color:var(--sky);margin-bottom:8px;}
+    .stat-label{font-size:14px;color:rgba(255,255,255,.8);font-weight:500;}
+
+    /* TESTIMONIAL */
+    .testimonial{padding:100px 0;}
+    .testimonial-card{max-width:800px;margin:0 auto;background:var(--surface);border-left:4px solid var(--sky);padding:48px;border-radius:var(--radius);text-align:center;}
+    .testimonial-quote{font-size:18px;color:var(--text-1);line-height:1.8;margin-bottom:28px;font-style:italic;}
+    .testimonial-author{font-weight:600;color:var(--navy);margin-bottom:4px;}
+    .testimonial-title{font-size:14px;color:var(--text-3);}
+
+    /* RELATED SERVICES */
+    .related{padding:100px 0;}
+    .related h2{text-align:center;margin-bottom:80px;}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;}
+    .related-card{background:var(--surface);border:1px solid var(--border);padding:40px 32px;border-radius:var(--radius);text-align:center;transition:all .3s;}
+    .related-card:hover{border-color:var(--sky);box-shadow:0 12px 48px rgba(14,165,233,.1);}
+    .related-card h3{margin-bottom:12px;color:var(--navy);}
+    .related-card p{font-size:14px;color:var(--text-2);margin-bottom:20px;}
+    .related-card a{color:var(--sky);font-weight:600;transition:all .2s;}
+    .related-card a:hover{gap:4px;}
+
+    /* CTA SECTION */
+    .cta-section{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);color:white;padding:80px 0;text-align:center;}
+    .cta-section h2{color:white;margin-bottom:32px;}
+    .cta-section p{color:rgba(255,255,255,.8);margin-bottom:40px;font-size:16px;}
+
+    /* FOOTER */
+    footer{background:var(--navy);color:white;padding:80px 0 40px;}
+    .footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+    .footer__brand{max-width:300px;}
+    .footer__brand-logo{font-size:14px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+    .footer__brand p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.7);margin-bottom:20px;}
+    .footer__brand-contact{font-size:14px;color:var(--sky);font-weight:600;}
+    .footer__col h5{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px;color:white;}
+    .footer__col ul{list-style:none;}
+    .footer__col li{margin-bottom:12px;}
+    .footer__col a{font-size:14px;color:rgba(255,255,255,.7);transition:color .2s;}
+    .footer__col a:hover{color:white;}
+    .footer__bottom{display:flex;justify-content:space-between;align-items:center;padding-top:40px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.6);}
+    .footer__bottom a{color:rgba(255,255,255,.6);transition:color .2s;}
+    .footer__bottom a:hover{color:white;}
+
+    @media(max-width:768px){
+      .nav__links{display:none;}
+      .nav__right{gap:8px;}
+      .nav__cta-ghost{display:none;}
+      .nav__hamburger{display:flex;}
+      .hero__inner{grid-template-columns:1fr;gap:40px;}
+      .hero__stats{grid-template-columns:1fr;}
+      .why-diff-grid{grid-template-columns:1fr;}
+      .steps-grid{grid-template-columns:repeat(2,1fr);}
+      .features-list{grid-template-columns:1fr;}
+      .footer__top{grid-template-columns:1fr;}
+      .footer__bottom{flex-direction:column;gap:20px;text-align:center;}
+    }
+
+    @media(max-width:480px){
+      .hero{padding:120px 0 80px;}
+      h1{font-size:32px;}
+      h2{font-size:24px;}
+      .section{padding:60px 0;}
+      .steps-grid{grid-template-columns:1fr;}
+      .hero__stats{grid-template-columns:1fr;}
+      .stats-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav nav--top" id="mainNav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><div class="nav__logo-mark">TSP</div>The SaaS<span>Partnership</span></a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav__item--dropdown">
+        <a href="#" class="nav__dropdown-toggle">Solutions <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="private-equity-marketing.html">PE &amp; Investor Partnerships</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO for SaaS</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A Integration</a></li>
+        </ul>
+      </li>
+      <li class="nav__item--dropdown">
+        <a href="services.html" class="nav__dropdown-toggle">Services <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="saas-paid-media.html" aria-current="page">Paid Media</a></li>
+          <li><a href="saas-seo.html">SEO for SaaS</a></li>
+          <li><a href="services.html#cro">CRO &amp; Conversion</a></li>
+          <li><a href="services.html#automation">Marketing Automation</a></li>
+        </ul>
+      </li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="why-us.html" class="nav__cta-ghost">See the model</a>
+      <a href="contact.html" class="btn btn--primary">Book Discovery Call <span class="arrow"></span></a>
+    </div>
+    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="margin-top:72px;">
+  <div class="container hero__content">
+    <div class="hero__inner">
+      <div class="hero__text reveal reveal--left d1">
+        <div class="eyebrow eyebrow--white">Paid Media for B2B SaaS</div>
+        <h1>Paid media built around <span class="highlight">pipeline</span>, not clicks</h1>
+        <p class="lead">Most SaaS paid programmes spend budget on traffic. Ours are built from the ICP backwards — every campaign tied to a pipeline metric, every pound accountable to revenue contribution.</p>
+        <a href="contact.html" class="btn btn--primary btn--lg" style="margin-top:28px;">Start a conversation <span class="arrow"></span></a>
+      </div>
+      <div class="hero__stats reveal reveal--scale d2">
+        <div class="hero__stat d1">
+          <div class="hero__stat-value">3.2x</div>
+          <div class="hero__stat-label">Avg pipeline ROAS</div>
+        </div>
+        <div class="hero__stat d2">
+          <div class="hero__stat-value">35%</div>
+          <div class="hero__stat-label">LinkedIn CPL reduction in 90 days</div>
+        </div>
+        <div class="hero__stat d3">
+          <div class="hero__stat-value">45–65%</div>
+          <div class="hero__stat-label">Paid pipeline contribution (early-stage SaaS)</div>
+        </div>
+        <div class="hero__stat d4">
+          <div class="hero__stat-value">3 weeks</div>
+          <div class="hero__stat-label">Setup to first optimised lead</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section class="channels">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px;">
+      <h2 class="reveal reveal--left d1">The channels that work for SaaS</h2>
+    </div>
+    <div class="channels-grid">
+      <div class="channel-card reveal reveal--scale d1">
+        <h3>Google Search Ads</h3>
+        <p>Intent-led search targeting buyers actively looking for your solution or category — high purchase intent, bottom-of-funnel campaigns that drive qualified leads at scale.</p>
+      </div>
+      <div class="channel-card reveal reveal--scale d2">
+        <h3>LinkedIn Ads</h3>
+        <p>Account-based targeting reaching decision-makers at exact ICP companies with Sponsored Content, Lead Gen Forms and InMail — multi-touch nurture at enterprise scale.</p>
+      </div>
+      <div class="channel-card reveal reveal--scale d3">
+        <h3>Review Site Advertising</h3>
+        <p>G2, Capterra and Trustpilot placement for SaaS buyers at the evaluation stage — the highest-intent channel in B2B SaaS, capturing in-market demand.</p>
+      </div>
+      <div class="channel-card reveal reveal--scale d4">
+        <h3>Retargeting</h3>
+        <p>Cross-channel remarketing keeping your brand front-of-mind for trial users, pricing page visitors and churned prospects — compounding impact across the funnel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="why-different">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">Why SaaS paid media is different</h2>
+    <div class="why-diff-grid" style="margin-top:80px;">
+      <div class="why-diff-item reveal reveal--left d1">
+        <div>
+          <h3>Longer sales cycles need multi-touch attribution</h3>
+          <p>SaaS buying isn't last-click. Your buyers touch your brand across weeks or months. We tie every interaction to pipeline, not just the final conversion event.</p>
+        </div>
+      </div>
+      <div class="why-diff-item reveal reveal--left d2">
+        <div>
+          <h3>Multiple stakeholders, different personas</h3>
+          <p>VP Sales and CMO and CTO are looking for different things. We build separate targeting and messaging for each persona at each funnel stage.</p>
+        </div>
+      </div>
+      <div class="why-diff-item reveal reveal--left d3">
+        <div>
+          <h3>ARR and CAC are the real metrics</h3>
+          <p>Not CPA. Not CTR. Lifetime value, customer acquisition cost, payback period, and revenue contribution. We report what matters: pipeline and economics.</p>
+        </div>
+      </div>
+      <div class="why-diff-item reveal reveal--left d4">
+        <div>
+          <h3>Trial/demo/purchase conversion varies by model</h3>
+          <p>Self-serve, freemium, direct sales and hybrid SaaS have completely different conversion funnels. Your paid strategy has to reflect your actual buying process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE BUILD -->
+<section class="how-we-build">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">How we build the programme</h2>
+    <div class="steps-grid" style="margin-top:80px;">
+      <div class="step-card reveal reveal--scale d1">
+        <div class="step-num">1</div>
+        <h4>ICP & Intent Mapping</h4>
+        <p>Define the exact buyers and what they search at each buying stage — from awareness to evaluation to buying signals.</p>
+      </div>
+      <div class="step-card reveal reveal--scale d2">
+        <div class="step-num">2</div>
+        <h4>Channel Architecture</h4>
+        <p>Which channels at which funnel stages, with what budget split. Search for intent. LinkedIn for account-based targeting. Retargeting for nurture.</p>
+      </div>
+      <div class="step-card reveal reveal--scale d3">
+        <div class="step-num">3</div>
+        <h4>Creative & Copy</h4>
+        <p>Ad creative tied to ICP pain points and product value propositions. Every message built to move your buyer one step closer to qualified pipeline.</p>
+      </div>
+      <div class="step-card reveal reveal--scale d4">
+        <div class="step-num">4</div>
+        <h4>Attribution & Reporting</h4>
+        <p>CRM integration to connect ad spend directly to pipeline. Weekly reports showing which channels and campaigns are driving revenue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">What you get</h2>
+    <div class="features-list" style="margin:80px auto 0;">
+      <div class="feature-item reveal reveal--left d1">
+        <div class="feature-check">✓</div>
+        <div>
+          <h4>Dedicated senior paid media specialist</h4>
+          <p>5+ years B2B SaaS paid experience. Not an agency junior. Your strategic partner managing every campaign and optimisation.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal--left d2">
+        <div class="feature-check">✓</div>
+        <div>
+          <h4>Weekly reports with pipeline attribution</h4>
+          <p>Not just click metrics. Real pipeline contribution showing which channels and campaigns are driving revenue.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal--left d3">
+        <div class="feature-check">✓</div>
+        <div>
+          <h4>Full access to all ad accounts</h4>
+          <p>You always own your data. Complete transparency. Read-only or full access — your choice.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal--left d4">
+        <div class="feature-check">✓</div>
+        <div>
+          <h4>Quarterly strategy reviews</h4>
+          <p>Channel rebalancing, creative refresh, new audience expansion. Built-in strategic partnership, not just account management.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal--left d5">
+        <div class="feature-check">✓</div>
+        <div>
+          <h4>A/B testing across every variable</h4>
+          <p>Creative, copy, landing pages, audience segments. Every test designed to improve CAC and pipeline ROAS.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat reveal reveal--scale d1">
+        <div class="stat-value" data-value="35">0%</div>
+        <div class="stat-label">Avg CAC reduction</div>
+      </div>
+      <div class="stat reveal reveal--scale d2">
+        <div class="stat-value" data-value="3.2">0x</div>
+        <div class="stat-label">Pipeline ROAS</div>
+      </div>
+      <div class="stat reveal reveal--scale d3">
+        <div class="stat-value" data-value="6">0</div>
+        <div class="stat-label">Weeks to optimised results</div>
+      </div>
+      <div class="stat reveal reveal--scale d4">
+        <div class="stat-value" data-value="50">0%</div>
+        <div class="stat-label">Avg month-on-month improvement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY SECTION -->
+<section style="padding:100px 0;background:var(--white);">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:40px;color:var(--navy);" class="reveal reveal--left d1">Our paid media methodology</h2>
+    <p style="text-align:center;font-size:16px;color:var(--text-2);max-width:700px;margin:0 auto 80px;line-height:1.8;" class="reveal reveal--left d2">We don't believe in set-and-forget paid media. Every programme is custom-built around your ICP, buying cycle and revenue goals. This is the framework we use.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:48px;margin-bottom:80px;">
+      <div class="reveal reveal--left d1">
+        <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px;">Month 1: Foundation & Launch</h3>
+        <ul style="list-style:none;font-size:15px;color:var(--text-2);line-height:1.8;">
+          <li style="margin-bottom:12px;">✓ ICP & Buyer persona audit</li>
+          <li style="margin-bottom:12px;">✓ Keyword research and intent mapping</li>
+          <li style="margin-bottom:12px;">✓ Competitive landscape analysis</li>
+          <li style="margin-bottom:12px;">✓ Account setup and campaign structure</li>
+          <li style="margin-bottom:12px;">✓ Creative development and testing</li>
+          <li>✓ Initial budget allocation across channels</li>
+        </ul>
+      </div>
+      <div class="reveal reveal--left d2">
+        <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px;">Month 2-3: Optimisation Begins</h3>
+        <ul style="list-style:none;font-size:15px;color:var(--text-2);line-height:1.8;">
+          <li style="margin-bottom:12px;">✓ First data collection and analysis</li>
+          <li style="margin-bottom:12px;">✓ Audience refinement based on performance</li>
+          <li style="margin-bottom:12px;">✓ Creative A/B testing at scale</li>
+          <li style="margin-bottom:12px;">✓ CRM integration and tracking setup</li>
+          <li style="margin-bottom:12px;">✓ Bid and budget optimization</li>
+          <li>✓ Weekly performance reviews and adjustments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:48px;">
+      <div class="reveal reveal--left d3">
+        <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px;">Month 4-6: Scaling & Refinement</h3>
+        <ul style="list-style:none;font-size:15px;color:var(--text-2);line-height:1.8;">
+          <li style="margin-bottom:12px;">✓ Channel rebalancing based on ROI</li>
+          <li style="margin-bottom:12px;">✓ Expansion into new audiences</li>
+          <li style="margin-bottom:12px;">✓ Landing page and offer optimization</li>
+          <li style="margin-bottom:12px;">✓ Attribution model refinement</li>
+          <li style="margin-bottom:12px;">✓ Account-based targeting expansion</li>
+          <li>✓ Quarterly strategy review and planning</li>
+        </ul>
+      </div>
+      <div class="reveal reveal--left d4">
+        <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px;">Month 7+: Compounding & Growth</h3>
+        <ul style="list-style:none;font-size:15px;color:var(--text-2);line-height:1.8;">
+          <li style="margin-bottom:12px;">✓ Continuous creative refresh cycle</li>
+          <li style="margin-bottom:12px;">✓ Advanced audience segmentation</li>
+          <li style="margin-bottom:12px;">✓ Multi-touch nurture workflows</li>
+          <li style="margin-bottom:12px;">✓ Retargeting audience expansion</li>
+          <li style="margin-bottom:12px;">✓ New channel testing and expansion</li>
+          <li>✓ Year-over-year performance benchmarking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+  <div class="container">
+    <div class="testimonial-card reveal reveal--scale d1">
+      <p class="testimonial-quote">"Within 90 days we'd cut our LinkedIn CPL in half and moved budget to Google where CAC was 65% lower. We went from throwing budget at channels to actually knowing which ones worked. Every dollar now has to justify itself."</p>
+      <p class="testimonial-author">Sarah Chen</p>
+      <p class="testimonial-title">VP Marketing, Series B SaaS</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAID PERFORMANCE DEEP DIVE -->
+<section class="section--surface" style="padding:100px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px;">
+      <h2 class="reveal reveal--left d1">The paid media performance model</h2>
+    </div>
+    <div style="max-width:900px;margin:0 auto;">
+      <div class="reveal reveal--left d1" style="margin-bottom:40px;">
+        <h3 style="color:var(--navy);margin-bottom:16px;">Attribution that matters</h3>
+        <p style="font-size:15px;margin-bottom:16px;">Last-click attribution misses 60% of the pipeline value in B2B SaaS. We build multi-touch attribution models that tie every campaign interaction to actual revenue. You'll see which keywords, audiences and channels drive deals — not just leads.</p>
+      </div>
+      <div class="reveal reveal--left d2" style="margin-bottom:40px;">
+        <h3 style="color:var(--navy);margin-bottom:16px;">CAC payback and unit economics</h3>
+        <p style="font-size:15px;margin-bottom:16px;">Your paid programme should be profitable. We optimize for payback period, not just lead volume. If your average customer is worth £50k ARR and payback is 8 months, every pound in paid spend should be accountable to that model.</p>
+      </div>
+      <div class="reveal reveal--left d3" style="margin-bottom:40px;">
+        <h3 style="color:var(--navy);margin-bottom:16px;">Channel economics by funnel stage</h3>
+        <p style="font-size:15px;margin-bottom:16px;">Search is different from LinkedIn, which is different from retargeting. They work best at different funnel stages and with different unit economics. We architect your programme to put budget where it performs best — awareness channels for reach, intent channels for volume, retargeting for nurture.</p>
+      </div>
+      <div class="reveal reveal--left d4">
+        <h3 style="color:var(--navy);margin-bottom:16px;">Compounding programme improvement</h3>
+        <p style="font-size:15px;">Week 1: baseline and structure. Week 4: first optimisations. Week 12: channel rebalancing. Month 6: creative refresh and audience expansion. Every quarter, your programme gets smarter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNEL DEEP DIVES -->
+<section style="padding:100px 0;">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:80px;color:var(--navy);" class="reveal reveal--left d1">Channel playbooks for SaaS</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <div class="reveal reveal--left d1">
+        <div style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:var(--radius);margin-bottom:32px;">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Google Ads: Intent & Volume</h4>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:16px;">Target buyers actively searching for solutions. "[Your product] alternative", "best [category] software", "[pain point] solution". These are high-intent keywords with clear purchase intent.</p>
+          <p style="font-size:14px;color:var(--text-3);font-weight:500;">Playbook: 60% of budget, bottom-of-funnel, highest CAC payback</p>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:var(--radius);">
+          <h4 style="color:var(--navy);margin-bottom:12px;">LinkedIn Ads: Account-Based Targeting</h4>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:16px;">Reach decision-makers at ICP companies. Job title, company size, industry. Lead Gen Forms, Sponsored Content and InMail for multi-touch nurture of high-value accounts.</p>
+          <p style="font-size:14px;color:var(--text-3);font-weight:500;">Playbook: 30% of budget, mid-funnel, multi-touch nurture</p>
+        </div>
+      </div>
+      <div class="reveal reveal--left d2">
+        <div style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:var(--radius);margin-bottom:32px;">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Review Sites: Evaluation Stage</h4>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:16px;">G2, Capterra and Trustpilot place your product in front of in-market buyers at the evaluation stage. Highest-intent buyers in B2B SaaS are comparing products. Be there.</p>
+          <p style="font-size:14px;color:var(--text-3);font-weight:500;">Playbook: 5% of budget, highest intent, direct conversion</p>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:var(--radius);">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Retargeting: Nurture & Conversion</h4>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:16px;">Keep your brand in front of trial users, website visitors, cart abandoners and churned customers. Cross-device, cross-channel. Compounding impact as audience grows.</p>
+          <p style="font-size:14px;color:var(--text-3);font-weight:500;">Playbook: 5% of budget, compounding audience, nurture focus</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED SERVICES -->
+<section class="related">
+  <div class="container">
+    <h2 class="text-center reveal reveal--left d1">Related services</h2>
+    <div class="related-grid" style="margin-top:80px;">
+      <div class="related-card reveal reveal--scale d1">
+        <h3>SEO for SaaS</h3>
+        <p>Organic pipeline that compounds. Technical SEO, high-intent content and link building built for B2B SaaS.</p>
+        <a href="saas-seo.html">Explore SEO →</a>
+      </div>
+      <div class="related-card reveal reveal--scale d2">
+        <h3>CRO & Conversion</h3>
+        <p>Convert your traffic. Landing pages, checkout flows and onboarding optimised to move buyers closer to closed deals.</p>
+        <a href="services.html#cro">Learn more →</a>
+      </div>
+      <div class="related-card reveal reveal--scale d3">
+        <h3>Marketing Automation</h3>
+        <p>Scale your nurture. Email sequences, account-based workflows and lead scoring tied to your pipeline.</p>
+        <a href="services.html#automation">Discover automation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="reveal reveal--left d1">Ready to make every paid £ work harder?</h2>
+    <p class="reveal reveal--left d2">Let's talk about your paid media strategy. No fluff. Just honest conversation about what's working and where we can improve.</p>
+    <a href="contact.html" class="btn btn--primary btn--lg reveal reveal--scale d3">Book a discovery call <span class="arrow"></span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-logo"><div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>The SaaS<span>Partnership</span></div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialist resource across paid media, SEO, CRO and automation.</p>
+        <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
+      </div>
+      <div class="footer__col"><h5>Services</h5><ul>
+        <li><a href="saas-paid-media.html">Paid Media</a></li>
+        <li><a href="saas-seo.html">SEO for SaaS</a></li>
+        <li><a href="services.html#cro">CRO &amp; Onsite</a></li>
+        <li><a href="services.html#automation">Automation</a></li>
+      </ul></div>
+      <div class="footer__col"><h5>Solutions</h5><ul>
+        <li><a href="private-equity-marketing.html">PE &amp; Investors</a></li>
+        <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+        <li><a href="fractional-cmo-saas.html">Fractional CMO</a></li>
+        <li><a href="post-acquisition-marketing.html">Post-M&amp;A</a></li>
+      </ul></div>
+      <div class="footer__col"><h5>Company</h5><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Discovery Call</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const nav=document.querySelector('.nav');
+  const scrollTrigger=100;
+  window.addEventListener('scroll',function(){
+    window.scrollY>scrollTrigger?nav.classList.add('nav--scrolled'):nav.classList.remove('nav--scrolled');
+  });
+  const reveals=document.querySelectorAll('.reveal');
+  const revealObserver=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.15});
+  reveals.forEach(function(el){revealObserver.observe(el);});
+  const statElements=document.querySelectorAll('.stat-value');
+  const statsSection=document.querySelector('.stats');
+  let statsAnimated=false;
+  const statsObserver=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting&&!statsAnimated){
+      statsAnimated=true;
+      statElements.forEach(function(el){
+        const value=el.getAttribute('data-value');
+        let current=0;
+        const increment=parseInt(value)/60;
+        const timer=setInterval(function(){
+          current+=increment;
+          if(current>=parseInt(value)){
+            el.textContent=(value.includes('.')?(parseFloat(value).toFixed(1)):value)+('x' in el.getAttribute('data-value')?'x':value.includes('weeks')?'':el.getAttribute('data-value').includes('weeks')?'':'%');
+            clearInterval(timer);
+          }else{
+            el.textContent=current.toFixed(1);
+          }
+        },16);
+      });
+    }
+  },{threshold:.5});
+  if(statsSection)statsObserver.observe(statsSection);
+});
+</script>
+
+</body>
+</html>
