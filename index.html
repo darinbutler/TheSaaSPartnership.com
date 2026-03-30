@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The SaaS Partnership — Fractional Marketing for SaaS Growth</title>
+  <meta name="description" content="The SaaS Partnership is a fractional marketing consultancy for ambitious SaaS companies. Expert paid media, SEO, CRO and automation — the growth partner, not just another agency." />
+  <meta name="keywords" content="fractional marketing, SaaS marketing, B2B SaaS growth, paid media, SEO, CRO, marketing automation" />
+  <meta property="og:title" content="The SaaS Partnership — Your SaaS Growth Partner" />
+  <meta property="og:description" content="Fractional marketing expertise across paid media, SEO, CRO and automation for ambitious SaaS businesses." />
+  <meta property="og:url" content="https://www.thesaaspartnership.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ─────────────────────────────────────────────────────
+       DESIGN TOKENS
+    ───────────────────────────────────────────────────── */
+    :root {
+      --navy:        #0A1628;
+      --navy-mid:    #142240;
+      --navy-light:  #1E3A6B;
+      --sky:         #0EA5E9;
+      --sky-dark:    #0284C7;
+      --sky-light:   #BAE6FD;
+      --teal:        #14B8A6;
+      --teal-light:  #CCFBF1;
+      --white:       #FFFFFF;
+      --surface:     #F8FAFC;
+      --surface-2:   #F1F5F9;
+      --border:      #E2E8F0;
+      --border-mid:  #CBD5E1;
+      --text-1:      #0A1628;
+      --text-2:      #334155;
+      --text-3:      #64748B;
+      --text-4:      #94A3B8;
+      --radius:      14px;
+      --radius-sm:   8px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 4px rgba(0,0,0,.06);
+      --shadow-md:   0 4px 20px rgba(0,0,0,.09);
+      --shadow-lg:   0 12px 48px rgba(0,0,0,.12);
+      --shadow-xl:   0 24px 80px rgba(0,0,0,.16);
+    }
+
+    /* ─────────────────────────────────────────────────────
+       RESET & BASE
+    ───────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-1);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─────────────────────────────────────────────────────
+       LAYOUT
+    ───────────────────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+    .container--narrow { max-width: 800px; margin: 0 auto; padding: 0 28px; }
+    .section { padding: 100px 0; }
+    .section--sm { padding: 64px 0; }
+    .section--dark { background: var(--navy); }
+    .section--surface { background: var(--surface); }
+    .section--surface-2 { background: var(--surface-2); }
+
+    /* ─────────────────────────────────────────────────────
+       TYPOGRAPHY
+    ───────────────────────────────────────────────────── */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--sky);
+      margin-bottom: 16px;
+    }
+    .eyebrow::before {
+      content: ''; display: block;
+      width: 20px; height: 2px;
+      background: var(--sky); border-radius: 2px;
+    }
+    .eyebrow--teal { color: var(--teal); }
+    .eyebrow--teal::before { background: var(--teal); }
+    .eyebrow--white { color: rgba(255,255,255,.7); }
+    .eyebrow--white::before { background: rgba(255,255,255,.4); }
+
+    h1 { font-size: clamp(40px, 5.5vw, 68px); font-weight: 900; line-height: 1.06; letter-spacing: -.03em; }
+    h2 { font-size: clamp(30px, 4vw, 50px); font-weight: 800; line-height: 1.1; letter-spacing: -.025em; }
+    h3 { font-size: 22px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+    h4 { font-size: 17px; font-weight: 600; }
+    p { color: var(--text-2); line-height: 1.8; }
+
+    .lead { font-size: 19px; color: var(--text-2); line-height: 1.7; }
+    .text-center { text-align: center; }
+    .text-white { color: var(--white) !important; }
+    .text-white p { color: rgba(255,255,255,.7) !important; }
+    .text-soft { color: var(--text-3) !important; }
+    .text-sky { color: var(--sky) !important; }
+
+    /* ─────────────────────────────────────────────────────
+       SCROLL REVEAL ANIMATIONS
+    ───────────────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .65s cubic-bezier(.25,.46,.45,.94),
+                  transform .65s cubic-bezier(.25,.46,.45,.94);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal--left  { transform: translateX(-32px); }
+    .reveal--left.visible  { transform: translateX(0); }
+    .reveal--right { transform: translateX(32px); }
+    .reveal--right.visible { transform: translateX(0); }
+    .reveal--scale { transform: scale(.95); }
+    .reveal--scale.visible { transform: scale(1); }
+    .d1 { transition-delay: .08s !important; }
+    .d2 { transition-delay: .16s !important; }
+    .d3 { transition-delay: .24s !important; }
+    .d4 { transition-delay: .32s !important; }
+    .d5 { transition-delay: .40s !important; }
+
+    /* ─────────────────────────────────────────────────────
+       BUTTONS
+    ───────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 15px 30px; border-radius: var(--radius-sm);
+      font-size: 15px; font-weight: 600; cursor: pointer;
+      border: none; transition: all .22s ease; white-space: nowrap;
+      letter-spacing: -.01em;
+    }
+    .btn svg { transition: transform .2s ease; }
+    .btn:hover svg { transform: translateX(4px); }
+
+    .btn--primary { background: var(--sky); color: var(--white); }
+    .btn--primary:hover { background: var(--sky-dark); box-shadow: 0 8px 24px rgba(14,165,233,.4); transform: translateY(-2px); }
+
+    .btn--navy { background: var(--navy); color: var(--white); }
+    .btn--navy:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,22,40,.3); }
+
+    .btn--ghost { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.3); }
+    .btn--ghost:hover { border-color: rgba(255,255,255,.7); background: rgba(255,255,255,.08); }
+
+    .btn--outline { background: transparent; color: var(--text-1); border: 1.5px solid var(--border-mid); }
+    .btn--outline:hover { border-color: var(--sky); color: var(--sky); }
+
+    .btn--lg { padding: 18px 36px; font-size: 16px; }
+    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Arrow icon */
+    .arrow {
+      display: inline-block; width: 18px; height: 18px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-size: contain;
+      transition: transform .2s ease;
+    }
+    .btn:hover .arrow { transform: translateX(4px); }
+    .arrow--sky {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230EA5E9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
+    }
+    .arrow--dark {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A1628' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
+    }
+
+    /* ─────────────────────────────────────────────────────
+       NAVIGATION
+    ───────────────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: all .3s ease;
+    }
+    .nav--scrolled {
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 var(--border), 0 4px 20px rgba(0,0,0,.06);
+    }
+    .nav--top { background: transparent; }
+    .nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 28px; max-width: 1180px; margin: 0 auto; height: 72px;
+    }
+    .nav__logo {
+      font-size: 17px; font-weight: 800; color: var(--white);
+      display: flex; align-items: center; gap: 10px;
+      transition: color .3s;
+    }
+    .nav--scrolled .nav__logo { color: var(--navy); }
+    .nav__logo-mark {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--sky), var(--teal));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 900; color: white;
+      letter-spacing: -.02em; flex-shrink: 0;
+    }
+    .nav__logo span { color: var(--sky); }
+    .nav__links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav__links a {
+      padding: 8px 14px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 500; color: rgba(255,255,255,.8);
+      transition: all .2s;
+    }
+    .nav--scrolled .nav__links a { color: var(--text-2); }
+    .nav__links a:hover { color: var(--white); background: rgba(255,255,255,.1); }
+    .nav--scrolled .nav__links a:hover { color: var(--navy); background: var(--surface); }
+    .nav__links a.active { color: var(--white); font-weight: 600; }
+    .nav--scrolled .nav__links a.active { color: var(--sky); }
+    .nav__right { display: flex; align-items: center; gap: 12px; }
+    .nav__cta-ghost {
+      padding: 9px 18px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85);
+      border: 1.5px solid rgba(255,255,255,.2);
+      transition: all .2s;
+    }
+    .nav__cta-ghost:hover { border-color: rgba(255,255,255,.5); color: white; }
+    .nav--scrolled .nav__cta-ghost { color: var(--text-2); border-color: var(--border); }
+    .nav--scrolled .nav__cta-ghost:hover { border-color: var(--sky); color: var(--sky); }
+
+    /* Mobile menu */
+    .nav__hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .nav__hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: white; border-radius: 2px; transition: all .3s;
+    }
+    .nav--scrolled .nav__hamburger span { background: var(--navy); }
+
+    /* ─────────────────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding: 140px 0 100px;
+    }
+
+    /* Animated grid background */
+    .hero__bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(14,165,233,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14,165,233,.07) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridShift 20s linear infinite;
+    }
+    @keyframes gridShift {
+      0% { background-position: 0 0; }
+      100% { background-position: 60px 60px; }
+    }
+
+    /* Radial glow */
+    .hero__glow {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 60% 40%, rgba(14,165,233,.13) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(20,184,166,.08) 0%, transparent 55%);
+    }
+
+    /* Floating orbs */
+    .hero__orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(60px); pointer-events: none;
+    }
+    .hero__orb--1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(14,165,233,.15), transparent 70%);
+      top: -100px; right: -100px;
+      animation: floatOrb 12s ease-in-out infinite;
+    }
+    .hero__orb--2 {
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(20,184,166,.1), transparent 70%);
+      bottom: 50px; left: -80px;
+      animation: floatOrb 15s ease-in-out infinite reverse;
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translate(0, 0); }
+      33% { transform: translate(30px, -20px); }
+      66% { transform: translate(-20px, 30px); }
+    }
+
+    .hero__inner { position: relative; z-index: 2; width: 100%; }
+    .hero__layout { display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: center; }
+
+    .hero__pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(14,165,233,.12);
+      border: 1px solid rgba(14,165,233,.25);
+      border-radius: 100px; padding: 8px 18px;
+      margin-bottom: 32px;
+    }
+    .hero__pill-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--sky);
+      box-shadow: 0 0 0 0 rgba(14,165,233,.4);
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,233,.4); }
+      50% { box-shadow: 0 0 0 8px rgba(14,165,233,0); }
+    }
+    .hero__pill-text { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.85); }
+
+    .hero h1 {
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .hero h1 .highlight {
+      position: relative; display: inline-block;
+      color: var(--sky);
+    }
+    .hero h1 .highlight::after {
+      content: '';
+      position: absolute; bottom: 4px; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sky), var(--teal));
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: underlineIn 0.8s .6s cubic-bezier(.25,.46,.45,.94) forwards;
+    }
+    @keyframes underlineIn { to { transform: scaleX(1); } }
+
+    .hero .lead { color: rgba(255,255,255,.7); margin-bottom: 44px; max-width: 560px; }
+
+    .hero__stats {
+      display: flex; gap: 0;
+      margin-top: 56px; padding-top: 44px;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .hero__stat { flex: 1; padding-right: 32px; }
+    .hero__stat:not(:last-child) {
+      margin-right: 32px; border-right: 1px solid rgba(255,255,255,.1);
+    }
+    .hero__stat strong {
+      display: block; font-size: 40px; font-weight: 900;
+      color: var(--white); line-height: 1; margin-bottom: 6px;
+      letter-spacing: -.03em;
+    }
+    .hero__stat strong em { font-style: normal; color: var(--sky); }
+    .hero__stat span { font-size: 12px; color: rgba(255,255,255,.45); line-height: 1.5; display: block; }
+
+    /* Hero card panel */
+    .hero__panel {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      backdrop-filter: blur(10px);
+    }
+    .hero__panel-header {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.35);
+      margin-bottom: 24px;
+    }
+    .hero__service-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+      transition: all .2s;
+    }
+    .hero__service-item:last-child { border-bottom: none; }
+    .hero__service-item:hover { padding-left: 6px; }
+    .hero__service-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .si-blue   { background: rgba(14,165,233,.18); }
+    .si-teal   { background: rgba(20,184,166,.18); }
+    .si-green  { background: rgba(34,197,94,.18);  }
+    .si-purple { background: rgba(168,85,247,.18); }
+    .hero__service-text strong {
+      display: block; font-size: 14px; font-weight: 600;
+      color: rgba(255,255,255,.9); margin-bottom: 2px;
+    }
+    .hero__service-text span {
+      font-size: 12px; color: rgba(255,255,255,.4);
+    }
+    .hero__panel-cta {
+      margin-top: 24px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .hero__panel-cta a {
+      display: flex; align-items: center; justify-content: space-between;
+      background: linear-gradient(135deg, var(--sky), #0EA5E9CC);
+      border-radius: var(--radius-sm); padding: 14px 18px;
+      font-size: 13px; font-weight: 600; color: white;
+      transition: all .2s;
+    }
+    .hero__panel-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,165,233,.4); }
+
+    /* ─────────────────────────────────────────────────────
+       TRUST BAR
+    ───────────────────────────────────────────────────── */
+    .trust-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 0;
+    }
+    .trust-bar__inner {
+      display: flex; align-items: center; gap: 48px;
+    }
+    .trust-bar__label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-4);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .trust-bar__logos {
+      display: flex; gap: 48px; align-items: center; flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .trust-bar__logo {
+      font-size: 14px; font-weight: 700;
+      color: var(--text-4); letter-spacing: -.01em;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+    .trust-bar__logo:hover { color: var(--text-3); }
+
+    /* ─────────────────────────────────────────────────────
+       SECTION HEADER
+    ───────────────────────────────────────────────────── */
+    .section-header { margin-bottom: 64px; }
+    .section-header--center { text-align: center; }
+    .section-header--center .eyebrow { display: inline-flex; }
+    .section-header p { margin-top: 16px; font-size: 17px; max-width: 580px; }
+    .section-header--center p { margin-left: auto; margin-right: auto; }
+    .section-header h2 { margin-top: 4px; }
+
+    /* ─────────────────────────────────────────────────────
+       PROBLEM / SOLUTION
+    ───────────────────────────────────────────────────── */
+    .split-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+    }
+    .problem-item {
+      display: flex; gap: 14px;
+      padding: 20px; border-radius: var(--radius);
+      background: #FFF5F5;
+      border-left: 3px solid #FCA5A5;
+      margin-bottom: 12px;
+      transition: transform .2s;
+    }
+    .problem-item:hover { transform: translateX(4px); }
+    .problem-item:last-child { margin-bottom: 0; }
+    .prob-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .problem-item h4 { font-size: 15px; margin-bottom: 4px; color: var(--text-1); }
+    .problem-item p  { font-size: 13px; color: var(--text-3); line-height: 1.6; }
+
+    .solution-item {
+      display: flex; gap: 14px;
+      padding: 20px; border-radius: var(--radius);
+      background: #F0FDF4;
+      border-left: 3px solid #4ADE80;
+      margin-bottom: 12px;
+      transition: transform .2s;
+    }
+    .solution-item:hover { transform: translateX(4px); }
+    .solution-item:last-child { margin-bottom: 0; }
+    .solution-item h4 { font-size: 15px; margin-bottom: 4px; color: var(--text-1); }
+    .solution-item p  { font-size: 13px; color: var(--text-3); line-height: 1.6; }
+
+    /* ─────────────────────────────────────────────────────
+       SERVICE CARDS
+    ───────────────────────────────────────────────────── */
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+    .svc-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+      transition: all .3s cubic-bezier(.25,.46,.45,.94);
+      cursor: default;
+    }
+    .svc-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      opacity: 0; transition: opacity .3s;
+    }
+    .svc-card:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+    }
+    .svc-card:hover::before { opacity: 1; }
+
+    .svc-card--blue::before  { background: linear-gradient(90deg, #0EA5E9, #38BDF8); }
+    .svc-card--teal::before  { background: linear-gradient(90deg, #14B8A6, #2DD4BF); }
+    .svc-card--purple::before{ background: linear-gradient(90deg, #A855F7, #C084FC); }
+    .svc-card--orange::before{ background: linear-gradient(90deg, #F97316, #FB923C); }
+
+    .svc-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 20px; flex-shrink: 0;
+    }
+    .svc-icon--blue   { background: #EFF6FF; }
+    .svc-icon--teal   { background: #F0FDFA; }
+    .svc-icon--purple { background: #FAF5FF; }
+    .svc-icon--orange { background: #FFF7ED; }
+
+    .svc-card h3 { font-size: 17px; margin-bottom: 10px; }
+    .svc-card p  { font-size: 14px; line-height: 1.7; flex: 1; }
+    .svc-card__link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600; color: var(--sky);
+      margin-top: 20px; transition: gap .2s;
+    }
+    .svc-card__link:hover { gap: 10px; }
+
+    /* ─────────────────────────────────────────────────────
+       STATS SECTION
+    ───────────────────────────────────────────────────── */
+    .stats-section {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy) 100%);
+      padding: 80px 0; position: relative; overflow: hidden;
+    }
+    .stats-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(14,165,233,.08), transparent 60%);
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; position: relative; z-index: 1; }
+    .stats-divider {
+      position: absolute; top: 20%; bottom: 20%; width: 1px;
+      background: rgba(255,255,255,.08);
+    }
+    .stat-item {
+      text-align: center; padding: 20px;
+      border-right: 1px solid rgba(255,255,255,.08);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item__num {
+      font-size: 52px; font-weight: 900; color: var(--white);
+      line-height: 1; margin-bottom: 10px; letter-spacing: -.04em;
+      display: block;
+    }
+    .stat-item__num em { font-style: normal; color: var(--sky); }
+    .stat-item__label { font-size: 13px; color: rgba(255,255,255,.45); line-height: 1.5; }
+
+    /* ─────────────────────────────────────────────────────
+       MODEL CARDS
+    ───────────────────────────────────────────────────── */
+    .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+    .model-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 40px 36px;
+      position: relative; display: flex; flex-direction: column;
+      transition: all .25s ease;
+    }
+    .model-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .model-card--featured {
+      background: var(--navy); border-color: var(--navy);
+      color: var(--white); transform: scale(1.03);
+    }
+    .model-card--featured:hover { transform: scale(1.03) translateY(-4px); }
+    .model-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--sky); color: white;
+      font-size: 11px; font-weight: 700; padding: 5px 14px;
+      border-radius: 100px; letter-spacing: .06em; text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .model-card h3 { font-size: 20px; margin-bottom: 10px; }
+    .model-card--featured h3 { color: white; }
+    .model-card p { font-size: 14px; line-height: 1.7; }
+    .model-card--featured p { color: rgba(255,255,255,.6); }
+    .model-price {
+      font-size: 44px; font-weight: 900; color: var(--navy);
+      line-height: 1; margin: 28px 0 4px; letter-spacing: -.04em;
+    }
+    .model-price sub { font-size: 16px; font-weight: 500; letter-spacing: 0; }
+    .model-price sup { font-size: 24px; font-weight: 700; }
+    .model-card--featured .model-price { color: var(--sky); }
+    .model-features {
+      list-style: none; margin-top: 28px;
+      display: flex; flex-direction: column; gap: 12px; flex: 1;
+    }
+    .model-features li { display: flex; gap: 10px; font-size: 14px; align-items: flex-start; }
+    .model-features li::before { content: '✓'; color: var(--sky); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .model-card--featured .model-features li::before { color: #4ADE80; }
+    .model-card--featured .model-features li { color: rgba(255,255,255,.8); }
+    .model-card__btn { margin-top: 32px; text-align: center; }
+
+    /* ─────────────────────────────────────────────────────
+       TESTIMONIALS
+    ───────────────────────────────────────────────────── */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 36px 32px;
+      transition: all .25s ease;
+    }
+    .testi-card:hover { border-color: var(--sky-light); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .testi-stars { color: #F59E0B; font-size: 15px; letter-spacing: 2px; margin-bottom: 20px; }
+    .testi-quote {
+      font-size: 15px; line-height: 1.8; color: var(--text-2);
+      margin-bottom: 28px; font-style: italic;
+      position: relative;
+    }
+    .testi-quote::before {
+      content: '"';
+      position: absolute; top: -20px; left: -8px;
+      font-size: 64px; font-weight: 900; color: var(--sky-light);
+      font-style: normal; line-height: 1;
+      z-index: 0;
+    }
+    .testi-author { display: flex; align-items: center; gap: 14px; }
+    .testi-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; font-weight: 800; color: white;
+      flex-shrink: 0; letter-spacing: -.02em;
+    }
+    .testi-name strong { display: block; font-size: 14px; font-weight: 700; }
+    .testi-name span   { font-size: 12px; color: var(--text-3); }
+    .testi-result {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #F0FDF4; border-radius: 100px;
+      padding: 5px 12px; font-size: 12px; font-weight: 600; color: #15803D;
+      margin-bottom: 20px;
+    }
+    .testi-result::before { content: '↑'; }
+
+    /* ─────────────────────────────────────────────────────
+       MARQUEE (MOVING EXPERTISE LIST)
+    ───────────────────────────────────────────────────── */
+    .marquee-section {
+      background: var(--navy); padding: 32px 0; overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .marquee-track {
+      display: flex; gap: 0;
+      animation: marqueeScroll 30s linear infinite;
+      width: max-content;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 0 32px; white-space: nowrap;
+      font-size: 14px; font-weight: 600; color: rgba(255,255,255,.5);
+    }
+    .marquee-item::after {
+      content: '·'; font-size: 24px; color: rgba(255,255,255,.15);
+    }
+    .marquee-item span {
+      color: rgba(255,255,255,.7);
+    }
+
+    /* ─────────────────────────────────────────────────────
+       CTA SECTION
+    ───────────────────────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, #0284C7 0%, #0EA5E9 50%, #06B6D4 100%);
+      padding: 96px 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255,255,255,.08), transparent 60%);
+    }
+    .cta-section__inner { position: relative; z-index: 2; }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-section p  { color: rgba(255,255,255,.8); font-size: 18px; max-width: 520px; margin: 0 auto 40px; }
+    .cta-section .btn--white {
+      background: white; color: var(--sky);
+      box-shadow: 0 8px 32px rgba(0,0,0,.15);
+    }
+    .cta-section .btn--white:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,.2); }
+
+    /* ─────────────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      padding: 72px 0 32px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .footer__top {
+      display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr;
+      gap: 56px; padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .footer__brand-logo {
+      font-size: 17px; font-weight: 800; color: white;
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+    }
+    .footer__brand-logo span { color: var(--sky); }
+    .footer__brand p { font-size: 14px; color: rgba(255,255,255,.45); line-height: 1.75; max-width: 280px; }
+    .footer__brand-contact {
+      margin-top: 24px; font-size: 14px; font-weight: 600;
+      color: var(--sky);
+    }
+    .footer__col h5 {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.3);
+      margin-bottom: 20px;
+    }
+    .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer__col a { font-size: 14px; color: rgba(255,255,255,.55); transition: color .15s; }
+    .footer__col a:hover { color: white; }
+    .footer__bottom {
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 12px; color: rgba(255,255,255,.25);
+    }
+    .footer__bottom a { color: rgba(255,255,255,.35); }
+    .footer__bottom a:hover { color: rgba(255,255,255,.6); }
+
+    /* ─────────────────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero__layout { grid-template-columns: 1fr; }
+      .hero__panel { display: none; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .model-card--featured { transform: scale(1); }
+      .model-card--featured:hover { transform: translateY(-4px); }
+      .footer__top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .split-grid { grid-template-columns: 1fr; gap: 48px; }
+      .model-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .nav__links, .nav__cta-ghost { display: none; }
+      .nav__hamburger { display: flex; }
+      .section { padding: 72px 0; }
+      .hero { padding: 120px 0 80px; }
+      .hero__stats { flex-direction: column; gap: 24px; }
+      .hero__stat:not(:last-child) { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: 24px; margin-right: 0; }
+      h1 { font-size: 38px; }
+      h2 { font-size: 30px; }
+    }
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .footer__top { grid-template-columns: 1fr; }
+      .container { padding: 0 20px; }
+      .btn--lg { padding: 15px 24px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════ -->
+<nav class="nav nav--top" id="mainNav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="The SaaS Partnership home">
+      <div class="nav__logo-mark">TSP</div>
+      The SaaS<span>Partnership</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="why-us.html" class="nav__cta-ghost">See the model</a>
+      <a href="contact.html" class="btn btn--primary">Book Discovery Call <span class="arrow"></span></a>
+    </div>
+    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════ -->
+<main>
+<section class="hero" aria-label="Hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__layout">
+        <div>
+          <div class="hero__pill">
+            <div class="hero__pill-dot"></div>
+            <span class="hero__pill-text">Fractional Marketing for SaaS Companies</span>
+          </div>
+
+          <h1>
+            The Growth Partner<br />Your SaaS Business<br />
+            <span class="highlight">Actually Needs</span>
+          </h1>
+
+          <p class="lead">Senior fractional marketing expertise across paid media, SEO, CRO and automation — delivering compounding pipeline growth without the overhead of a full in-house team.</p>
+
+          <div class="btn-group">
+            <a href="contact.html" class="btn btn--primary btn--lg">
+              Book a Discovery Call <span class="arrow"></span>
+            </a>
+            <a href="services.html" class="btn btn--ghost btn--lg">Explore Services</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <strong><span class="counter" data-target="3" data-suffix="×">3×</span></strong>
+              <span>Average pipeline growth in the first year</span>
+            </div>
+            <div class="hero__stat">
+              <strong><span class="counter" data-target="40" data-suffix="%">40%</span></strong>
+              <span>Typical reduction in marketing team overhead</span>
+            </div>
+            <div class="hero__stat">
+              <strong><span class="counter" data-target="60" data-suffix="+">60+</span></strong>
+              <span>SaaS brands scaled across the partnership</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__panel" aria-hidden="true">
+          <div class="hero__panel-header">Our Core Specialisms</div>
+          <div class="hero__service-item">
+            <div class="hero__service-icon si-blue">📈</div>
+            <div class="hero__service-text">
+              <strong>Paid Media Management</strong>
+              <span>Google, LinkedIn, Meta &amp; programmatic</span>
+            </div>
+          </div>
+          <div class="hero__service-item">
+            <div class="hero__service-icon si-teal">🔍</div>
+            <div class="hero__service-text">
+              <strong>Organic &amp; Technical SEO</strong>
+              <span>Content strategy + technical health</span>
+            </div>
+          </div>
+          <div class="hero__service-item">
+            <div class="hero__service-icon si-green">🎯</div>
+            <div class="hero__service-text">
+              <strong>CRO &amp; Onsite Optimisation</strong>
+              <span>Turn traffic into qualified pipeline</span>
+            </div>
+          </div>
+          <div class="hero__service-item">
+            <div class="hero__service-icon si-purple">⚙️</div>
+            <div class="hero__service-text">
+              <strong>Marketing Automation</strong>
+              <span>Workflows, nurture &amp; RevOps alignment</span>
+            </div>
+          </div>
+          <div class="hero__panel-cta">
+            <a href="contact.html">
+              <span>Start your growth partnership</span>
+              <span class="arrow"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     MARQUEE — EXPERTISE STRIP
+═══════════════════════════════════════════════════ -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <!-- repeated twice for seamless loop -->
+    <div class="marquee-item">Paid Media Management</div>
+    <div class="marquee-item">Technical SEO</div>
+    <div class="marquee-item">CRO &amp; A/B Testing</div>
+    <div class="marquee-item">Marketing Automation</div>
+    <div class="marquee-item">Pipeline Attribution</div>
+    <div class="marquee-item">RevOps Alignment</div>
+    <div class="marquee-item">Content Strategy</div>
+    <div class="marquee-item">LinkedIn Ads</div>
+    <div class="marquee-item">Google Ads</div>
+    <div class="marquee-item">Lead Scoring</div>
+    <div class="marquee-item">Demand Generation</div>
+    <div class="marquee-item">Fractional CMO</div>
+    <div class="marquee-item">Paid Media Management</div>
+    <div class="marquee-item">Technical SEO</div>
+    <div class="marquee-item">CRO &amp; A/B Testing</div>
+    <div class="marquee-item">Marketing Automation</div>
+    <div class="marquee-item">Pipeline Attribution</div>
+    <div class="marquee-item">RevOps Alignment</div>
+    <div class="marquee-item">Content Strategy</div>
+    <div class="marquee-item">LinkedIn Ads</div>
+    <div class="marquee-item">Google Ads</div>
+    <div class="marquee-item">Lead Scoring</div>
+    <div class="marquee-item">Demand Generation</div>
+    <div class="marquee-item">Fractional CMO</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TRUST BAR
+═══════════════════════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar__inner">
+      <div class="trust-bar__label">Trusted by</div>
+      <div class="trust-bar__logos">
+        <span class="trust-bar__logo">CloudMetrics</span>
+        <span class="trust-bar__logo">PipelineHQ</span>
+        <span class="trust-bar__logo">Scalr.io</span>
+        <span class="trust-bar__logo">RevStack</span>
+        <span class="trust-bar__logo">DataBridge</span>
+        <span class="trust-bar__logo">FlowSuite</span>
+        <span class="trust-bar__logo">NovaPlatform</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     PROBLEM / SOLUTION
+═══════════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="problem-heading">
+  <div class="container">
+    <div class="split-grid">
+      <div>
+        <div class="eyebrow reveal">The Challenge</div>
+        <h2 id="problem-heading" class="reveal d1">Most SaaS marketing teams are built to cost, not to grow</h2>
+        <p class="reveal d2" style="margin-top:16px;margin-bottom:28px;">Whether you've scaled quickly, absorbed multiple teams through M&amp;A, or simply outgrown your original marketing model — the symptoms are the same: inflated headcount, siloed expertise, and underperforming pipeline contribution.</p>
+        <div class="reveal d2">
+          <div class="problem-item">
+            <span class="prob-icon">⚠️</span>
+            <div>
+              <h4>Inflated headcount from M&amp;A integration</h4>
+              <p>Multiple absorbed marketing teams with overlapping roles, misaligned tools and competing priorities — all at full-time cost.</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <span class="prob-icon">⚠️</span>
+            <div>
+              <h4>Critical skills gaps in specialist channels</h4>
+              <p>Generalists stretched thinly across paid, SEO, CRO and automation — without the specialist depth each channel demands to perform.</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <span class="prob-icon">⚠️</span>
+            <div>
+              <h4>Marketing ops and automation underinvested</h4>
+              <p>Leads fall through the cracks without the infrastructure, tooling and expertise to capture, score and nurture them effectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow eyebrow--teal reveal">The Partnership Difference</div>
+        <h2 class="reveal d1">Experienced specialists, aligned to your revenue outcomes</h2>
+        <p class="reveal d2" style="margin-top:16px;margin-bottom:28px;">The SaaS Partnership brings senior specialists across every marketing channel — working as a true extension of your team, accountable to pipeline results and market share growth, not just activity metrics.</p>
+        <div class="reveal d3">
+          <div class="solution-item">
+            <span class="prob-icon">✅</span>
+            <div>
+              <h4>Senior specialists, not generalists</h4>
+              <p>Each channel led by someone who's driven growth at scale — from Series A startups to enterprise SaaS platforms.</p>
+            </div>
+          </div>
+          <div class="solution-item">
+            <span class="prob-icon">✅</span>
+            <div>
+              <h4>Fractional resource, fully dedicated</h4>
+              <p>The output of a full specialist team at a fraction of the in-house cost — with full transparency, clear attribution and accountability.</p>
+            </div>
+          </div>
+          <div class="solution-item">
+            <span class="prob-icon">✅</span>
+            <div>
+              <h4>Performance-aligned commercial model</h4>
+              <p>Low retainer base plus performance fees tied to pipeline KPIs — our incentives are perfectly aligned with your revenue goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════════════ -->
+<section class="section section--surface" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="eyebrow">What We Do</div>
+      <h2 id="services-heading">Every specialist channel, fully covered</h2>
+      <p>From first click to closed-won — we own the marketing channels that drive compounding pipeline growth for SaaS businesses.</p>
+    </div>
+    <div class="services-grid">
+      <article class="svc-card svc-card--blue reveal d1">
+        <div class="svc-icon svc-icon--blue">📈</div>
+        <h3>Paid Media Management</h3>
+        <p>Strategic campaign management across Google Ads, LinkedIn, Meta and programmatic channels. Built for pipeline, not impressions.</p>
+        <a href="services.html#paid-media" class="svc-card__link">Learn more <span class="arrow arrow--sky"></span></a>
+      </article>
+      <article class="svc-card svc-card--teal reveal d2">
+        <div class="svc-icon svc-icon--teal">🔍</div>
+        <h3>Organic SEO &amp; Content</h3>
+        <p>Technical SEO, content strategy and authority building — compounding organic visibility that reduces dependency on paid acquisition over time.</p>
+        <a href="services.html#seo" class="svc-card__link">Learn more <span class="arrow arrow--sky"></span></a>
+      </article>
+      <article class="svc-card svc-card--purple reveal d3">
+        <div class="svc-icon svc-icon--purple">🎯</div>
+        <h3>CRO &amp; Onsite Optimisation</h3>
+        <p>Data-led conversion rate optimisation — turning existing traffic into more demos, trials and qualified pipeline through structured testing.</p>
+        <a href="services.html#cro" class="svc-card__link">Learn more <span class="arrow arrow--sky"></span></a>
+      </article>
+      <article class="svc-card svc-card--orange reveal d4">
+        <div class="svc-icon svc-icon--orange">⚙️</div>
+        <h3>Marketing Automation</h3>
+        <p>Full-funnel automation, lead scoring, nurture sequences and RevOps alignment — so no qualified opportunity is ever left on the table.</p>
+        <a href="services.html#automation" class="svc-card__link">Learn more <span class="arrow arrow--sky"></span></a>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <a href="services.html" class="btn btn--outline btn--lg">
+        View Full Services Detail <span class="arrow arrow--dark"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     STATS
+═══════════════════════════════════════════════════ -->
+<div class="stats-section" aria-label="Key statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal d1">
+        <span class="stat-item__num"><span class="counter" data-target="3" data-suffix="×">3×</span></span>
+        <div class="stat-item__label">Average pipeline growth<br />in the first 12 months</div>
+      </div>
+      <div class="stat-item reveal d2">
+        <span class="stat-item__num"><span class="counter" data-target="40" data-suffix="%">40%</span></span>
+        <div class="stat-item__label">Average reduction in<br />marketing team overhead</div>
+      </div>
+      <div class="stat-item reveal d3">
+        <span class="stat-item__num"><span class="counter" data-target="60" data-suffix="+">60+</span></span>
+        <div class="stat-item__label">SaaS brands grown<br />through the partnership</div>
+      </div>
+      <div class="stat-item reveal d4">
+        <span class="stat-item__num"><span class="counter" data-target="94" data-suffix="%">94%</span></span>
+        <div class="stat-item__label">Client retention rate<br />beyond the first year</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     COMMERCIAL MODEL
+═══════════════════════════════════════════════════ -->
+<section class="section" aria-labelledby="model-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Commercial Model</div>
+      <h2 id="model-heading">We only win when you win</h2>
+      <p style="margin-top:12px;max-width:580px;">Our performance-aligned model keeps your fixed overheads low while ensuring our incentives are always pointed in the same direction: compounding pipeline growth and revenue contribution.</p>
+    </div>
+    <div class="model-grid">
+      <div class="model-card reveal d1">
+        <h3>Growth Sprint</h3>
+        <p>A focused 90-day intensive engagement to identify, test and validate the highest-impact growth levers across your SaaS marketing stack.</p>
+        <div class="model-price"><sup>£</sup>12,000</div>
+        <p style="font-size:13px;color:var(--text-3);">One-time investment</p>
+        <ul class="model-features">
+          <li>Full marketing audit across all channels</li>
+          <li>90-day execution roadmap</li>
+          <li>Rapid testing &amp; hypothesis validation</li>
+          <li>Channel attribution analysis</li>
+          <li>Clear transition path to ongoing partnership</li>
+        </ul>
+        <div class="model-card__btn">
+          <a href="contact.html" class="btn btn--outline" style="width:100%;justify-content:center;">Start with a Sprint</a>
+        </div>
+      </div>
+
+      <div class="model-card model-card--featured reveal d2">
+        <div class="model-badge">Recommended</div>
+        <h3>Performance + Retainer</h3>
+        <p style="color:rgba(255,255,255,.6);">Our signature model. A low monthly retainer covering resource costs, plus performance fees tied directly to agreed pipeline or revenue KPIs.</p>
+        <div class="model-price"><sub>from </sub><sup>£</sup>1,800<sub>/mo</sub></div>
+        <p style="font-size:13px;color:rgba(255,255,255,.35);">+ performance component</p>
+        <ul class="model-features">
+          <li>Low fixed overhead per month</li>
+          <li>Performance fees tied to pipeline KPIs</li>
+          <li>Full access to specialist team</li>
+          <li>All four core service channels</li>
+          <li>Marketing ops &amp; automation stack</li>
+          <li>Quarterly business reviews</li>
+        </ul>
+        <div class="model-card__btn">
+          <a href="contact.html" class="btn btn--primary" style="width:100%;justify-content:center;">Start the Conversation</a>
+        </div>
+      </div>
+
+      <div class="model-card reveal d3">
+        <h3>Retained Partnership</h3>
+        <p>A fixed-scope retainer engagement for companies needing defined, predictable monthly resource without a performance component.</p>
+        <div class="model-price"><sub>from </sub><sup>£</sup>3,500<sub>/mo</sub></div>
+        <p style="font-size:13px;color:var(--text-3);">Monthly retainer</p>
+        <ul class="model-features">
+          <li>Dedicated channel specialist access</li>
+          <li>Defined monthly scope of work</li>
+          <li>Monthly reporting &amp; strategy reviews</li>
+          <li>Flexible engagement duration</li>
+          <li>Optional performance add-on</li>
+        </ul>
+        <div class="model-card__btn">
+          <a href="contact.html" class="btn btn--outline" style="width:100%;justify-content:center;">Discuss Scope</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="reveal">
+      <a href="why-us.html#model" class="svc-card__link" style="font-size:14px;">
+        Read more about our commercial model <span class="arrow arrow--sky"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════════ -->
+<section class="section section--surface" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="eyebrow">Client Stories</div>
+      <h2 id="testimonials-heading">What our partners say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testi-card reveal d1">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-result">MQL volume doubled in 6 months</div>
+        <p class="testi-quote">After a merger, we had three marketing teams doing the work of one at three times the cost. The SaaS Partnership helped us rationalise, rebuild the right stack, and completely transform our pipeline contribution.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#0EA5E9,#14B8A6);">SH</div>
+          <div class="testi-name">
+            <strong>Sarah H.</strong>
+            <span>CMO, PipelineHQ</span>
+          </div>
+        </div>
+      </article>
+      <article class="testi-card reveal d2">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-result">Cost per SQL down 47%</div>
+        <p class="testi-quote">We were burning budget on paid media with very little return. Within 90 days the team had rebuilt our attribution, restructured campaigns, and our cost per SQL dropped by 47%. That ROI speaks for itself.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#EC4899);">MR</div>
+          <div class="testi-name">
+            <strong>Marcus R.</strong>
+            <span>VP Growth, Scalr.io</span>
+          </div>
+        </div>
+      </article>
+      <article class="testi-card reveal d3">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-result">3.2× pipeline in year one</div>
+        <p class="testi-quote">What sets TSP apart is that they behave like genuine partners. They challenged our strategy, not just executed our briefs. That mindset shift — from activity to outcomes — transformed how our whole business views marketing.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444);">JL</div>
+          <div class="testi-name">
+            <strong>James L.</strong>
+            <span>CEO, RevStack</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CTA
+═══════════════════════════════════════════════════ -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-section__inner reveal">
+      <div class="eyebrow eyebrow--white" style="justify-content:center;margin-bottom:20px;">Ready to scale?</div>
+      <h2 id="cta-heading">Let's talk about your growth potential</h2>
+      <p>An honest 30-minute conversation about where your pipeline is today, what's holding it back, and what a growth partnership could look like for your business.</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="contact.html" class="btn btn--white btn--lg">
+          Book a Discovery Call <span class="arrow arrow--sky"></span>
+        </a>
+        <a href="why-us.html" class="btn btn--ghost btn--lg">Why The SaaS Partnership?</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
+          The SaaS<span>Partnership</span>
+        </div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. We deliver senior specialist resource across paid media, SEO, CRO and automation — for a fraction of the in-house cost.</p>
+        <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
+      </div>
+      <div class="footer__col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#paid-media">Paid Media</a></li>
+          <li><a href="services.html#seo">Organic SEO</a></li>
+          <li><a href="services.html#cro">CRO &amp; Onsite</a></li>
+          <li><a href="services.html#automation">Automation</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="why-us.html">Why Us</a></li>
+          <li><a href="why-us.html#model">Our Model</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Get Started</h5>
+        <ul>
+          <li><a href="contact.html">Discovery Call</a></li>
+          <li><a href="contact.html#sprint">Growth Sprint</a></li>
+          <li><a href="why-us.html">Read Our Story</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ─────────────────────────────────────────────
+     NAV: Scroll state
+  ───────────────────────────────────────────── */
+  const nav = document.getElementById('mainNav');
+  const scrollThreshold = 60;
+
+  function updateNav() {
+    if (window.scrollY > scrollThreshold) {
+      nav.classList.add('nav--scrolled');
+      nav.classList.remove('nav--top');
+    } else {
+      nav.classList.add('nav--top');
+      nav.classList.remove('nav--scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  /* ─────────────────────────────────────────────
+     SCROLL REVEAL
+  ───────────────────────────────────────────── */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* ─────────────────────────────────────────────
+     COUNTER ANIMATION
+  ───────────────────────────────────────────── */
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+
+        function tick(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease out cubic
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(eased * target) + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+</script>
+</body>
+</html>

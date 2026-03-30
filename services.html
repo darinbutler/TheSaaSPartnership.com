@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — The SaaS Partnership | Fractional Marketing Specialists</title>
+  <meta name="description" content="Expert fractional marketing services for SaaS companies — paid media management, organic SEO, CRO and conversion optimisation, and marketing automation." />
+  <meta name="keywords" content="SaaS paid media, B2B SEO, SaaS CRO, marketing automation, fractional marketing services" />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/services" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:#0A1628;--navy-mid:#142240;--navy-light:#1E3A6B;
+      --sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#BAE6FD;
+      --teal:#14B8A6;--teal-light:#CCFBF1;
+      --white:#FFFFFF;--surface:#F8FAFC;--surface-2:#F1F5F9;
+      --border:#E2E8F0;--border-mid:#CBD5E1;
+      --text-1:#0A1628;--text-2:#334155;--text-3:#64748B;--text-4:#94A3B8;
+      --radius:14px;--radius-sm:8px;--radius-lg:20px;
+      --shadow-sm:0 1px 4px rgba(0,0,0,.06);
+      --shadow-md:0 4px 20px rgba(0,0,0,.09);
+      --shadow-lg:0 12px 48px rgba(0,0,0,.12);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',system-ui,sans-serif;color:var(--text-1);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;text-decoration:none;}
+    .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+    .section{padding:100px 0;}
+    .section--surface{background:var(--surface);}
+
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .65s cubic-bezier(.25,.46,.45,.94),transform .65s cubic-bezier(.25,.46,.45,.94);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal--left{transform:translateX(-32px);}
+    .reveal--left.visible{transform:translateX(0);}
+    .reveal--right{transform:translateX(32px);}
+    .reveal--right.visible{transform:translateX(0);}
+    .d1{transition-delay:.08s!important;}
+    .d2{transition-delay:.16s!important;}
+    .d3{transition-delay:.24s!important;}
+    .d4{transition-delay:.32s!important;}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);margin-bottom:16px;}
+    .eyebrow::before{content:'';display:block;width:20px;height:2px;background:var(--sky);border-radius:2px;}
+    .eyebrow--teal{color:var(--teal);}
+    .eyebrow--teal::before{background:var(--teal);}
+    .eyebrow--purple{color:#A855F7;}
+    .eyebrow--purple::before{background:#A855F7;}
+    .eyebrow--orange{color:#F97316;}
+    .eyebrow--orange::before{background:#F97316;}
+    .eyebrow--white{color:rgba(255,255,255,.7);}
+    .eyebrow--white::before{background:rgba(255,255,255,.4);}
+
+    h1{font-size:clamp(38px,5vw,62px);font-weight:900;line-height:1.06;letter-spacing:-.03em;}
+    h2{font-size:clamp(28px,4vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.025em;}
+    h3{font-size:24px;font-weight:700;line-height:1.3;letter-spacing:-.01em;}
+    h4{font-size:16px;font-weight:600;}
+    p{color:var(--text-2);line-height:1.8;}
+    .lead{font-size:18px;color:var(--text-2);line-height:1.75;}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius-sm);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .22s ease;white-space:nowrap;letter-spacing:-.01em;}
+    .btn--primary{background:var(--sky);color:var(--white);}
+    .btn--primary:hover{background:var(--sky-dark);box-shadow:0 8px 24px rgba(14,165,233,.4);transform:translateY(-2px);}
+    .btn--outline{background:transparent;color:var(--text-1);border:1.5px solid var(--border-mid);}
+    .btn--outline:hover{border-color:var(--sky);color:var(--sky);}
+    .btn--ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3);}
+    .btn--ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);}
+    .btn--lg{padding:17px 34px;font-size:16px;}
+    .btn-group{display:flex;gap:12px;flex-wrap:wrap;}
+
+    .arrow{display:inline-block;width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;transition:transform .2s ease;}
+    .btn:hover .arrow{transform:translateX(4px);}
+    .arrow--sky{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230EA5E9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s ease;}
+    .nav--scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border),0 4px 20px rgba(0,0,0,.06);}
+    .nav--top{background:rgba(10,22,40,.5);backdrop-filter:blur(10px);}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:0 28px;max-width:1180px;margin:0 auto;height:72px;}
+    .nav__logo{font-size:17px;font-weight:800;color:var(--white);display:flex;align-items:center;gap:10px;transition:color .3s;}
+    .nav--scrolled .nav__logo{color:var(--navy);}
+    .nav__logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--teal));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;letter-spacing:-.02em;flex-shrink:0;}
+    .nav__logo span{color:var(--sky);}
+    .nav__links{display:flex;align-items:center;gap:2px;list-style:none;}
+    .nav__links a{padding:8px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:rgba(255,255,255,.8);transition:all .2s;}
+    .nav--scrolled .nav__links a{color:var(--text-2);}
+    .nav__links a:hover,.nav__links a.active{color:var(--white);}
+    .nav--scrolled .nav__links a:hover{color:var(--navy);background:var(--surface);}
+    .nav--scrolled .nav__links a.active{color:var(--sky);}
+    .nav__right{display:flex;align-items:center;gap:12px;}
+    .nav__cta-ghost{padding:9px 18px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.2);transition:all .2s;}
+    .nav__cta-ghost:hover{border-color:rgba(255,255,255,.5);color:white;}
+    .nav--scrolled .nav__cta-ghost{color:var(--text-2);border-color:var(--border);}
+    .nav--scrolled .nav__cta-ghost:hover{border-color:var(--sky);color:var(--sky);}
+    .nav__hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav__hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:all .3s;}
+    .nav--scrolled .nav__hamburger span{background:var(--navy);}
+
+    /* PAGE HERO */
+    .page-hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 60%,var(--navy) 100%);padding:160px 0 96px;position:relative;overflow:hidden;}
+    .page-hero__bg{position:absolute;inset:0;background-image:linear-gradient(rgba(14,165,233,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,.07) 1px,transparent 1px);background-size:60px 60px;animation:gridShift 20s linear infinite;}
+    @keyframes gridShift{0%{background-position:0 0;}100%{background-position:60px 60px;}}
+    .page-hero__glow{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 30% 60%,rgba(14,165,233,.12) 0%,transparent 65%);}
+    .page-hero__inner{position:relative;z-index:2;}
+    .page-hero h1{color:var(--white);margin-bottom:20px;}
+    .page-hero .lead{color:rgba(255,255,255,.7);max-width:640px;margin-bottom:36px;}
+    .page-hero__breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4);margin-bottom:24px;}
+    .page-hero__breadcrumb a{color:rgba(255,255,255,.4);transition:color .2s;}
+    .page-hero__breadcrumb a:hover{color:rgba(255,255,255,.7);}
+    .page-hero__breadcrumb span{color:rgba(255,255,255,.2);}
+
+    /* SERVICE SECTION */
+    .service-section{padding:96px 0;scroll-margin-top:72px;}
+    .service-section:nth-child(even){background:var(--surface);}
+    .service-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+    .service-layout--reverse{direction:rtl;}
+    .service-layout--reverse > *{direction:ltr;}
+    .service-visual{border-radius:var(--radius-lg);overflow:hidden;position:relative;}
+
+    /* Animated visual panels */
+    .vis-panel{
+      border-radius:var(--radius-lg);
+      padding:36px;
+      min-height:340px;
+      display:flex;flex-direction:column;
+      justify-content:space-between;
+      position:relative;overflow:hidden;
+    }
+    .vis-panel--blue  {background:linear-gradient(145deg,var(--navy),#1B3A6B);}
+    .vis-panel--teal  {background:linear-gradient(145deg,#0D3B35,#134E4A);}
+    .vis-panel--purple{background:linear-gradient(145deg,#2D1B69,#1E1B4B);}
+    .vis-panel--orange{background:linear-gradient(145deg,#431407,#1C0A00);}
+
+    .vis-panel__glow{
+      position:absolute;top:-40px;right:-40px;width:220px;height:220px;
+      border-radius:50%;filter:blur(50px);
+    }
+    .vis-panel--blue   .vis-panel__glow{background:rgba(14,165,233,.25);}
+    .vis-panel--teal   .vis-panel__glow{background:rgba(20,184,166,.25);}
+    .vis-panel--purple .vis-panel__glow{background:rgba(168,85,247,.25);}
+    .vis-panel--orange .vis-panel__glow{background:rgba(249,115,22,.25);}
+
+    .vis-panel__label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:20px;position:relative;}
+    .vis-metric-row{display:flex;gap:16px;position:relative;}
+    .vis-metric{
+      flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+      border-radius:10px;padding:16px;
+    }
+    .vis-metric__val{font-size:28px;font-weight:800;color:white;letter-spacing:-.03em;line-height:1;margin-bottom:4px;}
+    .vis-metric__val em{font-style:normal;}
+    .vis-metric__key{font-size:11px;color:rgba(255,255,255,.4);}
+    .vis-bar-row{display:flex;flex-direction:column;gap:10px;margin-top:20px;position:relative;}
+    .vis-bar-item{display:flex;flex-direction:column;gap:5px;}
+    .vis-bar-item__label{display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.5);}
+    .vis-bar-track{height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden;}
+    .vis-bar-fill{height:100%;border-radius:3px;animation:barGrow 1.5s ease-out forwards;transform-origin:left;}
+    @keyframes barGrow{from{width:0%;}to{width:var(--w);}}
+    .vis-bar-fill--blue  {background:linear-gradient(90deg,#0EA5E9,#38BDF8);}
+    .vis-bar-fill--teal  {background:linear-gradient(90deg,#14B8A6,#2DD4BF);}
+    .vis-bar-fill--purple{background:linear-gradient(90deg,#A855F7,#C084FC);}
+    .vis-bar-fill--orange{background:linear-gradient(90deg,#F97316,#FB923C);}
+
+    .service-icon-large{
+      width:64px;height:64px;border-radius:16px;
+      display:flex;align-items:center;justify-content:center;font-size:28px;
+      margin-bottom:24px;
+    }
+    .si-large--blue  {background:#EFF6FF;}
+    .si-large--teal  {background:#F0FDFA;}
+    .si-large--purple{background:#FAF5FF;}
+    .si-large--orange{background:#FFF7ED;}
+
+    .service-features{list-style:none;margin:24px 0;display:flex;flex-direction:column;gap:12px;}
+    .service-features li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--text-2);}
+    .service-features li::before{content:'✓';color:var(--sky);font-weight:700;flex-shrink:0;margin-top:2px;}
+
+    .service-stat-band{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+      margin-top:32px;padding-top:32px;border-top:1px solid var(--border);
+    }
+    .service-stat{text-align:center;padding:16px;background:var(--surface);border-radius:var(--radius-sm);}
+    .service-stat strong{display:block;font-size:28px;font-weight:800;color:var(--navy);letter-spacing:-.03em;}
+    .service-stat span{font-size:12px;color:var(--text-3);}
+
+    /* HOW WE WORK */
+    .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+    .process-steps::before{
+      content:'';position:absolute;top:40px;left:10%;right:10%;height:2px;
+      background:linear-gradient(90deg,var(--sky),var(--teal));
+      z-index:0;
+    }
+    .process-step{text-align:center;padding:20px 24px;position:relative;z-index:1;}
+    .process-step__num{
+      width:80px;height:80px;border-radius:50%;
+      background:var(--white);border:3px solid var(--sky);
+      display:flex;align-items:center;justify-content:center;
+      font-size:24px;font-weight:800;color:var(--navy);
+      margin:0 auto 20px;
+      transition:all .25s;
+    }
+    .process-step:hover .process-step__num{background:var(--sky);color:white;transform:scale(1.1);}
+    .process-step h4{font-size:15px;margin-bottom:8px;}
+    .process-step p{font-size:13px;color:var(--text-3);line-height:1.65;}
+
+    /* CTA STRIP */
+    .cta-strip{
+      background:linear-gradient(135deg,#0284C7 0%,#0EA5E9 50%,#06B6D4 100%);
+      padding:80px 0;text-align:center;position:relative;overflow:hidden;
+    }
+    .cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(255,255,255,.08),transparent 60%);}
+    .cta-strip__inner{position:relative;z-index:2;}
+    .cta-strip h2{color:white;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.8);font-size:17px;max-width:500px;margin:0 auto 36px;}
+
+    footer{background:var(--navy);padding:64px 0 28px;border-top:1px solid rgba(255,255,255,.06);}
+    .footer__top{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .footer__brand-logo{font-size:17px;font-weight:800;color:white;display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+    .footer__brand-logo span{color:var(--sky);}
+    .footer__brand p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.7;max-width:280px;}
+    .footer__brand-contact{margin-top:20px;font-size:14px;font-weight:600;color:var(--sky);}
+    .footer__col h5{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:18px;}
+    .footer__col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer__col a{font-size:14px;color:rgba(255,255,255,.5);transition:color .15s;}
+    .footer__col a:hover{color:white;}
+    .footer__bottom{padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.2);}
+    .footer__bottom a{color:rgba(255,255,255,.3);}
+    .footer__bottom a:hover{color:rgba(255,255,255,.6);}
+
+    @media(max-width:1024px){.service-layout{grid-template-columns:1fr;}.service-layout--reverse{direction:ltr;}.service-visual{order:-1;}}
+    @media(max-width:768px){.process-steps{grid-template-columns:1fr 1fr;}.process-steps::before{display:none;}.nav__links,.nav__cta-ghost{display:none;}.nav__hamburger{display:flex;}.section{padding:72px 0;}.footer__top{grid-template-columns:1fr 1fr;}}
+    @media(max-width:480px){.process-steps{grid-template-columns:1fr;}.footer__top{grid-template-columns:1fr;}.vis-metric-row{flex-direction:column;}}
+  </style>
+</head>
+<body>
+
+<nav class="nav nav--top" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-mark">TSP</div>
+      The SaaS<span>Partnership</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="why-us.html" class="nav__cta-ghost">Our model</a>
+      <a href="contact.html" class="btn btn--primary">Book Discovery Call <span class="arrow"></span></a>
+    </div>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero__bg"></div>
+  <div class="page-hero__glow"></div>
+  <div class="container">
+    <div class="page-hero__inner">
+      <div class="page-hero__breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span style="color:rgba(255,255,255,.6);">Services</span>
+      </div>
+      <div class="eyebrow eyebrow--white">What We Deliver</div>
+      <h1 style="color:white;max-width:700px;">Senior specialist expertise<br/>across every growth channel</h1>
+      <p class="lead">Each service is led by an experienced practitioner who has driven results at scale — not a junior account manager running a template playbook. This is what fractional done right looks like.</p>
+      <div class="btn-group">
+        <a href="contact.html" class="btn btn--primary btn--lg">Start a Conversation <span class="arrow"></span></a>
+        <a href="why-us.html" class="btn btn--ghost btn--lg">See the commercial model</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══ PAID MEDIA ═══ -->
+<section id="paid-media" class="service-section">
+  <div class="container">
+    <div class="service-layout">
+      <div>
+        <div class="eyebrow reveal">Paid Media Management</div>
+        <div class="service-icon-large si-large--blue reveal d1">📈</div>
+        <h2 class="reveal d1">Pipeline-focused paid media, not vanity metrics</h2>
+        <p class="reveal d2" style="margin-top:14px;">We manage paid acquisition across every channel that moves the needle for B2B SaaS — Google Ads, LinkedIn, Meta and programmatic. Every campaign is built around pipeline contribution and SQL cost, not impressions or click-through rates.</p>
+        <ul class="service-features reveal d3">
+          <li>Google Search &amp; Performance Max — intent-capture at scale</li>
+          <li>LinkedIn Ads — precise ICP targeting by title, company size and sector</li>
+          <li>Meta for SaaS — retargeting and awareness at competitive CPM</li>
+          <li>Programmatic &amp; display — ABM and account-based campaigns</li>
+          <li>Full attribution modelling across the pipeline funnel</li>
+          <li>Weekly optimisation cycles with transparent reporting</li>
+        </ul>
+        <div class="service-stat-band reveal d4">
+          <div class="service-stat"><strong>47%</strong><span>Average SQL cost reduction</span></div>
+          <div class="service-stat"><strong>2.8×</strong><span>Avg. ROAS improvement in 90 days</span></div>
+        </div>
+        <div style="margin-top:28px;" class="reveal d4">
+          <a href="contact.html" class="btn btn--primary">Discuss Paid Media <span class="arrow"></span></a>
+        </div>
+      </div>
+      <div class="service-visual reveal--right">
+        <div class="vis-panel vis-panel--blue">
+          <div class="vis-panel__glow"></div>
+          <div>
+            <div class="vis-panel__label">Paid Media Performance Dashboard</div>
+            <div class="vis-metric-row">
+              <div class="vis-metric">
+                <div class="vis-metric__val">£<em>42</em></div>
+                <div class="vis-metric__key">Cost per SQL (was £79)</div>
+              </div>
+              <div class="vis-metric">
+                <div class="vis-metric__val"><em>4.1</em>×</div>
+                <div class="vis-metric__key">Pipeline ROAS</div>
+              </div>
+            </div>
+          </div>
+          <div class="vis-bar-row">
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Google Search</span><span>64%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--blue" style="--w:64%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>LinkedIn Ads</span><span>52%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--blue" style="--w:52%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Programmatic</span><span>38%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--blue" style="--w:38%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Meta Retargeting</span><span>27%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--blue" style="--w:27%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SEO ═══ -->
+<section id="seo" class="service-section">
+  <div class="container">
+    <div class="service-layout service-layout--reverse">
+      <div>
+        <div class="eyebrow eyebrow--teal reveal">Organic SEO &amp; Content</div>
+        <div class="service-icon-large si-large--teal reveal d1">🔍</div>
+        <h2 class="reveal d1">Compounding organic growth that reduces paid dependency</h2>
+        <p class="reveal d2" style="margin-top:14px;">We combine technical SEO rigour with strategic content to build the organic presence that compounds over time — reducing your cost of acquisition and increasing market authority as you scale.</p>
+        <ul class="service-features reveal d3">
+          <li>Full technical SEO audit and remediation roadmap</li>
+          <li>Keyword strategy aligned to ICP search intent and funnel stage</li>
+          <li>Content strategy — pillar pages, cluster content and thought leadership</li>
+          <li>Core Web Vitals and site performance optimisation</li>
+          <li>Structured data and schema implementation</li>
+          <li>Link building and digital PR for domain authority growth</li>
+        </ul>
+        <div class="service-stat-band reveal d4">
+          <div class="service-stat"><strong>3.4×</strong><span>Avg. organic traffic growth in 12 months</span></div>
+          <div class="service-stat"><strong>58%</strong><span>Avg. reduction in paid dependency by month 18</span></div>
+        </div>
+        <div style="margin-top:28px;" class="reveal d4">
+          <a href="contact.html" class="btn btn--primary" style="background:var(--teal);">Discuss SEO &amp; Content <span class="arrow"></span></a>
+        </div>
+      </div>
+      <div class="service-visual reveal--left">
+        <div class="vis-panel vis-panel--teal">
+          <div class="vis-panel__glow"></div>
+          <div>
+            <div class="vis-panel__label">Organic Growth Metrics</div>
+            <div class="vis-metric-row">
+              <div class="vis-metric">
+                <div class="vis-metric__val"><em>3.4</em>×</div>
+                <div class="vis-metric__key">Organic traffic growth</div>
+              </div>
+              <div class="vis-metric">
+                <div class="vis-metric__val"><em>142</em></div>
+                <div class="vis-metric__key">Keywords ranking page 1</div>
+              </div>
+            </div>
+          </div>
+          <div class="vis-bar-row">
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Technical Health</span><span>96/100</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--teal" style="--w:96%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Content Coverage</span><span>78%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--teal" style="--w:78%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Domain Authority</span><span>61/100</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--teal" style="--w:61%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Core Web Vitals</span><span>Good</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--teal" style="--w:88%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CRO ═══ -->
+<section id="cro" class="service-section">
+  <div class="container">
+    <div class="service-layout">
+      <div>
+        <div class="eyebrow eyebrow--purple reveal">CRO &amp; Onsite Optimisation</div>
+        <div class="service-icon-large si-large--purple reveal d1">🎯</div>
+        <h2 class="reveal d1">Turn the traffic you already have into more qualified pipeline</h2>
+        <p class="reveal d2" style="margin-top:14px;">The fastest win in SaaS marketing is often hidden in your existing funnel. We identify conversion friction, design structured testing programmes and implement changes that turn browsers into buyers.</p>
+        <ul class="service-features reveal d3">
+          <li>Heuristic UX audit and conversion friction analysis</li>
+          <li>Qualitative research — heatmaps, session recordings, user testing</li>
+          <li>Structured A/B and multivariate testing programmes</li>
+          <li>Landing page and pricing page optimisation</li>
+          <li>Free trial and demo request flow improvement</li>
+          <li>Personalisation strategy by segment and ICP tier</li>
+        </ul>
+        <div class="service-stat-band reveal d4">
+          <div class="service-stat"><strong>+34%</strong><span>Avg. demo request rate improvement</span></div>
+          <div class="service-stat"><strong>2.1×</strong><span>Avg. trial-to-paid conversion improvement</span></div>
+        </div>
+        <div style="margin-top:28px;" class="reveal d4">
+          <a href="contact.html" class="btn btn--primary" style="background:#A855F7;">Discuss CRO <span class="arrow"></span></a>
+        </div>
+      </div>
+      <div class="service-visual reveal--right">
+        <div class="vis-panel vis-panel--purple">
+          <div class="vis-panel__glow"></div>
+          <div>
+            <div class="vis-panel__label">CRO Testing Results</div>
+            <div class="vis-metric-row">
+              <div class="vis-metric">
+                <div class="vis-metric__val">+<em>34</em>%</div>
+                <div class="vis-metric__key">Demo request rate</div>
+              </div>
+              <div class="vis-metric">
+                <div class="vis-metric__val"><em>12</em></div>
+                <div class="vis-metric__key">Active experiments</div>
+              </div>
+            </div>
+          </div>
+          <div class="vis-bar-row">
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Homepage → Demo</span><span>+41%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--purple" style="--w:75%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Pricing page</span><span>+28%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--purple" style="--w:60%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Trial activation</span><span>+52%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--purple" style="--w:85%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Blog → Trial</span><span>+19%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--purple" style="--w:45%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AUTOMATION ═══ -->
+<section id="automation" class="service-section">
+  <div class="container">
+    <div class="service-layout service-layout--reverse">
+      <div>
+        <div class="eyebrow eyebrow--orange reveal">Marketing Automation</div>
+        <div class="service-icon-large si-large--orange reveal d1">⚙️</div>
+        <h2 class="reveal d1">No lead left behind — automation that converts pipeline</h2>
+        <p class="reveal d2" style="margin-top:14px;">Marketing automation is the infrastructure layer that ties everything together. We design, build and operate the workflows, lead scoring models and nurture programmes that keep your pipeline moving and your sales team focused on the right opportunities.</p>
+        <ul class="service-features reveal d3">
+          <li>CRM and MAP integration, audit and optimisation (HubSpot, Salesforce, Marketo)</li>
+          <li>Lead scoring and MQL/SQL threshold definition</li>
+          <li>Multi-touch nurture sequences by persona and funnel stage</li>
+          <li>Trial onboarding and product-led growth flows</li>
+          <li>Revenue operations (RevOps) alignment and reporting</li>
+          <li>Marketing and sales handoff SLA and process design</li>
+        </ul>
+        <div class="service-stat-band reveal d4">
+          <div class="service-stat"><strong>68%</strong><span>Avg. improvement in MQL-to-SQL conversion</span></div>
+          <div class="service-stat"><strong>4×</strong><span>Increase in lead velocity through the funnel</span></div>
+        </div>
+        <div style="margin-top:28px;" class="reveal d4">
+          <a href="contact.html" class="btn btn--primary" style="background:#F97316;">Discuss Automation <span class="arrow"></span></a>
+        </div>
+      </div>
+      <div class="service-visual reveal--left">
+        <div class="vis-panel vis-panel--orange">
+          <div class="vis-panel__glow"></div>
+          <div>
+            <div class="vis-panel__label">Automation Stack Performance</div>
+            <div class="vis-metric-row">
+              <div class="vis-metric">
+                <div class="vis-metric__val"><em>68</em>%</div>
+                <div class="vis-metric__key">MQL→SQL conversion ↑</div>
+              </div>
+              <div class="vis-metric">
+                <div class="vis-metric__val"><em>4</em>×</div>
+                <div class="vis-metric__key">Lead velocity increase</div>
+              </div>
+            </div>
+          </div>
+          <div class="vis-bar-row">
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Email nurture open rate</span><span>34%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--orange" style="--w:68%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Lead scoring accuracy</span><span>91%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--orange" style="--w:91%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Trial onboard completion</span><span>72%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--orange" style="--w:72%"></div></div>
+            </div>
+            <div class="vis-bar-item">
+              <div class="vis-bar-item__label"><span>Sales handoff SLA met</span><span>97%</span></div>
+              <div class="vis-bar-track"><div class="vis-bar-fill vis-bar-fill--orange" style="--w:97%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW WE WORK ═══ -->
+<section class="section section--surface" aria-labelledby="process-heading">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:64px;" class="reveal">
+      <div class="eyebrow">How We Work</div>
+      <h2 id="process-heading">From discovery to compounding growth</h2>
+      <p style="max-width:520px;margin:12px auto 0;">Every engagement follows a proven process designed to deliver early wins while building the long-term infrastructure for compounding growth.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal d1">
+        <div class="process-step__num">01</div>
+        <h4>Discovery &amp; Audit</h4>
+        <p>Deep-dive into your current channels, attribution, tech stack, team structure and pipeline metrics to identify the highest-leverage opportunities.</p>
+      </div>
+      <div class="process-step reveal d2">
+        <div class="process-step__num">02</div>
+        <h4>Strategy &amp; Roadmap</h4>
+        <p>90-day prioritised execution roadmap with clear ownership, KPIs and the commercial model agreed before we start spending a penny.</p>
+      </div>
+      <div class="process-step reveal d3">
+        <div class="process-step__num">03</div>
+        <h4>Execute &amp; Test</h4>
+        <p>Senior specialists execute across all agreed channels — running rapid test-and-learn cycles to validate hypotheses and double down on what works.</p>
+      </div>
+      <div class="process-step reveal d4">
+        <div class="process-step__num">04</div>
+        <h4>Scale &amp; Compound</h4>
+        <p>Winning plays are systematised and scaled. Reporting cadence ensures full visibility and strategic alignment with your business objectives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="container">
+    <div class="cta-strip__inner reveal">
+      <h2>Ready to put the right specialists in place?</h2>
+      <p>Book a discovery call to discuss your growth goals and explore the right service combination for your SaaS business.</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="contact.html" class="btn btn--lg" style="background:white;color:var(--sky);">Book Discovery Call <span class="arrow arrow--sky"></span></a>
+        <a href="why-us.html" class="btn btn--ghost btn--lg">See the commercial model</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
+          The SaaS<span>Partnership</span>
+        </div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialists across paid, SEO, CRO and automation.</p>
+        <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
+      </div>
+      <div class="footer__col"><h5>Services</h5><ul><li><a href="#paid-media">Paid Media</a></li><li><a href="#seo">Organic SEO</a></li><li><a href="#cro">CRO &amp; Onsite</a></li><li><a href="#automation">Automation</a></li></ul></div>
+      <div class="footer__col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="why-us.html">Why Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h5>Get Started</h5><ul><li><a href="contact.html">Discovery Call</a></li><li><a href="why-us.html#model">Our Model</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 The SaaS Partnership · thesaaspartnership.com</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('mainNav');
+  function updateNav(){nav.classList.toggle('nav--scrolled',window.scrollY>60);nav.classList.toggle('nav--top',window.scrollY<=60);}
+  window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+
+  const ro=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

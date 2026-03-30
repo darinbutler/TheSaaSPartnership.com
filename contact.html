@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — The SaaS Partnership | Book a Discovery Call</title>
+  <meta name="description" content="Book a discovery call with The SaaS Partnership — a 30-minute honest conversation about your pipeline, your growth objectives and whether we're the right fit." />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/contact" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#0A1628;--navy-mid:#142240;--sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#BAE6FD;--teal:#14B8A6;--white:#FFFFFF;--surface:#F8FAFC;--surface-2:#F1F5F9;--border:#E2E8F0;--border-mid:#CBD5E1;--text-1:#0A1628;--text-2:#334155;--text-3:#64748B;--text-4:#94A3B8;--radius:14px;--radius-sm:8px;--radius-lg:20px;--shadow-md:0 4px 20px rgba(0,0,0,.09);--shadow-lg:0 12px 48px rgba(0,0,0,.12);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',system-ui,sans-serif;color:var(--text-1);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    a{color:inherit;text-decoration:none;}
+    .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+    .section{padding:100px 0;}
+
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .65s cubic-bezier(.25,.46,.45,.94),transform .65s cubic-bezier(.25,.46,.45,.94);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .d1{transition-delay:.08s!important;}.d2{transition-delay:.16s!important;}.d3{transition-delay:.24s!important;}.d4{transition-delay:.32s!important;}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);margin-bottom:16px;}
+    .eyebrow::before{content:'';display:block;width:20px;height:2px;background:var(--sky);border-radius:2px;}
+    .eyebrow--white{color:rgba(255,255,255,.7);}.eyebrow--white::before{background:rgba(255,255,255,.4);}
+    h1{font-size:clamp(38px,5vw,62px);font-weight:900;line-height:1.06;letter-spacing:-.03em;}
+    h2{font-size:clamp(28px,4vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.025em;}
+    h3{font-size:20px;font-weight:700;}
+    p{color:var(--text-2);line-height:1.8;}
+    .lead{font-size:18px;color:var(--text-2);line-height:1.75;}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius-sm);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .22s ease;white-space:nowrap;}
+    .btn--primary{background:var(--sky);color:var(--white);}
+    .btn--primary:hover{background:var(--sky-dark);box-shadow:0 8px 24px rgba(14,165,233,.4);transform:translateY(-2px);}
+    .btn--ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3);}
+    .btn--ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);}
+    .btn--lg{padding:17px 34px;font-size:16px;}
+    .arrow{display:inline-block;width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;transition:transform .2s;}
+    .btn:hover .arrow{transform:translateX(4px);}
+
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s ease;}
+    .nav--scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border),0 4px 20px rgba(0,0,0,.06);}
+    .nav--top{background:rgba(10,22,40,.5);backdrop-filter:blur(10px);}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:0 28px;max-width:1180px;margin:0 auto;height:72px;}
+    .nav__logo{font-size:17px;font-weight:800;color:var(--white);display:flex;align-items:center;gap:10px;transition:color .3s;}
+    .nav--scrolled .nav__logo{color:var(--navy);}
+    .nav__logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--teal));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;flex-shrink:0;}
+    .nav__logo span{color:var(--sky);}
+    .nav__links{display:flex;align-items:center;gap:2px;list-style:none;}
+    .nav__links a{padding:8px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:rgba(255,255,255,.8);transition:all .2s;}
+    .nav--scrolled .nav__links a{color:var(--text-2);}
+    .nav__links a:hover{color:var(--white);}
+    .nav--scrolled .nav__links a:hover{color:var(--navy);background:var(--surface);}
+    .nav--scrolled .nav__links a.active{color:var(--sky);}
+    .nav__right{display:flex;align-items:center;gap:12px;}
+    .nav__cta-ghost{padding:9px 18px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.2);transition:all .2s;}
+    .nav__cta-ghost:hover{border-color:rgba(255,255,255,.5);}
+    .nav--scrolled .nav__cta-ghost{color:var(--text-2);border-color:var(--border);}
+    .nav--scrolled .nav__cta-ghost:hover{border-color:var(--sky);color:var(--sky);}
+    .nav__hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav__hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;}
+    .nav--scrolled .nav__hamburger span{background:var(--navy);}
+
+    /* HERO */
+    .contact-hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 60%,var(--navy) 100%);padding:140px 0 0;position:relative;overflow:hidden;}
+    .contact-hero__bg{position:absolute;inset:0;background-image:linear-gradient(rgba(14,165,233,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,.07) 1px,transparent 1px);background-size:60px 60px;animation:gridShift 20s linear infinite;}
+    @keyframes gridShift{0%{background-position:0 0;}100%{background-position:60px 60px;}}
+    .contact-hero__glow{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 60% 30%,rgba(14,165,233,.12) 0%,transparent 65%);}
+    .contact-hero__inner{position:relative;z-index:2;}
+    .contact-hero__top{padding-bottom:64px;}
+    .contact-hero h1{color:var(--white);max-width:600px;margin-bottom:20px;}
+    .contact-hero .lead{color:rgba(255,255,255,.7);max-width:560px;margin-bottom:0;}
+    .contact-hero__breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4);margin-bottom:24px;}
+    .contact-hero__breadcrumb a{color:rgba(255,255,255,.4);transition:color .2s;}
+    .contact-hero__breadcrumb a:hover{color:rgba(255,255,255,.7);}
+
+    /* FORM CARD */
+    .contact-layout{display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:start;padding:64px 0;}
+    .form-card{background:var(--white);border-radius:var(--radius-lg);padding:48px;box-shadow:0 24px 80px rgba(0,0,0,.2);position:relative;z-index:10;margin-top:-48px;}
+
+    /* Form Styles */
+    .form-group{margin-bottom:24px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    label{display:block;font-size:13px;font-weight:600;color:var(--text-1);margin-bottom:6px;}
+    label span{color:#F87171;margin-left:2px;}
+    input,textarea,select{
+      width:100%;padding:13px 16px;
+      border:1.5px solid var(--border);border-radius:var(--radius-sm);
+      font-size:14px;font-family:'Inter',sans-serif;color:var(--text-1);
+      background:var(--surface);
+      transition:all .2s;
+      appearance:none;-webkit-appearance:none;
+    }
+    input:focus,textarea:focus,select:focus{outline:none;border-color:var(--sky);background:var(--white);box-shadow:0 0 0 3px rgba(14,165,233,.12);}
+    input::placeholder,textarea::placeholder{color:var(--text-4);}
+    textarea{resize:vertical;min-height:130px;}
+    select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:40px;cursor:pointer;}
+
+    /* Radio group */
+    .radio-group{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
+    .radio-option{display:flex;align-items:center;gap:10px;cursor:pointer;padding:12px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--border);transition:all .2s;}
+    .radio-option:hover{border-color:var(--sky-light);background:var(--surface);}
+    .radio-option input[type=radio]{width:18px;height:18px;accent-color:var(--sky);flex-shrink:0;cursor:pointer;}
+    .radio-option.selected{border-color:var(--sky);background:rgba(14,165,233,.04);}
+    .radio-label{font-size:14px;font-weight:500;color:var(--text-1);}
+    .radio-sub{font-size:12px;color:var(--text-3);}
+
+    /* Checkbox */
+    .checkbox-row{display:flex;align-items:flex-start;gap:10px;margin-top:4px;}
+    .checkbox-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--sky);flex-shrink:0;margin-top:2px;cursor:pointer;}
+    .checkbox-label{font-size:13px;color:var(--text-2);line-height:1.5;}
+    .checkbox-label a{color:var(--sky);text-decoration:underline;}
+
+    .form-submit{margin-top:8px;}
+    .form-submit .btn{width:100%;justify-content:center;padding:16px;font-size:16px;}
+
+    /* Success state */
+    .form-success{display:none;text-align:center;padding:40px 20px;}
+    .form-success__icon{font-size:56px;margin-bottom:16px;}
+    .form-success h3{margin-bottom:8px;}
+    .form-success p{font-size:14px;color:var(--text-3);}
+    .form--submitted .form-fields{display:none;}
+    .form--submitted .form-success{display:block;}
+
+    /* CONTACT INFO */
+    .contact-info{padding-top:16px;}
+    .contact-info h3{color:white;margin-bottom:8px;font-size:22px;}
+    .contact-info .lead{color:rgba(255,255,255,.65);font-size:16px;margin-bottom:40px;}
+    .info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:28px;}
+    .info-icon{width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+    .info-label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:4px;}
+    .info-value{font-size:15px;font-weight:600;color:white;}
+    .info-value a{color:var(--sky);transition:color .2s;}
+    .info-value a:hover{color:var(--sky-light);}
+
+    .what-to-expect{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:28px;margin-top:32px;}
+    .what-to-expect h4{color:white;margin-bottom:16px;font-size:15px;}
+    .wte-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-size:13px;color:rgba(255,255,255,.6);}
+    .wte-item:last-child{margin-bottom:0;}
+    .wte-item::before{content:'✓';color:var(--sky);font-weight:700;flex-shrink:0;margin-top:1px;}
+
+    /* SPRINT CTA */
+    #sprint{scroll-margin-top:80px;}
+    .sprint-card{background:linear-gradient(145deg,var(--navy),var(--navy-mid));border:1px solid rgba(14,165,233,.2);border-radius:var(--radius-lg);padding:56px;text-align:center;position:relative;overflow:hidden;}
+    .sprint-card__glow{position:absolute;top:-60px;right:-60px;width:250px;height:250px;background:radial-gradient(circle,rgba(14,165,233,.15),transparent 70%);filter:blur(40px);}
+    .sprint-card__inner{position:relative;z-index:1;}
+    .sprint-card h2{color:white;margin-bottom:12px;}
+    .sprint-card p{color:rgba(255,255,255,.6);max-width:560px;margin:0 auto 36px;font-size:16px;}
+    .sprint-features{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:36px;}
+    .sprint-feature{display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.7);}
+    .sprint-feature::before{content:'✓';color:var(--sky);font-weight:700;}
+    .sprint-price{font-size:42px;font-weight:900;color:var(--sky);margin-bottom:4px;letter-spacing:-.03em;}
+    .sprint-price sub{font-size:16px;font-weight:500;}
+    .sprint-price-note{font-size:13px;color:rgba(255,255,255,.35);margin-bottom:28px;}
+
+    footer{background:var(--navy);padding:64px 0 28px;border-top:1px solid rgba(255,255,255,.06);}
+    .footer__top{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .footer__brand-logo{font-size:17px;font-weight:800;color:white;display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+    .footer__brand-logo span{color:var(--sky);}
+    .footer__brand p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.7;max-width:280px;}
+    .footer__brand-contact{margin-top:20px;font-size:14px;font-weight:600;color:var(--sky);}
+    .footer__col h5{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:18px;}
+    .footer__col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer__col a{font-size:14px;color:rgba(255,255,255,.5);transition:color .15s;}
+    .footer__col a:hover{color:white;}
+    .footer__bottom{padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.2);}
+    .footer__bottom a{color:rgba(255,255,255,.3);}
+    .footer__bottom a:hover{color:rgba(255,255,255,.6);}
+
+    @media(max-width:1024px){.contact-layout{grid-template-columns:1fr;}.contact-info{order:-1;}.form-card{margin-top:0;}}
+    @media(max-width:768px){.form-row{grid-template-columns:1fr;}.nav__links,.nav__cta-ghost{display:none;}.nav__hamburger{display:flex;}.sprint-features{flex-direction:column;align-items:center;}.footer__top{grid-template-columns:1fr 1fr;}}
+    @media(max-width:480px){.form-card{padding:28px;}.footer__top{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<nav class="nav nav--top" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-mark">TSP</div>
+      The SaaS<span>Partnership</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="services.html" class="nav__cta-ghost">Our services</a>
+      <a href="why-us.html" class="btn btn--primary">See the model <span class="arrow"></span></a>
+    </div>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- CONTACT HERO + FORM -->
+<div class="contact-hero">
+  <div class="contact-hero__bg"></div>
+  <div class="contact-hero__glow"></div>
+  <div class="container">
+    <div class="contact-hero__inner">
+      <div class="contact-hero__top">
+        <div class="contact-hero__breadcrumb"><a href="index.html">Home</a><span>/</span><span style="color:rgba(255,255,255,.6);">Contact</span></div>
+        <div class="eyebrow eyebrow--white">Get In Touch</div>
+        <h1>Let's have an honest conversation</h1>
+        <p class="lead">A 30-minute discovery call. We'll talk through where your pipeline is today, what's holding it back, and whether a growth partnership makes sense for your business.</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- FORM -->
+        <div class="form-card reveal" id="contactForm">
+          <div class="form-fields">
+            <h3 style="margin-bottom:6px;">Book your discovery call</h3>
+            <p style="font-size:14px;color:var(--text-3);margin-bottom:32px;">We typically respond within one business day. No sales pressure — just a genuine conversation.</p>
+
+            <form id="mainForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First name<span>*</span></label>
+                  <input type="text" id="firstName" name="firstName" placeholder="James" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last name<span>*</span></label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Sterling" required autocomplete="family-name" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Work email<span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="work email" />
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company name<span>*</span></label>
+                <input type="text" id="company" name="company" placeholder="Your SaaS Company" required />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="role">Your role<span>*</span></label>
+                  <select id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option>CEO / Founder</option>
+                    <option>CMO / Marketing Director</option>
+                    <option>VP Marketing</option>
+                    <option>Head of Marketing</option>
+                    <option>Marketing Manager</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="arr">Current ARR</label>
+                  <select id="arr" name="arr">
+                    <option value="" disabled selected>Select range</option>
+                    <option>Pre-revenue / seed</option>
+                    <option>£0–£1M ARR</option>
+                    <option>£1M–£5M ARR</option>
+                    <option>£5M–£20M ARR</option>
+                    <option>£20M–£50M ARR</option>
+                    <option>£50M+ ARR</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Which services are you most interested in?</label>
+                <div class="radio-group" id="servicesGroup">
+                  <label class="radio-option" onclick="selectRadio(this)">
+                    <input type="radio" name="service" value="paid-media" />
+                    <div><div class="radio-label">Paid Media Management</div><div class="radio-sub">Google, LinkedIn, Meta &amp; programmatic</div></div>
+                  </label>
+                  <label class="radio-option" onclick="selectRadio(this)">
+                    <input type="radio" name="service" value="seo" />
+                    <div><div class="radio-label">Organic SEO &amp; Content</div><div class="radio-sub">Technical SEO &amp; content strategy</div></div>
+                  </label>
+                  <label class="radio-option" onclick="selectRadio(this)">
+                    <input type="radio" name="service" value="cro" />
+                    <div><div class="radio-label">CRO &amp; Onsite Optimisation</div><div class="radio-sub">Conversion rate improvement</div></div>
+                  </label>
+                  <label class="radio-option" onclick="selectRadio(this)">
+                    <input type="radio" name="service" value="automation" />
+                    <div><div class="radio-label">Marketing Automation &amp; Ops</div><div class="radio-sub">Workflows, nurture &amp; RevOps</div></div>
+                  </label>
+                  <label class="radio-option" onclick="selectRadio(this)">
+                    <input type="radio" name="service" value="full" />
+                    <div><div class="radio-label">Full partnership (all services)</div><div class="radio-sub">The complete fractional team</div></div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="challenge">What's your biggest marketing challenge right now?</label>
+                <textarea id="challenge" name="challenge" placeholder="Tell us briefly about where you are with your marketing — what's working, what isn't, and what you're hoping to achieve..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <div class="checkbox-row">
+                  <input type="checkbox" id="consent" name="consent" required />
+                  <label for="consent" class="checkbox-label">I agree to be contacted by The SaaS Partnership regarding my enquiry. We'll never share your data with third parties. View our <a href="#">Privacy Policy</a>.</label>
+                </div>
+              </div>
+
+              <div class="form-submit" id="errorMsg" style="display:none;margin-bottom:16px;">
+                <p style="color:#F87171;font-size:13px;font-weight:500;text-align:center;">Please fill in all required fields and accept the privacy policy.</p>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn--primary btn--lg">
+                  Request Discovery Call <span class="arrow"></span>
+                </button>
+              </div>
+
+              <p style="font-size:12px;color:var(--text-4);text-align:center;margin-top:14px;">We typically respond within 1 business day. No spam, ever.</p>
+            </form>
+          </div>
+
+          <div class="form-success" id="formSuccess">
+            <div class="form-success__icon">🎉</div>
+            <h3>You're on the list!</h3>
+            <p>Thanks for getting in touch. One of our senior team will be in contact within one business day to arrange your discovery call.</p>
+            <p style="margin-top:12px;">In the meantime, <a href="why-us.html" style="color:var(--sky);">learn more about our commercial model →</a></p>
+          </div>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
+          <h3>What happens next?</h3>
+          <p class="lead">No sales process. No pressure. Just an honest 30-minute conversation.</p>
+
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value"><a href="mailto:hello@thesaaspartnership.com">hello@thesaaspartnership.com</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">Based</div>
+              <div class="info-value">UK — Working globally with SaaS companies</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🌐</div>
+            <div>
+              <div class="info-label">Website</div>
+              <div class="info-value"><a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></div>
+            </div>
+          </div>
+
+          <div class="what-to-expect">
+            <h4>What to expect from your discovery call</h4>
+            <div class="wte-item">We'll ask about your current pipeline, channel performance and team structure</div>
+            <div class="wte-item">You'll hear about the partnership model and how we typically engage</div>
+            <div class="wte-item">We'll be honest if we're not the right fit — no hard sell</div>
+            <div class="wte-item">If there's a match, we'll outline a proposed scope and commercial structure within 48 hours</div>
+            <div class="wte-item">Calls are 30 minutes — we respect your time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GROWTH SPRINT CTA -->
+<section id="sprint" class="section" style="background:var(--surface);">
+  <div class="container">
+    <div class="sprint-card reveal">
+      <div class="sprint-card__glow"></div>
+      <div class="sprint-card__inner">
+        <div class="eyebrow eyebrow--white" style="justify-content:center;margin-bottom:16px;">90-Day Engagement</div>
+        <h2>Not sure where to start? Begin with a Growth Sprint</h2>
+        <p>A 90-day intensive engagement that audits your marketing stack, identifies the highest-leverage growth opportunities, and delivers an execution roadmap — plus early wins. The fastest way to validate whether a full partnership is right for your business.</p>
+        <div class="sprint-features">
+          <div class="sprint-feature">Full channel audit</div>
+          <div class="sprint-feature">90-day execution roadmap</div>
+          <div class="sprint-feature">Rapid testing &amp; validation</div>
+          <div class="sprint-feature">Attribution model build</div>
+          <div class="sprint-feature">Clear partnership path</div>
+        </div>
+        <div class="sprint-price"><sub>£</sub>12,000</div>
+        <div class="sprint-price-note">One-time investment · Deliverables guaranteed</div>
+        <a href="#contactForm" class="btn btn--primary btn--lg" onclick="document.querySelector('#challenge').placeholder='I\'m interested in starting with a Growth Sprint...'">
+          Enquire About a Growth Sprint <span class="arrow"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
+          The SaaS<span>Partnership</span>
+        </div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialists across paid, SEO, CRO and automation.</p>
+        <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
+      </div>
+      <div class="footer__col"><h5>Services</h5><ul><li><a href="services.html#paid-media">Paid Media</a></li><li><a href="services.html#seo">Organic SEO</a></li><li><a href="services.html#cro">CRO &amp; Onsite</a></li><li><a href="services.html#automation">Automation</a></li></ul></div>
+      <div class="footer__col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="why-us.html">Why Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h5>Get Started</h5><ul><li><a href="contact.html">Discovery Call</a></li><li><a href="why-us.html#model">Our Model</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 The SaaS Partnership · thesaaspartnership.com</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* NAV */
+  const nav=document.getElementById('mainNav');
+  function updateNav(){nav.classList.toggle('nav--scrolled',window.scrollY>60);nav.classList.toggle('nav--top',window.scrollY<=60);}
+  window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+
+  /* REVEAL */
+  const ro=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');ro.unobserve(en.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+  /* RADIO SELECT */
+  function selectRadio(label) {
+    document.querySelectorAll('.radio-option').forEach(l => l.classList.remove('selected'));
+    label.classList.add('selected');
+  }
+
+  /* FORM SUBMIT */
+  document.getElementById('mainForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName  = document.getElementById('lastName').value.trim();
+    const email     = document.getElementById('email').value.trim();
+    const company   = document.getElementById('company').value.trim();
+    const role      = document.getElementById('role').value;
+    const consent   = document.getElementById('consent').checked;
+    const errorMsg  = document.getElementById('errorMsg');
+
+    if (!firstName || !lastName || !email || !company || !role || !consent) {
+      errorMsg.style.display = 'block';
+      return;
+    }
+    errorMsg.style.display = 'none';
+
+    // Simulate form submission
+    const formEl = document.getElementById('contactForm');
+    const fieldsEl = formEl.querySelector('.form-fields');
+    const successEl = document.getElementById('formSuccess');
+    fieldsEl.style.opacity = '0';
+    fieldsEl.style.transition = 'opacity .3s';
+    setTimeout(() => {
+      fieldsEl.style.display = 'none';
+      successEl.style.display = 'block';
+      successEl.style.opacity = '0';
+      successEl.style.transition = 'opacity .4s';
+      setTimeout(() => { successEl.style.opacity = '1'; }, 50);
+    }, 300);
+  });
+</script>
+</body>
+</html>
