@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | The SaaS Partnership</title>
+  <meta name="description" content="Privacy Policy for The SaaS Partnership — how we collect, use and protect your personal data under UK GDPR." />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/privacy.html" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:       #0A1628;
+      --navy-mid:   #142240;
+      --sky:        #0EA5E9;
+      --sky-dark:   #0284C7;
+      --teal:       #14B8A6;
+      --white:      #FFFFFF;
+      --surface:    #F8FAFC;
+      --surface-2:  #F1F5F9;
+      --border:     #E2E8F0;
+      --border-mid: #CBD5E1;
+      --text-1:     #0A1628;
+      --text-2:     #334155;
+      --text-3:     #64748B;
+      --text-4:     #94A3B8;
+      --radius:     14px;
+      --radius-sm:  8px;
+      --shadow-sm:  0 1px 4px rgba(0,0,0,.06);
+      --shadow-md:  0 4px 20px rgba(0,0,0,.09);
+      --shadow-lg:  0 12px 48px rgba(0,0,0,.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-1); background: var(--white);
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all .3s ease; }
+    .nav--scrolled { background: rgba(255,255,255,.96); backdrop-filter: blur(16px); box-shadow: 0 1px 0 var(--border), 0 4px 20px rgba(0,0,0,.06); }
+    .nav--top { background: var(--navy); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; padding: 0 28px; max-width: 1180px; margin: 0 auto; height: 72px; }
+    .nav__logo { font-size: 17px; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 10px; transition: color .3s; }
+    .nav--scrolled .nav__logo { color: var(--navy); }
+    .nav__logo-mark { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--sky), var(--teal)); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; color: white; flex-shrink: 0; }
+    .nav__logo span { color: var(--sky); }
+    .nav__item--dropdown { position: relative; }
+    .nav__submenu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: white; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 8px; min-width: 230px; list-style: none; z-index: 1001; }
+    .nav__item--dropdown:hover .nav__submenu { display: block; }
+    .nav__submenu li a { display: block; padding: 9px 14px; border-radius: var(--radius-sm); font-size: 14px; color: var(--text-1) !important; font-weight: 500; transition: all .15s; background: transparent !important; }
+    .nav__submenu li a:hover { background: var(--surface) !important; color: var(--sky) !important; }
+    .nav__chevron { font-size: 10px; opacity: 0.7; }
+    .nav__links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav__links a { padding: 8px 14px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 500; color: rgba(255,255,255,.8); transition: all .2s; }
+    .nav--scrolled .nav__links a { color: var(--text-2); }
+    .nav__links a:hover { color: white; background: rgba(255,255,255,.1); }
+    .nav--scrolled .nav__links a:hover { color: var(--navy); background: var(--surface); }
+    .nav__right { display: flex; align-items: center; gap: 12px; }
+    .nav__cta-ghost { padding: 9px 18px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85); border: 1.5px solid rgba(255,255,255,.2); transition: all .2s; }
+    .nav__cta-ghost:hover { border-color: rgba(255,255,255,.5); color: white; }
+    .nav--scrolled .nav__cta-ghost { color: var(--text-2); border-color: var(--border); }
+    .nav--scrolled .nav__cta-ghost:hover { border-color: var(--sky); color: var(--sky); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: all .22s ease; }
+    .btn--primary { background: var(--sky); color: white; }
+    .btn--primary:hover { background: var(--sky-dark); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav__hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+    .nav--scrolled .nav__hamburger span { background: var(--navy); }
+
+    /* PAGE HERO */
+    .legal-hero { background: var(--navy); padding: 140px 0 72px; }
+    .legal-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -.025em; color: white; margin-bottom: 12px; }
+    .legal-hero p { color: rgba(255,255,255,.55); font-size: 15px; margin-top: 8px; }
+    .eyebrow-legal { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--sky); margin-bottom: 16px; }
+    .eyebrow-legal::before { content: ''; display: block; width: 20px; height: 2px; background: var(--sky); border-radius: 2px; }
+
+    /* LEGAL CONTENT */
+    .legal-body { padding: 72px 0 100px; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+    .legal-layout { display: grid; grid-template-columns: 220px 1fr; gap: 64px; align-items: start; }
+    .legal-toc { position: sticky; top: 96px; }
+    .legal-toc h6 { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-4); margin-bottom: 16px; }
+    .legal-toc ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .legal-toc a { font-size: 13px; color: var(--text-3); padding: 5px 10px; border-radius: 6px; display: block; transition: all .15s; border-left: 2px solid transparent; }
+    .legal-toc a:hover { color: var(--sky); border-left-color: var(--sky); background: var(--surface); }
+    .legal-content h2 { font-size: 22px; font-weight: 700; letter-spacing: -.015em; color: var(--text-1); margin: 48px 0 16px; padding-top: 8px; border-top: 1px solid var(--border); }
+    .legal-content h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .legal-content h3 { font-size: 16px; font-weight: 600; color: var(--text-1); margin: 24px 0 10px; }
+    .legal-content p { font-size: 15px; color: var(--text-2); line-height: 1.85; margin-bottom: 16px; }
+    .legal-content ul, .legal-content ol { margin: 12px 0 20px 24px; display: flex; flex-direction: column; gap: 8px; }
+    .legal-content li { font-size: 15px; color: var(--text-2); line-height: 1.75; }
+    .legal-content strong { color: var(--text-1); font-weight: 600; }
+    .legal-content a { color: var(--sky); text-decoration: underline; text-underline-offset: 3px; }
+    .legal-content a:hover { color: var(--sky-dark); }
+    .legal-notice { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--sky); border-radius: var(--radius-sm); padding: 16px 20px; margin: 24px 0; }
+    .legal-notice p { margin: 0; font-size: 14px; color: var(--text-3); }
+
+    /* RIGHTS TABLE */
+    .rights-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; }
+    .rights-table th { background: var(--surface-2); padding: 12px 16px; text-align: left; font-weight: 600; color: var(--text-1); border-bottom: 2px solid var(--border); }
+    .rights-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-2); vertical-align: top; line-height: 1.6; }
+    .rights-table tr:last-child td { border-bottom: none; }
+    .rights-table tr:hover td { background: var(--surface); }
+
+    /* FOOTER */
+    footer { background: var(--navy); padding: 64px 0 0; }
+    .footer__top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .footer__brand-logo { font-size: 17px; font-weight: 800; color: white; display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .footer__brand-logo span { color: var(--sky); }
+    .footer__brand p { font-size: 14px; color: rgba(255,255,255,.45); line-height: 1.75; max-width: 280px; }
+    .footer__brand-contact { margin-top: 16px; font-size: 14px; color: var(--sky); font-weight: 500; }
+    .footer__col h5 { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.25); margin-bottom: 18px; }
+    .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer__col a { font-size: 14px; color: rgba(255,255,255,.5); transition: color .15s; }
+    .footer__col a:hover { color: white; }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; font-size: 13px; color: rgba(255,255,255,.3); }
+    .footer__bottom a { color: rgba(255,255,255,.45); }
+    .footer__bottom a:hover { color: white; }
+
+    @media(max-width: 900px) { .legal-layout { grid-template-columns: 1fr; } .legal-toc { display: none; } }
+    @media(max-width: 768px) { .nav__links, .nav__cta-ghost { display: none; } .nav__hamburger { display: flex; } .footer__top { grid-template-columns: 1fr 1fr; } .legal-hero { padding: 120px 0 56px; } .rights-table { font-size: 13px; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav nav--top" id="mainNav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="The SaaS Partnership home">
+      <div class="nav__logo-mark">TSP</div>
+      The SaaS<span>Partnership</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav__item--dropdown">
+        <a href="#" class="nav__dropdown-toggle">Solutions <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="private-equity-marketing.html">PE &amp; Investor Partnerships</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO for SaaS</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A Integration</a></li>
+        </ul>
+      </li>
+      <li class="nav__item--dropdown">
+        <a href="services.html" class="nav__dropdown-toggle">Services <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="saas-paid-media.html">Paid Media</a></li>
+          <li><a href="saas-seo.html">SEO for SaaS</a></li>
+          <li><a href="services.html#cro">CRO &amp; Conversion</a></li>
+          <li><a href="services.html#automation">Marketing Automation</a></li>
+        </ul>
+      </li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="why-us.html" class="nav__cta-ghost">See the model</a>
+      <a href="contact.html" class="btn btn--primary">Book Discovery Call</a>
+    </div>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="legal-hero">
+  <div class="container">
+    <div class="eyebrow-legal">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: 1 January 2025 &nbsp;·&nbsp; Effective from: 1 January 2025</p>
+  </div>
+</div>
+
+<!-- LEGAL BODY -->
+<div class="legal-body">
+  <div class="container">
+    <div class="legal-layout">
+
+      <!-- TABLE OF CONTENTS -->
+      <nav class="legal-toc" aria-label="Page contents">
+        <h6>Contents</h6>
+        <ul>
+          <li><a href="#intro">1. Introduction</a></li>
+          <li><a href="#who-we-are">2. Who We Are</a></li>
+          <li><a href="#what-we-collect">3. Data We Collect</a></li>
+          <li><a href="#how-we-use">4. How We Use Your Data</a></li>
+          <li><a href="#lawful-basis">5. Lawful Basis</a></li>
+          <li><a href="#sharing">6. Sharing Your Data</a></li>
+          <li><a href="#international">7. International Transfers</a></li>
+          <li><a href="#retention">8. How Long We Keep Data</a></li>
+          <li><a href="#your-rights">9. Your Rights</a></li>
+          <li><a href="#cookies">10. Cookies</a></li>
+          <li><a href="#children">11. Children's Privacy</a></li>
+          <li><a href="#security">12. Security</a></li>
+          <li><a href="#third-party">13. Third-Party Links</a></li>
+          <li><a href="#changes">14. Changes to This Policy</a></li>
+          <li><a href="#contact">15. Contact &amp; Complaints</a></li>
+        </ul>
+      </nav>
+
+      <!-- CONTENT -->
+      <div class="legal-content">
+
+        <div class="legal-notice">
+          <p><strong>Your privacy matters to us.</strong> This Privacy Policy explains how The SaaS Partnership collects, uses, shares and protects your personal data. We are committed to handling your information responsibly and in compliance with applicable data protection law, including the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+        </div>
+
+        <h2 id="intro">1. Introduction</h2>
+        <p>This Privacy Policy applies to personal data collected through our website at <strong>www.thesaaspartnership.com</strong> (the "Website") and in the course of providing our services to clients, prospective clients, and business contacts.</p>
+        <p>Please read this policy carefully. By using our Website or engaging our services, you acknowledge that your personal data will be processed as described in this policy. If you do not agree, please do not use our Website or provide us with your personal data.</p>
+
+        <h2 id="who-we-are">2. Who We Are</h2>
+        <p>The SaaS Partnership is the data controller responsible for your personal data collected through this Website and in connection with our services. As data controller, we determine the purposes and means of processing your personal data.</p>
+        <p>
+          <strong>Data Controller:</strong> The SaaS Partnership<br>
+          <strong>Email:</strong> <a href="mailto:privacy@thesaaspartnership.com">privacy@thesaaspartnership.com</a><br>
+          <strong>Website:</strong> <a href="https://www.thesaaspartnership.com">www.thesaaspartnership.com</a>
+        </p>
+        <p>We are based in the United Kingdom and are subject to UK data protection law. Where we process data of individuals in the European Economic Area (EEA), we are also subject to the EU GDPR.</p>
+
+        <h2 id="what-we-collect">3. Data We Collect</h2>
+        <h3>3.1 Information You Provide to Us</h3>
+        <p>We collect personal data that you voluntarily provide to us, including when you:</p>
+        <ul>
+          <li>Complete our contact or enquiry form (name, work email address, company name, job title, company ARR range, service interests, and message content)</li>
+          <li>Book a discovery call or consultation (contact details, scheduling information)</li>
+          <li>Engage us as a client (business contact details, billing information, information about your business and marketing activities)</li>
+          <li>Correspond with us by email, telephone, or other means</li>
+          <li>Subscribe to marketing communications (name and email address)</li>
+          <li>Connect with us on LinkedIn or other professional networks</li>
+        </ul>
+        <h3>3.2 Information We Collect Automatically</h3>
+        <p>When you visit our Website, we may automatically collect certain technical data, including:</p>
+        <ul>
+          <li>IP address and approximate geographic location</li>
+          <li>Browser type and version, operating system</li>
+          <li>Pages visited, time and duration of visits, referring URLs</li>
+          <li>Device identifiers and screen resolution</li>
+          <li>Cookie data (see Section 10 for details)</li>
+        </ul>
+        <h3>3.3 Information from Third Parties</h3>
+        <p>We may receive information about you from third-party sources, including:</p>
+        <ul>
+          <li>Professional networking platforms such as LinkedIn</li>
+          <li>Business intelligence and contact data providers where we have a legitimate business interest in contacting you</li>
+          <li>Referrals from existing clients or professional contacts</li>
+          <li>Publicly available sources such as company websites and Companies House</li>
+        </ul>
+
+        <h2 id="how-we-use">4. How We Use Your Data</h2>
+        <p>We use your personal data for the following purposes:</p>
+        <ul>
+          <li><strong>Responding to enquiries:</strong> To respond to contact form submissions, emails, and other communications</li>
+          <li><strong>Providing services:</strong> To deliver our marketing consultancy services to clients and manage client relationships</li>
+          <li><strong>Business development:</strong> To send relevant information about our services to prospective clients where we have a legitimate interest or your consent</li>
+          <li><strong>Marketing communications:</strong> To send newsletters, case studies, and other marketing content where you have opted in or we have a legitimate interest</li>
+          <li><strong>Website improvement:</strong> To analyse Website usage and improve the user experience</li>
+          <li><strong>Legal compliance:</strong> To comply with our legal and regulatory obligations</li>
+          <li><strong>Contract management:</strong> To administer contracts, invoicing, and payment</li>
+          <li><strong>Fraud prevention and security:</strong> To protect our Website and detect fraudulent or abusive activity</li>
+        </ul>
+
+        <h2 id="lawful-basis">5. Lawful Basis for Processing</h2>
+        <p>Under UK GDPR, we rely on the following lawful bases for processing your personal data:</p>
+        <table class="rights-table">
+          <thead>
+            <tr>
+              <th>Processing Activity</th>
+              <th>Lawful Basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Responding to contact form enquiries</td>
+              <td><strong>Legitimate interests</strong> — to respond to business enquiries; or <strong>Contract</strong> — where the enquiry relates to an existing engagement</td>
+            </tr>
+            <tr>
+              <td>Delivering services to clients</td>
+              <td><strong>Contract</strong> — necessary for the performance of a contract with the client</td>
+            </tr>
+            <tr>
+              <td>Sending marketing emails to existing clients</td>
+              <td><strong>Legitimate interests</strong> — to communicate relevant service updates and insights to existing client contacts</td>
+            </tr>
+            <tr>
+              <td>Sending marketing emails to prospective clients</td>
+              <td><strong>Legitimate interests</strong> — B2B outreach where we have a reasonable basis to believe our services are relevant; or <strong>Consent</strong> — where obtained</td>
+            </tr>
+            <tr>
+              <td>Website analytics</td>
+              <td><strong>Legitimate interests</strong> — to improve our Website; or <strong>Consent</strong> — where required for cookies</td>
+            </tr>
+            <tr>
+              <td>Compliance with legal obligations</td>
+              <td><strong>Legal obligation</strong> — e.g. tax records, responding to regulatory requests</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Where we rely on legitimate interests, we have assessed that our interests do not override your rights and freedoms. You have the right to object to processing based on legitimate interests (see Section 9).</p>
+
+        <h2 id="sharing">6. Sharing Your Data</h2>
+        <p>We do not sell your personal data. We may share your data with:</p>
+        <h3>6.1 Service Providers</h3>
+        <p>We engage trusted third-party service providers who process data on our behalf, including:</p>
+        <ul>
+          <li>Email and CRM platforms (e.g. HubSpot, Mailchimp or similar)</li>
+          <li>Website hosting and analytics providers (e.g. Google Analytics)</li>
+          <li>Scheduling and video conferencing tools (e.g. Calendly, Zoom)</li>
+          <li>Project management and collaboration tools</li>
+          <li>Accounting and invoicing software</li>
+        </ul>
+        <p>These providers are contractually required to handle your data securely and only for the purposes we specify.</p>
+        <h3>6.2 Professional Advisers</h3>
+        <p>We may share data with our lawyers, accountants, insurers, and other professional advisers where necessary.</p>
+        <h3>6.3 Legal Requirements</h3>
+        <p>We may disclose your data if required to do so by law, court order, or to protect our legal rights, or where we believe in good faith that disclosure is necessary to prevent harm or illegal activity.</p>
+        <h3>6.4 Business Transfers</h3>
+        <p>In the event of a merger, acquisition, or sale of all or part of our business, personal data may be transferred to the acquiring entity as part of that transaction. We will notify you of any such transfer where required by law.</p>
+
+        <h2 id="international">7. International Data Transfers</h2>
+        <p>We are based in the United Kingdom. Some of our service providers may process data outside the UK and the European Economic Area (EEA), including in the United States.</p>
+        <p>Where personal data is transferred to countries outside the UK that do not provide an equivalent level of data protection, we ensure appropriate safeguards are in place, which may include:</p>
+        <ul>
+          <li>UK International Data Transfer Agreements (IDTAs) or EU Standard Contractual Clauses (SCCs)</li>
+          <li>Adequacy decisions issued by the UK Secretary of State or the European Commission</li>
+          <li>Binding corporate rules or other appropriate mechanisms</li>
+        </ul>
+        <p>You can request further information about international transfer safeguards by contacting us at <a href="mailto:privacy@thesaaspartnership.com">privacy@thesaaspartnership.com</a>.</p>
+
+        <h2 id="retention">8. How Long We Keep Your Data</h2>
+        <p>We retain personal data only for as long as necessary for the purposes for which it was collected, or as required by applicable law. Our general retention guidelines are:</p>
+        <table class="rights-table">
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Retention Period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Contact and enquiry data (non-clients)</td>
+              <td>2 years from last contact, or until you request deletion</td>
+            </tr>
+            <tr>
+              <td>Client contact and contract data</td>
+              <td>7 years from end of the client relationship (for accounting and legal purposes)</td>
+            </tr>
+            <tr>
+              <td>Marketing opt-in records</td>
+              <td>Until consent is withdrawn, then deleted within 30 days</td>
+            </tr>
+            <tr>
+              <td>Website analytics data</td>
+              <td>Up to 26 months (anonymised after 14 months where possible)</td>
+            </tr>
+            <tr>
+              <td>Financial and invoicing records</td>
+              <td>7 years from the relevant financial year end (UK legal requirement)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>When data is no longer needed, we securely delete or anonymise it.</p>
+
+        <h2 id="your-rights">9. Your Rights</h2>
+        <p>Under UK GDPR, you have the following rights in relation to your personal data:</p>
+        <table class="rights-table">
+          <thead>
+            <tr>
+              <th>Right</th>
+              <th>What This Means</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Right of access</strong></td>
+              <td>You can request a copy of the personal data we hold about you (a "Subject Access Request")</td>
+            </tr>
+            <tr>
+              <td><strong>Right to rectification</strong></td>
+              <td>You can ask us to correct inaccurate or incomplete personal data</td>
+            </tr>
+            <tr>
+              <td><strong>Right to erasure</strong></td>
+              <td>You can ask us to delete your personal data in certain circumstances ("right to be forgotten")</td>
+            </tr>
+            <tr>
+              <td><strong>Right to restrict processing</strong></td>
+              <td>You can ask us to pause processing of your data in certain circumstances</td>
+            </tr>
+            <tr>
+              <td><strong>Right to data portability</strong></td>
+              <td>You can ask us to provide your data in a structured, machine-readable format</td>
+            </tr>
+            <tr>
+              <td><strong>Right to object</strong></td>
+              <td>You can object to processing based on legitimate interests or for direct marketing purposes</td>
+            </tr>
+            <tr>
+              <td><strong>Right to withdraw consent</strong></td>
+              <td>Where we process data based on consent, you can withdraw it at any time</td>
+            </tr>
+            <tr>
+              <td><strong>Rights related to automated decisions</strong></td>
+              <td>You have the right not to be subject to solely automated decisions with significant legal effects</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@thesaaspartnership.com">privacy@thesaaspartnership.com</a>. We will respond within one calendar month. We may need to verify your identity before fulfilling a request.</p>
+        <p>These rights may be subject to certain exemptions or limitations under applicable law. We will explain any applicable exemptions when responding to your request.</p>
+
+        <h2 id="cookies">10. Cookies</h2>
+        <h3>10.1 What Are Cookies?</h3>
+        <p>Cookies are small text files placed on your device by websites you visit. They are widely used to make websites work efficiently and to provide information to the website owner.</p>
+        <h3>10.2 Cookies We Use</h3>
+        <p>We may use the following types of cookies on our Website:</p>
+        <ul>
+          <li><strong>Strictly necessary cookies:</strong> Essential for the Website to function. These cannot be disabled.</li>
+          <li><strong>Analytics cookies:</strong> Used to collect anonymous information about how visitors use our Website (e.g. Google Analytics). We use this to improve our Website.</li>
+          <li><strong>Preference cookies:</strong> Used to remember your settings and preferences.</li>
+          <li><strong>Marketing cookies:</strong> Used to track visitors across websites to display relevant advertising. We will only use these with your consent.</li>
+        </ul>
+        <h3>10.3 Managing Cookies</h3>
+        <p>You can control and manage cookies through your browser settings. Most browsers allow you to refuse or delete cookies. Please note that disabling certain cookies may affect Website functionality.</p>
+        <p>For more information about cookies and how to manage them, visit <a href="https://www.aboutcookies.org" target="_blank" rel="noopener">www.aboutcookies.org</a> or <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">www.allaboutcookies.org</a>.</p>
+        <h3>10.4 Google Analytics</h3>
+        <p>We use Google Analytics to analyse Website usage. Google Analytics collects information anonymously and generates reports. Google may transfer this information to third parties where required by law, or where third parties process information on Google's behalf. Google will not associate your IP address with any other data held by Google. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+        <h2 id="children">11. Children's Privacy</h2>
+        <p>Our Website and services are directed at business professionals and are not intended for children under the age of 16. We do not knowingly collect personal data from children. If you believe we have inadvertently collected data from a child, please contact us immediately and we will delete it.</p>
+
+        <h2 id="security">12. Security</h2>
+        <p>We take the security of your personal data seriously and implement appropriate technical and organisational measures to protect it against unauthorised access, accidental loss, destruction, or damage. These include:</p>
+        <ul>
+          <li>Encryption of data in transit (HTTPS/TLS) and at rest where appropriate</li>
+          <li>Access controls limiting data access to authorised personnel on a need-to-know basis</li>
+          <li>Regular review of our information security practices</li>
+          <li>Staff training on data protection responsibilities</li>
+        </ul>
+        <p>No method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security. In the event of a data breach that poses a risk to your rights and freedoms, we will notify you and the Information Commissioner's Office (ICO) as required by law.</p>
+
+        <h2 id="third-party">13. Third-Party Links</h2>
+        <p>Our Website may contain links to third-party websites. This Privacy Policy applies only to our Website. We are not responsible for the privacy practices of third-party websites and encourage you to read the privacy policies of any linked sites you visit.</p>
+
+        <h2 id="changes">14. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will update the "Last updated" date at the top of this page when we make changes.</p>
+        <p>We encourage you to review this policy periodically. Where changes are material, we will take reasonable steps to notify affected individuals, such as by placing a notice on our Website or by direct communication.</p>
+
+        <h2 id="contact">15. Contact Us &amp; Complaints</h2>
+        <h3>15.1 Contact Us</h3>
+        <p>If you have any questions, concerns, or requests relating to this Privacy Policy or how we handle your personal data, please contact our privacy team:</p>
+        <p>
+          <strong>Privacy enquiries:</strong> <a href="mailto:privacy@thesaaspartnership.com">privacy@thesaaspartnership.com</a><br>
+          <strong>General enquiries:</strong> <a href="mailto:hello@thesaaspartnership.com">hello@thesaaspartnership.com</a><br>
+          <strong>Website:</strong> <a href="https://www.thesaaspartnership.com">www.thesaaspartnership.com</a>
+        </p>
+        <h3>15.2 Making a Complaint</h3>
+        <p>If you are unhappy with how we have handled your personal data, you have the right to lodge a complaint with the relevant supervisory authority:</p>
+        <p>
+          <strong>In the UK:</strong><br>
+          Information Commissioner's Office (ICO)<br>
+          Website: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a><br>
+          Helpline: 0303 123 1113
+        </p>
+        <p>
+          <strong>In the EU:</strong><br>
+          You may complain to your local EU data protection supervisory authority. A list of EU supervisory authorities is available at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener">edpb.europa.eu</a>.
+        </p>
+        <p>We would appreciate the opportunity to address your concerns before you contact a supervisory authority, so please contact us in the first instance.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
+          The SaaS<span>Partnership</span>
+        </div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. We deliver senior specialist resource across paid media, SEO, CRO and automation — for a fraction of the in-house cost.</p>
+        <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
+      </div>
+      <div class="footer__col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="saas-paid-media.html">Paid Media</a></li>
+          <li><a href="saas-seo.html">SEO for SaaS</a></li>
+          <li><a href="services.html#cro">CRO &amp; Onsite</a></li>
+          <li><a href="services.html#automation">Automation</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="private-equity-marketing.html">PE &amp; Investors</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="why-us.html">Why Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Discovery Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
+      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 20);
+    nav.classList.toggle('nav--top', window.scrollY <= 20);
+  }, { passive: true });
+</script>
+</body>
+</html>

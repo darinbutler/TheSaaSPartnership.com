@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions | The SaaS Partnership</title>
+  <meta name="description" content="Terms and Conditions governing the use of The SaaS Partnership website and services." />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/terms.html" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:       #0A1628;
+      --navy-mid:   #142240;
+      --sky:        #0EA5E9;
+      --sky-dark:   #0284C7;
+      --teal:       #14B8A6;
+      --white:      #FFFFFF;
+      --surface:    #F8FAFC;
+      --surface-2:  #F1F5F9;
+      --border:     #E2E8F0;
+      --border-mid: #CBD5E1;
+      --text-1:     #0A1628;
+      --text-2:     #334155;
+      --text-3:     #64748B;
+      --text-4:     #94A3B8;
+      --radius:     14px;
+      --radius-sm:  8px;
+      --shadow-sm:  0 1px 4px rgba(0,0,0,.06);
+      --shadow-md:  0 4px 20px rgba(0,0,0,.09);
+      --shadow-lg:  0 12px 48px rgba(0,0,0,.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-1);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: all .3s ease;
+    }
+    .nav--scrolled {
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 var(--border), 0 4px 20px rgba(0,0,0,.06);
+    }
+    .nav--top { background: var(--navy); }
+    .nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 28px; max-width: 1180px; margin: 0 auto; height: 72px;
+    }
+    .nav__logo {
+      font-size: 17px; font-weight: 800; color: var(--white);
+      display: flex; align-items: center; gap: 10px;
+      transition: color .3s;
+    }
+    .nav--scrolled .nav__logo { color: var(--navy); }
+    .nav__logo-mark {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--sky), var(--teal));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 900; color: white; flex-shrink: 0;
+    }
+    .nav__logo span { color: var(--sky); }
+    .nav__item--dropdown { position: relative; }
+    .nav__submenu {
+      display: none; position: absolute; top: calc(100% + 8px); left: 50%;
+      transform: translateX(-50%); background: white; border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg);
+      padding: 8px; min-width: 230px; list-style: none; z-index: 1001;
+    }
+    .nav__item--dropdown:hover .nav__submenu { display: block; }
+    .nav__submenu li a {
+      display: block; padding: 9px 14px; border-radius: var(--radius-sm);
+      font-size: 14px; color: var(--text-1) !important; font-weight: 500;
+      transition: all .15s; background: transparent !important;
+    }
+    .nav__submenu li a:hover { background: var(--surface) !important; color: var(--sky) !important; }
+    .nav__chevron { font-size: 10px; opacity: 0.7; }
+    .nav__links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav__links a {
+      padding: 8px 14px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 500; color: rgba(255,255,255,.8);
+      transition: all .2s;
+    }
+    .nav--scrolled .nav__links a { color: var(--text-2); }
+    .nav__links a:hover { color: white; background: rgba(255,255,255,.1); }
+    .nav--scrolled .nav__links a:hover { color: var(--navy); background: var(--surface); }
+    .nav__right { display: flex; align-items: center; gap: 12px; }
+    .nav__cta-ghost {
+      padding: 9px 18px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 600; color: rgba(255,255,255,.85);
+      border: 1.5px solid rgba(255,255,255,.2); transition: all .2s;
+    }
+    .nav__cta-ghost:hover { border-color: rgba(255,255,255,.5); color: white; }
+    .nav--scrolled .nav__cta-ghost { color: var(--text-2); border-color: var(--border); }
+    .nav--scrolled .nav__cta-ghost:hover { border-color: var(--sky); color: var(--sky); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 600; cursor: pointer;
+      border: none; transition: all .22s ease;
+    }
+    .btn--primary { background: var(--sky); color: white; }
+    .btn--primary:hover { background: var(--sky-dark); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav__hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+    .nav--scrolled .nav__hamburger span { background: var(--navy); }
+
+    /* PAGE HERO */
+    .legal-hero {
+      background: var(--navy);
+      padding: 140px 0 72px;
+    }
+    .legal-hero h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800; line-height: 1.15;
+      letter-spacing: -.025em; color: white;
+      margin-bottom: 12px;
+    }
+    .legal-hero p {
+      color: rgba(255,255,255,.55);
+      font-size: 15px; margin-top: 8px;
+    }
+    .eyebrow-legal {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--sky);
+      margin-bottom: 16px;
+    }
+    .eyebrow-legal::before {
+      content: ''; display: block; width: 20px; height: 2px;
+      background: var(--sky); border-radius: 2px;
+    }
+
+    /* LEGAL CONTENT */
+    .legal-body {
+      padding: 72px 0 100px;
+    }
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .legal-toc {
+      position: sticky; top: 96px;
+    }
+    .legal-toc h6 {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-4);
+      margin-bottom: 16px;
+    }
+    .legal-toc ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .legal-toc a {
+      font-size: 13px; color: var(--text-3);
+      padding: 5px 10px; border-radius: 6px;
+      display: block; transition: all .15s;
+      border-left: 2px solid transparent;
+    }
+    .legal-toc a:hover { color: var(--sky); border-left-color: var(--sky); background: var(--surface); }
+    .legal-content h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.015em;
+      color: var(--text-1); margin: 48px 0 16px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .legal-content h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .legal-content h3 {
+      font-size: 16px; font-weight: 600; color: var(--text-1);
+      margin: 24px 0 10px;
+    }
+    .legal-content p {
+      font-size: 15px; color: var(--text-2); line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .legal-content ul, .legal-content ol {
+      margin: 12px 0 20px 24px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .legal-content li {
+      font-size: 15px; color: var(--text-2); line-height: 1.75;
+    }
+    .legal-content strong { color: var(--text-1); font-weight: 600; }
+    .legal-content a { color: var(--sky); text-decoration: underline; text-underline-offset: 3px; }
+    .legal-content a:hover { color: var(--sky-dark); }
+    .legal-notice {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--sky);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .legal-notice p { margin: 0; font-size: 14px; color: var(--text-3); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      padding: 64px 0 0;
+    }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+    .footer__top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .footer__brand-logo {
+      font-size: 17px; font-weight: 800; color: white;
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+    }
+    .footer__brand-logo span { color: var(--sky); }
+    .footer__brand p { font-size: 14px; color: rgba(255,255,255,.45); line-height: 1.75; max-width: 280px; }
+    .footer__brand-contact {
+      margin-top: 16px; font-size: 14px; color: var(--sky);
+      font-weight: 500;
+    }
+    .footer__col h5 {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.25);
+      margin-bottom: 18px;
+    }
+    .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer__col a { font-size: 14px; color: rgba(255,255,255,.5); transition: color .15s; }
+    .footer__col a:hover { color: white; }
+    .footer__bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 0; font-size: 13px; color: rgba(255,255,255,.3);
+    }
+    .footer__bottom a { color: rgba(255,255,255,.45); }
+    .footer__bottom a:hover { color: white; }
+
+    @media(max-width: 900px) {
+      .legal-layout { grid-template-columns: 1fr; }
+      .legal-toc { display: none; }
+    }
+    @media(max-width: 768px) {
+      .nav__links, .nav__cta-ghost { display: none; }
+      .nav__hamburger { display: flex; }
+      .footer__top { grid-template-columns: 1fr 1fr; }
+      .legal-hero { padding: 120px 0 56px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav nav--top" id="mainNav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="The SaaS Partnership home">
+      <div class="nav__logo-mark">TSP</div>
+      The SaaS<span>Partnership</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav__item--dropdown">
+        <a href="#" class="nav__dropdown-toggle">Solutions <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="private-equity-marketing.html">PE &amp; Investor Partnerships</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO for SaaS</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A Integration</a></li>
+        </ul>
+      </li>
+      <li class="nav__item--dropdown">
+        <a href="services.html" class="nav__dropdown-toggle">Services <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="saas-paid-media.html">Paid Media</a></li>
+          <li><a href="saas-seo.html">SEO for SaaS</a></li>
+          <li><a href="services.html#cro">CRO &amp; Conversion</a></li>
+          <li><a href="services.html#automation">Marketing Automation</a></li>
+        </ul>
+      </li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="why-us.html" class="nav__cta-ghost">See the model</a>
+      <a href="contact.html" class="btn btn--primary">Book Discovery Call</a>
+    </div>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="legal-hero">
+  <div class="container">
+    <div class="eyebrow-legal">Legal</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p>Last updated: 1 January 2025 &nbsp;·&nbsp; Effective from: 1 January 2025</p>
+  </div>
+</div>
+
+<!-- LEGAL BODY -->
+<div class="legal-body">
+  <div class="container">
+    <div class="legal-layout">
+
+      <!-- TABLE OF CONTENTS -->
+      <nav class="legal-toc" aria-label="Page contents">
+        <h6>Contents</h6>
+        <ul>
+          <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+          <li><a href="#about-us">2. About Us</a></li>
+          <li><a href="#services">3. Our Services</a></li>
+          <li><a href="#client-obligations">4. Client Obligations</a></li>
+          <li><a href="#fees">5. Fees &amp; Payment</a></li>
+          <li><a href="#ip">6. Intellectual Property</a></li>
+          <li><a href="#confidentiality">7. Confidentiality</a></li>
+          <li><a href="#liability">8. Limitation of Liability</a></li>
+          <li><a href="#warranties">9. Warranties &amp; Disclaimers</a></li>
+          <li><a href="#termination">10. Termination</a></li>
+          <li><a href="#data">11. Data Protection</a></li>
+          <li><a href="#third-party">12. Third-Party Links</a></li>
+          <li><a href="#governing-law">13. Governing Law</a></li>
+          <li><a href="#changes">14. Changes to These Terms</a></li>
+          <li><a href="#contact">15. Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CONTENT -->
+      <div class="legal-content">
+
+        <div class="legal-notice">
+          <p><strong>Important:</strong> These Terms &amp; Conditions constitute a legally binding agreement. Please read them carefully before using this website or engaging our services. If you do not agree to these terms, you must not use this website or engage our services.</p>
+        </div>
+
+        <h2 id="acceptance">1. Acceptance of Terms</h2>
+        <p>By accessing or using the website located at <strong>www.thesaaspartnership.com</strong> (the "Website"), or by engaging the services of The SaaS Partnership (the "Company", "we", "us", or "our"), you agree to be bound by these Terms &amp; Conditions ("Terms"), our Privacy Policy, and any additional terms applicable to specific services.</p>
+        <p>These Terms apply to all visitors, users, clients, and others who access or use the Website or our services. If you are accepting these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms.</p>
+
+        <h2 id="about-us">2. About Us</h2>
+        <p>The SaaS Partnership is a fractional marketing consultancy providing specialist marketing services to software-as-a-service (SaaS) companies, private equity firms, venture capital firms, and their portfolio companies.</p>
+        <p>Our registered office and principal place of business is in the United Kingdom. Our contact details are provided at Section 15 of these Terms.</p>
+
+        <h2 id="services">3. Our Services</h2>
+        <h3>3.1 Scope of Services</h3>
+        <p>We provide fractional and project-based marketing services including, but not limited to: paid media management (pay-per-click advertising, social media advertising), search engine optimisation (SEO), conversion rate optimisation (CRO), marketing automation, fractional Chief Marketing Officer (CMO) services, marketing strategy, and post-acquisition marketing integration support.</p>
+        <h3>3.2 Service Agreements</h3>
+        <p>The specific scope, deliverables, timelines, and fees for any engagement will be set out in a separate Statement of Work, Proposal, or Service Agreement ("Service Agreement") entered into between the Company and the client. In the event of any conflict between these Terms and a Service Agreement, the Service Agreement shall prevail.</p>
+        <h3>3.3 Performance Commitments</h3>
+        <p>Where performance targets or metrics are referenced in marketing materials or proposals, these are illustrative of typical outcomes and are not guaranteed results. Marketing performance depends on many external factors including market conditions, competitive landscape, advertising platform changes, and client-side factors. We commit to applying professional skill, care, and diligence in the delivery of all services.</p>
+        <h3>3.4 Subcontractors</h3>
+        <p>We may engage subcontractors or specialist partners in the delivery of services. We remain responsible to the client for services delivered by subcontractors appointed by us.</p>
+
+        <h2 id="client-obligations">4. Client Obligations</h2>
+        <p>To enable us to deliver services effectively, clients agree to:</p>
+        <ul>
+          <li>Provide timely access to relevant accounts, data, systems, and personnel as reasonably required</li>
+          <li>Ensure that all information, content, and materials provided to us are accurate and do not infringe the rights of any third party</li>
+          <li>Obtain and maintain all necessary licences, consents, and permissions for any client-supplied materials</li>
+          <li>Provide timely approvals and feedback in accordance with agreed timelines</li>
+          <li>Designate an appropriate contact person with authority to give instructions and approvals</li>
+          <li>Comply with all applicable laws and regulations in connection with the use of our services</li>
+        </ul>
+        <p>Delays caused by a client's failure to fulfil these obligations may affect delivery timelines and do not constitute a breach by us.</p>
+
+        <h2 id="fees">5. Fees &amp; Payment</h2>
+        <h3>5.1 Fees</h3>
+        <p>Fees for services are as agreed in the relevant Service Agreement. Unless otherwise stated, all fees are exclusive of Value Added Tax (VAT) or equivalent applicable sales taxes, which will be charged in addition at the prevailing rate.</p>
+        <h3>5.2 Invoicing &amp; Payment Terms</h3>
+        <p>Unless otherwise agreed in writing, invoices are payable within 30 days of the invoice date. Retainer fees are invoiced monthly in advance. Project fees may be invoiced in stages as agreed in the relevant Service Agreement.</p>
+        <h3>5.3 Late Payment</h3>
+        <p>In the event of late payment, we reserve the right to: (a) charge interest on overdue amounts at 8% per annum above the Bank of England base rate, as permitted under the Late Payment of Commercial Debts (Interest) Act 1998; (b) suspend services until outstanding amounts are settled; and (c) recover reasonable costs incurred in collecting overdue payments.</p>
+        <h3>5.4 Expenses</h3>
+        <p>Unless otherwise agreed, any pre-approved third-party costs or expenses incurred on a client's behalf (including advertising spend, software subscriptions, and travel) will be invoiced at cost with no mark-up, unless otherwise stated in the Service Agreement.</p>
+        <h3>5.5 Price Increases</h3>
+        <p>We reserve the right to adjust our fees with a minimum of 30 days' written notice. Clients may terminate services within the notice period without penalty if they do not accept the revised fees.</p>
+
+        <h2 id="ip">6. Intellectual Property</h2>
+        <h3>6.1 Our Intellectual Property</h3>
+        <p>All intellectual property rights in and to the Website — including its design, content, graphics, text, software, and all other materials — are owned by or licensed to us. Nothing in these Terms transfers ownership of our intellectual property to you.</p>
+        <h3>6.2 Client Materials</h3>
+        <p>You retain all intellectual property rights in materials, content, data, and information you supply to us. You grant us a non-exclusive, royalty-free licence to use such materials solely for the purpose of delivering the agreed services.</p>
+        <h3>6.3 Deliverables</h3>
+        <p>Upon receipt of full payment for the relevant services, intellectual property rights in the specific deliverables created for the client pursuant to a Service Agreement will transfer to the client, except that we retain the right to use our methodologies, frameworks, know-how, tools, and any pre-existing materials incorporated in the deliverables.</p>
+        <h3>6.4 Portfolio &amp; Case Studies</h3>
+        <p>We reserve the right to reference the client relationship and describe the general nature of work undertaken for marketing and portfolio purposes, unless the client requests otherwise in writing prior to the commencement of the engagement.</p>
+
+        <h2 id="confidentiality">7. Confidentiality</h2>
+        <p>Each party agrees to keep confidential any non-public information of a confidential or proprietary nature disclosed by the other party in connection with the services ("Confidential Information"), and not to use or disclose such information except as required to deliver the services or as required by law.</p>
+        <p>Confidential Information does not include information that: (a) is or becomes publicly known other than through breach of this obligation; (b) was already known to the receiving party prior to disclosure; (c) is received from a third party without restriction; or (d) is independently developed by the receiving party without reference to the Confidential Information.</p>
+        <p>This obligation survives termination of any Service Agreement for a period of three (3) years.</p>
+
+        <h2 id="liability">8. Limitation of Liability</h2>
+        <h3>8.1 Types of Loss Excluded</h3>
+        <p>To the fullest extent permitted by applicable law, we shall not be liable for: (a) loss of profits, revenue, or anticipated savings; (b) loss of business or contracts; (c) loss of data or goodwill; (d) indirect, consequential, incidental, or special loss or damage; or (e) any loss arising from events beyond our reasonable control.</p>
+        <h3>8.2 Cap on Liability</h3>
+        <p>Our total aggregate liability to you in respect of any claim arising under or in connection with any Service Agreement (whether in contract, tort, including negligence, breach of statutory duty, or otherwise) shall not exceed the total fees paid or payable by you to us in the three (3) months immediately preceding the event giving rise to the claim.</p>
+        <h3>8.3 Exceptions</h3>
+        <p>Nothing in these Terms limits or excludes our liability for: (a) death or personal injury caused by our negligence; (b) fraud or fraudulent misrepresentation; (c) any liability that cannot be excluded or limited by applicable law.</p>
+        <h3>8.4 Third-Party Platforms</h3>
+        <p>We are not liable for changes made by third-party platforms (including Google, LinkedIn, Meta, or other advertising or technology platforms) that adversely affect campaign performance or services we deliver on those platforms.</p>
+
+        <h2 id="warranties">9. Warranties &amp; Disclaimers</h2>
+        <p>We warrant that we will deliver services with reasonable skill and care in accordance with the relevant Service Agreement.</p>
+        <p>We do not warrant that the Website will be uninterrupted, error-free, or free of viruses or other harmful components. The Website and its contents are provided "as is" and "as available" without warranty of any kind, except as required by applicable law.</p>
+        <p>We do not make any representation or warranty regarding the accuracy, completeness, or timeliness of any information on the Website, including any indicative statistics or results referenced in marketing materials, which are illustrative only.</p>
+
+        <h2 id="termination">10. Termination</h2>
+        <h3>10.1 Termination for Convenience</h3>
+        <p>Unless otherwise specified in a Service Agreement, either party may terminate an ongoing retainer engagement by providing a minimum of 30 days' written notice. Project-based engagements may be subject to different termination provisions as specified in the relevant Service Agreement.</p>
+        <h3>10.2 Termination for Cause</h3>
+        <p>Either party may terminate a Service Agreement immediately by written notice if the other party: (a) commits a material breach that is incapable of remedy, or fails to remedy a material breach within 14 days of written notice; (b) becomes insolvent, enters administration, receivership, or liquidation; or (c) ceases or threatens to cease carrying on business.</p>
+        <h3>10.3 Consequences of Termination</h3>
+        <p>Upon termination: (a) all amounts outstanding become immediately due and payable; (b) each party shall return or destroy the other's Confidential Information; (c) we will provide reasonable transition assistance if required; and (d) provisions that by their nature should survive termination shall continue in effect.</p>
+
+        <h2 id="data">11. Data Protection</h2>
+        <p>We process personal data in accordance with applicable data protection laws, including the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Our Privacy Policy, available at <a href="privacy.html">www.thesaaspartnership.com/privacy.html</a>, explains how we collect, use, and protect personal data.</p>
+        <p>Where we process personal data on behalf of a client in the course of delivering services, we do so as a data processor and will enter into a Data Processing Agreement with the client if required by applicable law.</p>
+
+        <h2 id="third-party">12. Third-Party Links &amp; Services</h2>
+        <p>The Website may contain links to third-party websites or references to third-party services. These are provided for convenience and information only. We have no control over, and accept no responsibility for, the content, privacy practices, or availability of third-party websites or services. The inclusion of a link does not imply our endorsement of the linked site.</p>
+
+        <h2 id="governing-law">13. Governing Law &amp; Dispute Resolution</h2>
+        <p>These Terms and any dispute or claim arising out of or in connection with them (including non-contractual disputes) shall be governed by and construed in accordance with the laws of England and Wales.</p>
+        <p>The parties agree to submit to the exclusive jurisdiction of the courts of England and Wales to settle any dispute or claim. However, we retain the right to take proceedings in any jurisdiction to protect our intellectual property rights or enforce payment obligations.</p>
+        <p>For international clients, nothing in this clause prevents either party from seeking interim or urgent relief in any court of competent jurisdiction.</p>
+
+        <h2 id="changes">14. Changes to These Terms</h2>
+        <p>We reserve the right to update these Terms at any time. We will notify users of material changes by updating the "Last updated" date at the top of this page and, where appropriate, by notifying active clients directly.</p>
+        <p>Your continued use of the Website or our services following notification of changes constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, you should cease using the Website and, if applicable, terminate your engagement with us in accordance with Section 10.</p>
+
+        <h2 id="contact">15. Contact Us</h2>
+        <p>If you have any questions about these Terms &amp; Conditions, please contact us:</p>
+        <p>
+          <strong>The SaaS Partnership</strong><br>
+          Email: <a href="mailto:legal@thesaaspartnership.com">legal@thesaaspartnership.com</a><br>
+          Website: <a href="https://www.thesaaspartnership.com">www.thesaaspartnership.com</a>
+        </p>
+        <p>For general enquiries, please email <a href="mailto:hello@thesaaspartnership.com">hello@thesaaspartnership.com</a> or use the <a href="contact.html">contact form</a> on our website.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
+          The SaaS<span>Partnership</span>
+        </div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. We deliver senior specialist resource across paid media, SEO, CRO and automation — for a fraction of the in-house cost.</p>
+        <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
+      </div>
+      <div class="footer__col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="saas-paid-media.html">Paid Media</a></li>
+          <li><a href="saas-seo.html">SEO for SaaS</a></li>
+          <li><a href="services.html#cro">CRO &amp; Onsite</a></li>
+          <li><a href="services.html#automation">Automation</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="private-equity-marketing.html">PE &amp; Investors</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="why-us.html">Why Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Discovery Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
+      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 20);
+    nav.classList.toggle('nav--top', window.scrollY <= 20);
+  }, { passive: true });
+</script>
+</body>
+</html>
