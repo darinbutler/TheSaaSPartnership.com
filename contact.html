@@ -463,7 +463,7 @@
           <div class="sprint-feature">Attribution model build</div>
           <div class="sprint-feature">Clear partnership path</div>
         </div>
-        <div class="sprint-price"><sub>£</sub>12,000</div>
+        <div class="sprint-price"><sub>£</sub>10,000</div>
         <div class="sprint-price-note">One-time investment · Deliverables guaranteed</div>
         <a href="#contactForm" class="btn btn--primary btn--lg" onclick="document.querySelector('#challenge').placeholder='I\'m interested in starting with a Growth Sprint...'">
           Enquire About a Growth Sprint <span class="arrow"></span>
@@ -531,7 +531,7 @@
     });
   }
 
-  /* FORM SUBMIT */
+  /* FORM SUBMIT — Web3Forms → hello@thesaaspartnership.com */
   document.getElementById('mainForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const firstName = document.getElementById('firstName').value.trim();
@@ -539,17 +539,58 @@
     const email     = document.getElementById('email').value.trim();
     const company   = document.getElementById('company').value.trim();
     const role      = document.getElementById('role').value;
+    const arr       = document.getElementById('arr').value;
+    const challenge = document.getElementById('challenge').value.trim();
+    const service   = (document.querySelector('input[name="service"]:checked') || {}).value || 'Not selected';
     const consent   = document.getElementById('consent').checked;
     const errorMsg  = document.getElementById('errorMsg');
+    const submitBtn = document.querySelector('#mainForm .btn[type="submit"]');
 
     if (!firstName || !lastName || !email || !company || !role || !consent) {
       errorMsg.style.display = 'block';
+      errorMsg.querySelector('p').textContent = 'Please fill in all required fields and accept the privacy policy.';
       return;
     }
     errorMsg.style.display = 'none';
 
-    // Redirect to thank-you page
-    window.location.href = 'thank-you.html';
+    // Disable button and show sending state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key:  '4a7a3ebb-ca97-4e1e-b42f-b15da86208a4',
+        subject:     'New Discovery Call Request — ' + firstName + ' ' + lastName + ' (' + company + ')',
+        from_name:   'The SaaS Partnership Website',
+        name:        firstName + ' ' + lastName,
+        email:       email,
+        company:     company,
+        role:        role,
+        arr:         arr || 'Not provided',
+        service:     service,
+        message:     challenge || 'No message provided',
+        botcheck:    ''
+      })
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data.success) {
+        window.location.href = 'thank-you.html';
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request Discovery Call';
+        errorMsg.style.display = 'block';
+        errorMsg.querySelector('p').textContent = 'Something went wrong. Please try again or email us directly at hello@thesaaspartnership.com';
+      }
+    })
+    .catch(function() {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Request Discovery Call';
+      errorMsg.style.display = 'block';
+      errorMsg.querySelector('p').textContent = 'Something went wrong. Please try again or email us directly at hello@thesaaspartnership.com';
+    });
   });
 </script>
 </body>
