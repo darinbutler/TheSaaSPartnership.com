@@ -137,9 +137,11 @@
     .radio-sub{font-size:12px;color:var(--text-3);}
 
     /* Checkbox */
-    .checkbox-row{display:flex;align-items:flex-start;gap:10px;margin-top:4px;}
-    .checkbox-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--sky);flex-shrink:0;margin-top:2px;cursor:pointer;}
-    .checkbox-label{font-size:13px;color:var(--text-2);line-height:1.5;}
+    .checkbox-row{display:flex;align-items:flex-start;gap:12px;margin-top:4px;cursor:pointer;}
+    .checkbox-row input[type=checkbox]{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
+    .checkbox-label{font-size:13px;color:var(--text-2);line-height:1.5;cursor:pointer;display:flex;align-items:flex-start;gap:12px;}
+    .checkbox-label::before{content:'';flex-shrink:0;width:18px;height:18px;border-radius:5px;border:2px solid var(--border);background:white;transition:all .2s;margin-top:1px;}
+    .checkbox-row:has(input:checked) .checkbox-label::before,.checkbox-row.checked .checkbox-label::before{border-color:var(--sky);background:var(--sky);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='2 6 5 9 10 3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:12px;}
     .checkbox-label a{color:var(--sky);text-decoration:underline;}
 
     .form-submit{margin-top:8px;}
@@ -520,6 +522,14 @@
       this.closest('.radio-option').classList.add('selected');
     });
   });
+
+  /* CHECKBOX — JS fallback for browsers without :has() */
+  var consentInput = document.getElementById('consent');
+  if (consentInput) {
+    consentInput.addEventListener('change', function() {
+      this.closest('.checkbox-row').classList.toggle('checked', this.checked);
+    });
+  }
 
   /* FORM SUBMIT */
   document.getElementById('mainForm').addEventListener('submit', function(e) {
