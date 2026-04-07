@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | The SaaS Partnership</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/thank-you.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#0A1628;--navy-mid:#142240;--sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#BAE6FD;--teal:#14B8A6;--white:#FFFFFF;--surface:#F8FAFC;--surface-2:#F1F5F9;--border:#E2E8F0;--text-1:#0A1628;--text-2:#334155;--text-3:#64748B;--text-4:#94A3B8;--radius:14px;--radius-sm:8px;--radius-lg:20px;--shadow-md:0 4px 20px rgba(0,0,0,.09);--shadow-lg:0 12px 48px rgba(0,0,0,.12);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',system-ui,sans-serif;color:var(--text-1);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    a{color:inherit;text-decoration:none;}
+    .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+    /* ── NAV ── */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s ease;}
+    .nav--scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border),0 4px 20px rgba(0,0,0,.06);}
+    .nav--top{background:rgba(10,22,40,.5);backdrop-filter:blur(10px);}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:0 28px;max-width:1180px;margin:0 auto;height:72px;}
+    .nav__logo{font-size:17px;font-weight:800;color:var(--white);display:flex;align-items:center;gap:10px;transition:color .3s;}
+    .nav--scrolled .nav__logo{color:var(--navy);}
+    .nav__logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--teal));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;flex-shrink:0;}
+    .nav__logo span{color:var(--sky);}
+    .nav__links{display:flex;align-items:center;gap:2px;list-style:none;}
+    .nav__links a{padding:8px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:rgba(255,255,255,.8);transition:all .2s;}
+    .nav--scrolled .nav__links a{color:var(--text-2);}
+    .nav__links a:hover{color:var(--white);}
+    .nav--scrolled .nav__links a:hover{color:var(--navy);background:var(--surface);}
+    .nav__right{display:flex;align-items:center;gap:12px;}
+    .nav__hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav__hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;}
+    .nav--scrolled .nav__hamburger span{background:var(--navy);}
+    .nav__item--dropdown{position:relative;}
+    .nav__submenu{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:8px;min-width:230px;list-style:none;z-index:1001;}
+    .nav__item--dropdown:hover .nav__submenu{display:block;}
+    .nav__submenu li a{display:block;padding:9px 14px;border-radius:var(--radius-sm);font-size:14px;color:var(--text-1)!important;font-weight:500;transition:all .15s;background:transparent!important;}
+    .nav__submenu li a:hover{background:var(--surface)!important;color:var(--sky)!important;}
+    .nav__chevron{font-size:10px;opacity:.7;}
+    .nav__cta-ghost{padding:9px 18px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.2);transition:all .2s;}
+    .nav__cta-ghost:hover{border-color:rgba(255,255,255,.5);}
+    .nav--scrolled .nav__cta-ghost{color:var(--text-2);border-color:var(--border);}
+
+    /* ── BUTTONS ── */
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius-sm);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .22s ease;white-space:nowrap;}
+    .btn--primary{background:var(--sky);color:var(--white);}
+    .btn--primary:hover{background:var(--sky-dark);box-shadow:0 8px 24px rgba(14,165,233,.4);transform:translateY(-2px);}
+    .btn--ghost{background:transparent;color:var(--text-2);border:1.5px solid var(--border);}
+    .btn--ghost:hover{border-color:var(--sky);color:var(--sky);}
+    .btn--lg{padding:17px 34px;font-size:16px;}
+    .arrow{display:inline-block;width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;transition:transform .2s;}
+    .btn:hover .arrow{transform:translateX(4px);}
+
+    /* ── HERO ── */
+    .ty-hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 60%,var(--navy) 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+    .ty-hero__bg{position:absolute;inset:0;background-image:linear-gradient(rgba(14,165,233,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,.07) 1px,transparent 1px);background-size:60px 60px;animation:gridShift 20s linear infinite;}
+    @keyframes gridShift{0%{background-position:0 0;}100%{background-position:60px 60px;}}
+    .ty-hero__glow{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 40%,rgba(14,165,233,.15) 0%,transparent 65%);}
+    .ty-hero__inner{position:relative;z-index:2;text-align:center;padding:140px 28px 80px;max-width:680px;margin:0 auto;}
+
+    /* Animated checkmark circle */
+    .ty-check{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--teal));display:flex;align-items:center;justify-content:center;margin:0 auto 32px;animation:popIn .5s cubic-bezier(.34,1.56,.64,1) both;box-shadow:0 0 0 0 rgba(14,165,233,.4);}
+    @keyframes popIn{0%{transform:scale(0);opacity:0;}100%{transform:scale(1);opacity:1;}}
+    .ty-check svg{width:40px;height:40px;stroke:white;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-dasharray:60;stroke-dashoffset:60;animation:drawCheck .5s .4s ease forwards;}
+    @keyframes drawCheck{to{stroke-dashoffset:0;}}
+
+    .ty-hero h1{color:var(--white);font-size:clamp(32px,5vw,52px);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:20px;}
+    .ty-hero .lead{color:rgba(255,255,255,.75);font-size:18px;line-height:1.75;margin-bottom:40px;max-width:540px;margin-left:auto;margin-right:auto;}
+    .ty-hero .lead strong{color:rgba(255,255,255,.95);}
+
+    /* What happens next cards */
+    .ty-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:48px auto 0;max-width:780px;}
+    .ty-step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:24px;text-align:left;backdrop-filter:blur(4px);}
+    .ty-step__num{width:32px;height:32px;border-radius:50%;background:rgba(14,165,233,.2);border:1.5px solid rgba(14,165,233,.4);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--sky);margin-bottom:14px;}
+    .ty-step h4{font-size:14px;font-weight:700;color:var(--white);margin-bottom:6px;}
+    .ty-step p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;}
+
+    .ty-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px;}
+
+    /* ── FOOTER ── */
+    footer{background:var(--navy);padding:60px 0 32px;}
+    .footer__top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06);}
+    .footer__brand-logo{font-size:15px;font-weight:800;color:white;display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+    .footer__brand p{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;max-width:260px;margin-bottom:16px;}
+    .footer__brand-contact{font-size:13px;color:rgba(255,255,255,.45);}
+    .footer__col h5{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:16px;}
+    .footer__col ul{list-style:none;}
+    .footer__col li{margin-bottom:10px;}
+    .footer__col a{font-size:14px;color:rgba(255,255,255,.5);transition:color .15s;}
+    .footer__col a:hover{color:white;}
+    .footer__bottom{padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.2);}
+    .footer__bottom a{color:rgba(255,255,255,.3);}
+    .footer__bottom a:hover{color:rgba(255,255,255,.6);}
+
+    /* ── MOBILE ── */
+    @media(max-width:768px){
+      .nav__links{display:none;}
+      .nav__right{display:none;}
+      .nav__hamburger{display:flex;}
+      .nav__inner{padding:0 20px;height:64px;}
+      .nav__logo{font-size:13px;gap:6px;}
+      .nav__logo-mark{width:22px;height:22px;font-size:9px;border-radius:5px;}
+      .ty-steps{grid-template-columns:1fr;}
+      .ty-hero__inner{padding-top:120px;}
+      .footer__top{grid-template-columns:1fr 1fr;}
+    }
+    @media(max-width:480px){
+      .ty-actions{flex-direction:column;align-items:center;}
+      .footer__top{grid-template-columns:1fr;}
+    }
+    @media(max-width:360px){
+      .nav__logo-text{display:none;}
+      .nav__logo{gap:0;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav nav--top" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-mark">TSP</div>
+      <span class="nav__logo-text">The SaaS<span>Partnership</span></span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav__item--dropdown">
+        <a href="#" class="nav__dropdown-toggle">Solutions <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="private-equity-marketing.html">PE &amp; Investor Partnerships</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO for SaaS</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A Integration</a></li>
+        </ul>
+      </li>
+      <li class="nav__item--dropdown">
+        <a href="services.html" class="nav__dropdown-toggle">Services <span class="nav__chevron">▾</span></a>
+        <ul class="nav__submenu" role="list">
+          <li><a href="saas-paid-media.html">Paid Media</a></li>
+          <li><a href="saas-seo.html">SEO for SaaS</a></li>
+          <li><a href="services.html#cro">CRO &amp; Conversion</a></li>
+          <li><a href="services.html#automation">Marketing Automation</a></li>
+        </ul>
+      </li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="why-us.html" class="nav__cta-ghost">See the model</a>
+      <a href="contact.html" class="btn btn--primary">Book Discovery Call <span class="arrow"></span></a>
+    </div>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+  <section class="ty-hero" aria-label="Enquiry received">
+    <div class="ty-hero__bg"></div>
+    <div class="ty-hero__glow"></div>
+    <div class="ty-hero__inner">
+
+      <!-- Animated check -->
+      <div class="ty-check">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="4 13 9 18 20 7"></polyline>
+        </svg>
+      </div>
+
+      <div class="eyebrow eyebrow--white" style="justify-content:center;">Enquiry received</div>
+      <h1>We'll be in touch within one business day</h1>
+      <p class="lead">Thanks for reaching out. One of our <strong>senior team</strong> will review your enquiry and be in contact to arrange your discovery call — no junior handoffs, no sales scripts.</p>
+
+      <!-- What happens next -->
+      <div class="ty-steps">
+        <div class="ty-step">
+          <div class="ty-step__num">1</div>
+          <h4>We review your enquiry</h4>
+          <p>A senior specialist reads through your brief and researches your business before we speak.</p>
+        </div>
+        <div class="ty-step">
+          <div class="ty-step__num">2</div>
+          <h4>We schedule a call</h4>
+          <p>You'll receive a calendar link to pick a 30-minute slot that works for you.</p>
+        </div>
+        <div class="ty-step">
+          <div class="ty-step__num">3</div>
+          <h4>Honest conversation</h4>
+          <p>No pitch deck, no pressure. We talk through your challenges and whether we're the right fit.</p>
+        </div>
+      </div>
+
+      <div class="ty-actions">
+        <a href="why-us.html" class="btn btn--primary btn--lg">Learn about our model <span class="arrow"></span></a>
+        <a href="index.html" class="btn btn--ghost btn--lg">Back to home</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
+          The SaaS<span>Partnership</span>
+        </div>
+        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialists across paid, SEO, CRO and automation.</p>
+        <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
+      </div>
+      <div class="footer__col"><h5>Services</h5><ul><li><a href="saas-paid-media.html">Paid Media</a></li><li><a href="saas-seo.html">SEO for SaaS</a></li><li><a href="services.html#cro">CRO &amp; Onsite</a></li><li><a href="services.html#automation">Automation</a></li></ul></div>
+      <div class="footer__col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="private-equity-marketing.html">PE &amp; Investors</a></li>
+          <li><a href="growth-stage-saas.html">Growth-Stage SaaS</a></li>
+          <li><a href="fractional-cmo-saas.html">Fractional CMO</a></li>
+          <li><a href="post-acquisition-marketing.html">Post-M&amp;A</a></li>
+        </ul>
+      </div>
+      <div class="footer__col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="why-us.html">Why Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h5>Get Started</h5><ul><li><a href="contact.html">Discovery Call</a></li><li><a href="why-us.html#model">Our Model</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 The SaaS Partnership · thesaaspartnership.com</span>
+      <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* NAV scroll behaviour */
+  const nav = document.getElementById('mainNav');
+  function updateNav() {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 20);
+    nav.classList.toggle('nav--top', window.scrollY <= 20);
+  }
+  window.addEventListener('scroll', updateNav, {passive: true});
+  updateNav();
+</script>
+</body>
+</html>

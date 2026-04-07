@@ -125,10 +125,14 @@
 
     /* Radio group */
     .radio-group{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
-    .radio-option{display:flex;align-items:center;gap:10px;cursor:pointer;padding:12px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--border);transition:all .2s;}
+    .radio-option{display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--border);transition:all .2s;position:relative;}
     .radio-option:hover{border-color:var(--sky-light);background:var(--surface);}
-    .radio-option input[type=radio]{width:18px;height:18px;accent-color:var(--sky);flex-shrink:0;cursor:pointer;}
-    .radio-option.selected,.radio-option:has(input:checked){border-color:var(--sky);background:rgba(14,165,233,.04);}
+    /* Custom radio indicator — sits left of text */
+    .radio-option::before{content:'';flex-shrink:0;width:18px;height:18px;border-radius:50%;border:2px solid var(--border);background:white;transition:all .2s;order:-1;}
+    .radio-option.selected::before,.radio-option:has(input:checked)::before{border-color:var(--sky);background:var(--sky);box-shadow:inset 0 0 0 4px white;}
+    .radio-option.selected,.radio-option:has(input:checked){border-color:var(--sky);background:rgba(14,165,233,.05);}
+    /* Hide the native radio but keep it accessible + clickable via label */
+    .radio-option input[type=radio]{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
     .radio-label{font-size:14px;font-weight:500;color:var(--text-1);}
     .radio-sub{font-size:12px;color:var(--text-3);}
 
@@ -508,19 +512,13 @@
   const ro=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');ro.unobserve(en.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-  /* RADIO SELECT — works via native :has() CSS + JS fallback for older browsers */
-  function selectRadio(label) {
-    document.querySelectorAll('.radio-option').forEach(l => l.classList.remove('selected'));
-    label.classList.add('selected');
-  }
+  /* RADIO SELECT — native label/input + CSS :has() handles visual state.
+     JS fallback for browsers without :has() support (Firefox < 121). */
   document.querySelectorAll('.radio-option input[type=radio]').forEach(function(input) {
     input.addEventListener('change', function() {
       document.querySelectorAll('.radio-option').forEach(l => l.classList.remove('selected'));
       this.closest('.radio-option').classList.add('selected');
     });
-  });
-  document.querySelectorAll('.radio-option').forEach(function(label) {
-    label.addEventListener('click', function() { selectRadio(this); });
   });
 
   /* FORM SUBMIT */
@@ -540,19 +538,8 @@
     }
     errorMsg.style.display = 'none';
 
-    // Simulate form submission
-    const formEl = document.getElementById('contactForm');
-    const fieldsEl = formEl.querySelector('.form-fields');
-    const successEl = document.getElementById('formSuccess');
-    fieldsEl.style.opacity = '0';
-    fieldsEl.style.transition = 'opacity .3s';
-    setTimeout(() => {
-      fieldsEl.style.display = 'none';
-      successEl.style.display = 'block';
-      successEl.style.opacity = '0';
-      successEl.style.transition = 'opacity .4s';
-      setTimeout(() => { successEl.style.opacity = '1'; }, 50);
-    }, 300);
+    // Redirect to thank-you page
+    window.location.href = 'thank-you.html';
   });
 </script>
 </body>
