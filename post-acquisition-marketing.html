@@ -4,13 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Post-Acquisition Marketing Integration | The SaaS Partnership</title>
-  <meta name="description" content="Expert marketing integration for SaaS companies navigating M&A. The SaaS Partnership aligns brands, teams, data and GTM strategy in the first 100 days — accelerating growth, not disrupting it." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "M&A Marketing Integration",
+    "provider": {
+      "@type": "ProfessionalService",
+      "@id": "https://www.thesaaspartnership.com/#organization",
+      "name": "The SaaS Partnership",
+      "url": "https://www.thesaaspartnership.com"
+    },
+    "name": "Post-Acquisition Marketing Integration",
+    "description": "Marketing integration for SaaS M&A — protecting revenue and aligning brand in the critical first 100 days.",
+    "url": "https://www.thesaaspartnership.com/post-acquisition-marketing.html",
+    "areaServed": "Worldwide",
+    "audience": {"@type": "Audience", "audienceType": "SaaS Companies"}
+  }
+  </script>
+  <meta name="description" content="Expert marketing integration for SaaS companies navigating mergers and acquisitions. The SaaS Partnership manages the critical first 100 days to protect revenue and align brand." />
   <meta name="keywords" content="post acquisition marketing integration, post M&A marketing strategy, marketing after acquisition SaaS, M&A marketing integration agency, merger marketing strategy, post merger GTM integration" />
-  <meta property="og:title" content="Post-Acquisition Marketing Integration | The SaaS Partnership" />
-  <meta property="og:description" content="Navigate M&A with expert marketing integration. Align brands, teams, data and GTM in the first 100 days." />
-  <meta property="og:url" content="https://www.thesaaspartnership.com/post-acquisition-marketing.html" />
-  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://www.thesaaspartnership.com/post-acquisition-marketing.html" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The SaaS Partnership">
+  <meta property="og:title" content="Post-Acquisition Marketing Integration | The SaaS Partnership">
+  <meta property="og:description" content="Marketing integration for SaaS M&A. We manage the critical first 100 days to protect revenue, align brand and accelerate growth.">
+  <meta property="og:url" content="https://www.thesaaspartnership.com/post-acquisition-marketing.html">
+  <meta property="og:image" content="https://www.thesaaspartnership.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Post-Acquisition Marketing Integration | The SaaS Partnership">
+  <meta name="twitter:description" content="Marketing integration for SaaS M&A. We manage the critical first 100 days to protect revenue, align brand and accelerate growth.">
+  <meta name="twitter:image" content="https://www.thesaaspartnership.com/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -593,9 +619,19 @@
       .timeline-item::before { top: -20px; }
       .persona-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
-      .nav__links, .nav__cta-ghost { display: none; }
+      .nav__links { display: none; }
+      .nav__cta-ghost { display: none; }
+      .nav__right { gap: 0; }
+      .nav__right .btn--primary { padding: 6px 12px; font-size: 12px; letter-spacing: 0; border-radius: 6px; }
       .nav__hamburger { display: flex; }
       .section { padding: 72px 0; }
+      /* Visual/image blocks — center and constrain on mobile */
+      .service-visual,
+      .story-visual,
+      .vis-panel,
+      .model-visual { width: 100%; max-width: 480px; margin-left: auto; margin-right: auto; }
+      .service-layout { grid-template-columns: 1fr; gap: 40px; }
+      .service-layout--reverse { direction: ltr; }
       .hero { padding: 120px 0 80px; }
       h1 { font-size: 38px; }
       h2 { font-size: 30px; }
@@ -605,6 +641,11 @@
       .footer__top { grid-template-columns: 1fr; }
       .container { padding: 0 20px; }
       .btn--lg { padding: 15px 24px; font-size: 15px; }
+    }
+  
+    @media (max-width: 360px) {
+      .nav__logo-text { display: none; }
+      .nav__logo { gap: 0; }
     }
   </style>
 </head>
@@ -890,7 +931,7 @@
         <div class="testi-author">
           <div class="testi-avatar" style="background: linear-gradient(135deg, #0EA5E9, #14B8A6);">MC</div>
           <div class="testi-name">
-            <strong>Marcus C.</strong>
+            <strong>Marcus Chen</strong>
             <span>CRO, Acquired SaaS Company</span>
           </div>
         </div>
@@ -951,8 +992,8 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
-      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a></span>
+      <span>© 2025 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
+      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
     </div>
   </div>
 </footer>

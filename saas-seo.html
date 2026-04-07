@@ -4,9 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SaaS SEO Agency | B2B Organic Growth for SaaS | The SaaS Partnership</title>
-  <meta name="description" content="The SaaS Partnership delivers SEO for SaaS companies — technical optimisation, high-intent content and link building that builds organic pipeline compounding over time. Pipeline-first approach." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "SEO",
+    "provider": {
+      "@type": "ProfessionalService",
+      "@id": "https://www.thesaaspartnership.com/#organization",
+      "name": "The SaaS Partnership",
+      "url": "https://www.thesaaspartnership.com"
+    },
+    "name": "B2B SaaS SEO",
+    "description": "Technical SEO, high-intent content and link building for SaaS companies — compounding organic growth that reduces CAC.",
+    "url": "https://www.thesaaspartnership.com/saas-seo.html",
+    "areaServed": "Worldwide",
+    "audience": {"@type": "Audience", "audienceType": "SaaS Companies"}
+  }
+  </script>
+  <meta name="description" content="SaaS SEO specialists — technical optimisation, high-intent content, and authoritative link building for B2B SaaS companies. Compounding organic growth that reduces CAC." />
   <meta name="keywords" content="SaaS SEO agency, SEO for SaaS companies, B2B SaaS SEO, technical SEO for SaaS, SaaS content marketing agency, SEO agency software company" />
   <link rel="canonical" href="https://www.thesaaspartnership.com/saas-seo.html" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The SaaS Partnership">
+  <meta property="og:title" content="SaaS SEO Agency | B2B Organic Growth | The SaaS Partnership">
+  <meta property="og:description" content="Technical SEO, high-intent content and link building for B2B SaaS. Compounding organic growth that reduces CAC.">
+  <meta property="og:url" content="https://www.thesaaspartnership.com/saas-seo.html">
+  <meta property="og:image" content="https://www.thesaaspartnership.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SaaS SEO Agency | B2B Organic Growth | The SaaS Partnership">
+  <meta name="twitter:description" content="Technical SEO, high-intent content and link building for B2B SaaS. Compounding organic growth that reduces CAC.">
+  <meta name="twitter:image" content="https://www.thesaaspartnership.com/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -220,9 +250,10 @@
     .footer__bottom a:hover{color:white;}
 
     @media(max-width:768px){
-      .nav__links{display:none;}
-      .nav__right{gap:8px;}
+      .service-visual,.story-visual,.vis-panel,.model-visual{width:100%;max-width:480px;margin-left:auto;margin-right:auto;}.service-layout{grid-template-columns:1fr;gap:40px;}.service-layout--reverse{direction:ltr;}.nav__links{display:none;}
       .nav__cta-ghost{display:none;}
+      .nav__right{gap:0;}
+      .nav__right .btn--primary{padding:6px 12px;font-size:12px;letter-spacing:0;border-radius:6px;}
       .nav__hamburger{display:flex;}
       .hero__inner{grid-template-columns:1fr;gap:40px;}
       .hero__stats{grid-template-columns:1fr;}
@@ -244,6 +275,11 @@
       .roadmap-timeline{grid-template-columns:1fr;}
       .perf-stats-grid{grid-template-columns:1fr;}
       .mistakes-grid{grid-template-columns:1fr;}
+    }
+  
+    @media (max-width: 360px) {
+      .nav__logo-text { display: none; }
+      .nav__logo { gap: 0; }
     }
   </style>
 </head>
@@ -719,7 +755,7 @@
     </div>
     <div class="footer__bottom">
       <span>© 2025 The SaaS Partnership · <a href="https://www.thesaaspartnership.com">thesaaspartnership.com</a></span>
-      <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
+      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
     </div>
   </div>
 </footer>

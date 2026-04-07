@@ -125,7 +125,15 @@
     .footer__bottom a:hover { color: white; }
 
     @media(max-width: 900px) { .legal-layout { grid-template-columns: 1fr; } .legal-toc { display: none; } }
-    @media(max-width: 768px) { .nav__links, .nav__cta-ghost { display: none; } .nav__hamburger { display: flex; } .footer__top { grid-template-columns: 1fr 1fr; } .legal-hero { padding: 120px 0 56px; } .rights-table { font-size: 13px; } }
+    @media(max-width: 768px) { .nav__links { display: none; }
+      .nav__cta-ghost { display: none; }
+      .nav__right { gap: 0; }
+      .nav__right .btn--primary { padding: 6px 12px; font-size: 12px; letter-spacing: 0; border-radius: 6px; } .nav__hamburger { display: flex; } .footer__top { grid-template-columns: 1fr 1fr; } .legal-hero { padding: 120px 0 56px; } .rights-table { font-size: 13px; } }
+  
+    @media (max-width: 360px) {
+      .nav__logo-text { display: none; }
+      .nav__logo { gap: 0; }
+    }
   </style>
 </head>
 <body>

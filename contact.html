@@ -3,9 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — The SaaS Partnership | Book a Discovery Call</title>
-  <meta name="description" content="Book a discovery call with The SaaS Partnership — a 30-minute honest conversation about your pipeline, your growth objectives and whether we're the right fit." />
-  <link rel="canonical" href="https://www.thesaaspartnership.com/contact" />
+  <title>Book a Discovery Call | The SaaS Partnership</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "url": "https://www.thesaaspartnership.com/contact.html",
+    "name": "Book a Discovery Call — The SaaS Partnership",
+    "description": "Book a 30-minute discovery call to discuss your SaaS growth challenges.",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "@id": "https://www.thesaaspartnership.com/#organization",
+      "name": "The SaaS Partnership"
+    }
+  }
+  </script>
+  <meta name="description" content="Book a 30-minute discovery call with The SaaS Partnership. An honest conversation about your SaaS growth challenges — no pitch, no pressure." />
+  <link rel="canonical" href="https://www.thesaaspartnership.com/contact.html" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The SaaS Partnership">
+  <meta property="og:title" content="Book a Discovery Call | The SaaS Partnership">
+  <meta property="og:description" content="Book a 30-minute conversation about your SaaS growth challenges. No pitch, no pressure.">
+  <meta property="og:url" content="https://www.thesaaspartnership.com/contact.html">
+  <meta property="og:image" content="https://www.thesaaspartnership.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book a Discovery Call | The SaaS Partnership">
+  <meta name="twitter:description" content="Book a 30-minute conversation about your SaaS growth challenges. No pitch, no pressure.">
+  <meta name="twitter:image" content="https://www.thesaaspartnership.com/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
@@ -169,7 +195,10 @@
     .footer__bottom a:hover{color:rgba(255,255,255,.6);}
 
     @media(max-width:1024px){.contact-layout{grid-template-columns:1fr;}.contact-info{order:-1;}.form-card{margin-top:0;}}
-    @media(max-width:768px){.form-row{grid-template-columns:1fr;}.nav__links,.nav__cta-ghost{display:none;}.nav__hamburger{display:flex;}.sprint-features{flex-direction:column;align-items:center;}.footer__top{grid-template-columns:1fr 1fr;}}
+    @media(max-width:768px){.form-row{grid-template-columns:1fr;}.nav__links { display: none; }
+      .nav__cta-ghost { display: none; }
+      .nav__right { gap: 0; }
+      .nav__right .btn--primary { padding: 6px 12px; font-size: 12px; letter-spacing: 0; border-radius: 6px; }.nav__hamburger{display:flex;}.sprint-features{flex-direction:column;align-items:center;}.footer__top{grid-template-columns:1fr 1fr;}}
     @media(max-width:480px){.form-card{padding:28px;}.footer__top{grid-template-columns:1fr;}}
   
     /* ─────────────────────────────────────────────────────
@@ -190,6 +219,11 @@
     }
     .nav__submenu li a:hover { background: var(--surface) !important; color: var(--sky) !important; }
     .nav__chevron { font-size: 10px; opacity: 0.7; }
+  
+    @media (max-width: 360px) {
+      .nav__logo-text { display: none; }
+      .nav__logo { gap: 0; }
+    }
   </style>
 </head>
 <body>
@@ -335,7 +369,7 @@
               <div class="form-group">
                 <div class="checkbox-row">
                   <input type="checkbox" id="consent" name="consent" required />
-                  <label for="consent" class="checkbox-label">I agree to be contacted by The SaaS Partnership regarding my enquiry. We'll never share your data with third parties. View our <a href="#">Privacy Policy</a>.</label>
+                  <label for="consent" class="checkbox-label">I agree to be contacted by The SaaS Partnership regarding my enquiry. We'll never share your data with third parties. View our <a href="privacy.html">Privacy Policy</a>.</label>
                 </div>
               </div>
 
@@ -393,7 +427,7 @@
             <div class="wte-item">We'll ask about your current pipeline, channel performance and team structure</div>
             <div class="wte-item">You'll hear about the partnership model and how we typically engage</div>
             <div class="wte-item">We'll be honest if we're not the right fit — no hard sell</div>
-            <div class="wte-item">If there's a match, we'll outline a proposed scope and commercial structure within 72 hours</div>
+            <div class="wte-item">If there's a match, we'll outline a proposed scope and commercial structure within 48 hours</div>
             <div class="wte-item">Calls are 30 minutes — we respect your time</div>
           </div>
         </div>
@@ -418,7 +452,7 @@
           <div class="sprint-feature">Attribution model build</div>
           <div class="sprint-feature">Clear partnership path</div>
         </div>
-        <div class="sprint-price"><sub>£</sub>10,000</div>
+        <div class="sprint-price"><sub>£</sub>12,000</div>
         <div class="sprint-price-note">One-time investment · Deliverables guaranteed</div>
         <a href="#contactForm" class="btn btn--primary btn--lg" onclick="document.querySelector('#challenge').placeholder='I\'m interested in starting with a Growth Sprint...'">
           Enquire About a Growth Sprint <span class="arrow"></span>
@@ -436,7 +470,7 @@
           <div class="nav__logo-mark" style="width:28px;height:28px;font-size:11px;">TSP</div>
           The SaaS<span>Partnership</span>
         </div>
-        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialists across SEM,SEO.GEO,CRO and automation.</p>
+        <p>Fractional marketing expertise for ambitious SaaS companies. Senior specialists across paid, SEO, CRO and automation.</p>
         <div class="footer__brand-contact">hello@thesaaspartnership.com</div>
       </div>
       <div class="footer__col"><h5>Services</h5><ul><li><a href="saas-paid-media.html">Paid Media</a></li><li><a href="saas-seo.html">SEO for SaaS</a></li><li><a href="services.html#cro">CRO &amp; Onsite</a></li><li><a href="services.html#automation">Automation</a></li></ul></div>
@@ -453,8 +487,8 @@
       <div class="footer__col"><h5>Get Started</h5><ul><li><a href="contact.html">Discovery Call</a></li><li><a href="why-us.html#model">Our Model</a></li></ul></div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 The SaaS Partnership · thesaaspartnership.com</span>
-      <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
+      <span>© 2025 The SaaS Partnership · thesaaspartnership.com</span>
+      <span><a href="#">Privacy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
     </div>
   </div>
 </footer>
