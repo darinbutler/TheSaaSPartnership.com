@@ -128,7 +128,7 @@
     .radio-option{display:flex;align-items:center;gap:10px;cursor:pointer;padding:12px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--border);transition:all .2s;}
     .radio-option:hover{border-color:var(--sky-light);background:var(--surface);}
     .radio-option input[type=radio]{width:18px;height:18px;accent-color:var(--sky);flex-shrink:0;cursor:pointer;}
-    .radio-option.selected{border-color:var(--sky);background:rgba(14,165,233,.04);}
+    .radio-option.selected,.radio-option:has(input:checked){border-color:var(--sky);background:rgba(14,165,233,.04);}
     .radio-label{font-size:14px;font-weight:500;color:var(--text-1);}
     .radio-sub{font-size:12px;color:var(--text-3);}
 
@@ -196,9 +196,14 @@
 
     @media(max-width:1024px){.contact-layout{grid-template-columns:1fr;}.contact-info{order:-1;}.form-card{margin-top:0;}}
     @media(max-width:768px){.form-row{grid-template-columns:1fr;}.nav__links { display: none; }
-      .nav__cta-ghost { display: none; }
-      .nav__right { gap: 0; }
-      .nav__right .btn--primary { padding: 6px 12px; font-size: 12px; letter-spacing: 0; border-radius: 6px; }.nav__hamburger{display:flex;}.sprint-features{flex-direction:column;align-items:center;}.footer__top{grid-template-columns:1fr 1fr;}}
+      .nav__right { display: none; }
+      .nav__hamburger { display: flex; }
+      .nav__inner { padding: 0 20px; height: 64px; }
+      .nav__logo { font-size: 13px; gap: 6px; }
+      .nav__logo-mark { width: 22px; height: 22px; font-size: 9px; border-radius: 5px; }
+      .nav__inner { padding: 0 20px; height: 64px; }
+      .nav__logo { font-size: 13px; gap: 6px; }
+      .nav__logo-mark { width: 22px; height: 22px; font-size: 9px; border-radius: 5px; }.sprint-features{flex-direction:column;align-items:center;}.footer__top{grid-template-columns:1fr 1fr;}}
     @media(max-width:480px){.form-card{padding:28px;}.footer__top{grid-template-columns:1fr;}}
   
     /* ─────────────────────────────────────────────────────
@@ -281,7 +286,7 @@
 
       <div class="contact-layout">
         <!-- FORM -->
-        <div class="form-card reveal" id="contactForm">
+        <div class="form-card" id="contactForm">
           <div class="form-fields">
             <h3 style="margin-bottom:6px;">Book your discovery call</h3>
             <p style="font-size:14px;color:var(--text-3);margin-bottom:32px;">We typically respond within one business day. No sales pressure — just a genuine conversation.</p>
@@ -338,23 +343,23 @@
               <div class="form-group">
                 <label>Which services are you most interested in?</label>
                 <div class="radio-group" id="servicesGroup">
-                  <label class="radio-option" onclick="selectRadio(this)">
+                  <label class="radio-option">
                     <input type="radio" name="service" value="paid-media" />
                     <div><div class="radio-label">Paid Media Management</div><div class="radio-sub">Google, LinkedIn, Meta &amp; programmatic</div></div>
                   </label>
-                  <label class="radio-option" onclick="selectRadio(this)">
+                  <label class="radio-option">
                     <input type="radio" name="service" value="seo" />
                     <div><div class="radio-label">Organic SEO &amp; Content</div><div class="radio-sub">Technical SEO &amp; content strategy</div></div>
                   </label>
-                  <label class="radio-option" onclick="selectRadio(this)">
+                  <label class="radio-option">
                     <input type="radio" name="service" value="cro" />
                     <div><div class="radio-label">CRO &amp; Onsite Optimisation</div><div class="radio-sub">Conversion rate improvement</div></div>
                   </label>
-                  <label class="radio-option" onclick="selectRadio(this)">
+                  <label class="radio-option">
                     <input type="radio" name="service" value="automation" />
                     <div><div class="radio-label">Marketing Automation &amp; Ops</div><div class="radio-sub">Workflows, nurture &amp; RevOps</div></div>
                   </label>
-                  <label class="radio-option" onclick="selectRadio(this)">
+                  <label class="radio-option">
                     <input type="radio" name="service" value="full" />
                     <div><div class="radio-label">Full partnership (all services)</div><div class="radio-sub">The complete fractional team</div></div>
                   </label>
@@ -503,11 +508,20 @@
   const ro=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');ro.unobserve(en.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-  /* RADIO SELECT */
+  /* RADIO SELECT — works via native :has() CSS + JS fallback for older browsers */
   function selectRadio(label) {
     document.querySelectorAll('.radio-option').forEach(l => l.classList.remove('selected'));
     label.classList.add('selected');
   }
+  document.querySelectorAll('.radio-option input[type=radio]').forEach(function(input) {
+    input.addEventListener('change', function() {
+      document.querySelectorAll('.radio-option').forEach(l => l.classList.remove('selected'));
+      this.closest('.radio-option').classList.add('selected');
+    });
+  });
+  document.querySelectorAll('.radio-option').forEach(function(label) {
+    label.addEventListener('click', function() { selectRadio(this); });
+  });
 
   /* FORM SUBMIT */
   document.getElementById('mainForm').addEventListener('submit', function(e) {
