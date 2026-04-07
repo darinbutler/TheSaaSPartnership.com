@@ -222,13 +222,13 @@
     /* ─────────────────────────────────────────────────────
        DROPDOWN NAVIGATION
     ───────────────────────────────────────────────────── */
-    .nav__item--dropdown { position: relative; }
+    .nav__item--dropdown { position: relative; padding-bottom: 12px; margin-bottom: -12px; }
     .nav__submenu {
       display: none; position: absolute; top: 100%; left: 50%;
       transform: translateX(-50%); background: white; border: 1px solid var(--border);
       border-radius: var(--radius); box-shadow: var(--shadow-lg);
       padding: 8px; min-width: 230px; list-style: none; z-index: 1001;
-      margin-top: 8px;
+      
     }
     .nav__submenu::before {
       content: ''; position: absolute; top: -8px; left: 0; right: 0; height: 8px;

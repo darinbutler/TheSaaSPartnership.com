@@ -137,14 +137,15 @@
     .nav__hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:all .3s;}
     .nav--scrolled .nav__hamburger span{background:var(--navy);}
 
-    .nav__item--dropdown{position:relative;}
+    .nav__item--dropdown{position:relative;padding-bottom:12px;margin-bottom:-12px;}
     .nav__submenu{
-      display:none;position:absolute;top:100%;left:50%;margin-top:8px;
+      display:none;position:absolute;top:100%;left:50%;
       transform:translateX(-50%);background:white;border:1px solid var(--border);
       border-radius:var(--radius);box-shadow:var(--shadow-lg);
       padding:8px;min-width:230px;list-style:none;z-index:1001;
     }
     .nav__item--dropdown:hover .nav__submenu{display:block;}
+    .nav__submenu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px;}
     .nav__submenu li a{
       display:block;padding:9px 14px;border-radius:var(--radius-sm);
       font-size:14px;color:var(--text-1)!important;font-weight:500;
